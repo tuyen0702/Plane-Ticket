@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("1");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("1");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -48,7 +46,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -171,8 +168,6 @@
             this.label59 = new System.Windows.Forms.Label();
             this.textBox53 = new System.Windows.Forms.TextBox();
             this.label60 = new System.Windows.Forms.Label();
-            this.textBox54 = new System.Windows.Forms.TextBox();
-            this.label61 = new System.Windows.Forms.Label();
             this.textBox55 = new System.Windows.Forms.TextBox();
             this.label62 = new System.Windows.Forms.Label();
             this.textBox56 = new System.Windows.Forms.TextBox();
@@ -299,8 +294,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.textBox4);
             this.tabPage1.Controls.Add(this.textBox3);
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.textBox1);
@@ -311,7 +304,6 @@
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.comboBox9);
             this.tabPage1.Controls.Add(this.comboBox3);
@@ -328,25 +320,9 @@
             this.tabPage1.Text = "Vé Chuyến Bay";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(201, 285);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(71, 26);
-            this.button3.TabIndex = 51;
-            this.button3.Text = "Mua Vé";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(32, 163);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(167, 20);
-            this.textBox4.TabIndex = 50;
-            // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(32, 203);
+            this.textBox3.Location = new System.Drawing.Point(32, 163);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(167, 20);
             this.textBox3.TabIndex = 49;
@@ -376,7 +352,7 @@
             this.listView1.Enabled = false;
             this.listView1.GridLines = true;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(3, 413);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(462, 79);
@@ -414,7 +390,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(289, 285);
+            this.button2.Location = new System.Drawing.Point(257, 285);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(71, 26);
             this.button2.TabIndex = 45;
@@ -433,7 +409,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(29, 232);
+            this.label10.Location = new System.Drawing.Point(225, 98);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 13);
             this.label10.TabIndex = 42;
@@ -451,7 +427,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(29, 187);
+            this.label8.Location = new System.Drawing.Point(29, 147);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 13);
             this.label8.TabIndex = 40;
@@ -466,15 +442,6 @@
             this.label7.TabIndex = 39;
             this.label7.Text = "CMND";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 147);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 13);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Mã Hành Khách";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -487,7 +454,7 @@
             // comboBox9
             // 
             this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(32, 248);
+            this.comboBox9.Location = new System.Drawing.Point(228, 114);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(167, 21);
             this.comboBox9.TabIndex = 34;
@@ -1186,11 +1153,11 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(52, 24);
+            this.label38.Location = new System.Drawing.Point(22, 24);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(55, 13);
+            this.label38.Size = new System.Drawing.Size(85, 13);
             this.label38.TabIndex = 4;
-            this.label38.Text = "Số CMND";
+            this.label38.Text = "Mã Khách Hàng";
             // 
             // button12
             // 
@@ -1538,8 +1505,6 @@
             this.tabPage18.Controls.Add(this.label59);
             this.tabPage18.Controls.Add(this.textBox53);
             this.tabPage18.Controls.Add(this.label60);
-            this.tabPage18.Controls.Add(this.textBox54);
-            this.tabPage18.Controls.Add(this.label61);
             this.tabPage18.Controls.Add(this.textBox55);
             this.tabPage18.Controls.Add(this.label62);
             this.tabPage18.Controls.Add(this.textBox56);
@@ -1565,7 +1530,7 @@
             // 
             // textBox57
             // 
-            this.textBox57.Location = new System.Drawing.Point(130, 216);
+            this.textBox57.Location = new System.Drawing.Point(130, 190);
             this.textBox57.Name = "textBox57";
             this.textBox57.ReadOnly = true;
             this.textBox57.Size = new System.Drawing.Size(242, 20);
@@ -1574,7 +1539,7 @@
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(17, 219);
+            this.label64.Location = new System.Drawing.Point(17, 193);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(107, 13);
             this.label64.TabIndex = 53;
@@ -1582,7 +1547,7 @@
             // 
             // textBox58
             // 
-            this.textBox58.Location = new System.Drawing.Point(130, 242);
+            this.textBox58.Location = new System.Drawing.Point(130, 216);
             this.textBox58.Name = "textBox58";
             this.textBox58.ReadOnly = true;
             this.textBox58.Size = new System.Drawing.Size(242, 20);
@@ -1591,7 +1556,7 @@
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(3, 245);
+            this.label65.Location = new System.Drawing.Point(3, 219);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(121, 13);
             this.label65.TabIndex = 51;
@@ -1630,23 +1595,6 @@
             this.label60.Size = new System.Drawing.Size(103, 13);
             this.label60.TabIndex = 48;
             this.label60.Text = "Thời Gian Giao Dịch";
-            // 
-            // textBox54
-            // 
-            this.textBox54.Location = new System.Drawing.Point(130, 190);
-            this.textBox54.Name = "textBox54";
-            this.textBox54.ReadOnly = true;
-            this.textBox54.Size = new System.Drawing.Size(242, 20);
-            this.textBox54.TabIndex = 46;
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(47, 193);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(77, 13);
-            this.label61.TabIndex = 45;
-            this.label61.Text = "Loại Giao Dịch";
             // 
             // textBox55
             // 
@@ -2495,8 +2443,6 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
@@ -2511,7 +2457,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox9;
         private System.Windows.Forms.ComboBox comboBox3;
@@ -2634,8 +2579,6 @@
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.TextBox textBox53;
         private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.TextBox textBox54;
-        private System.Windows.Forms.Label label61;
         private System.Windows.Forms.TextBox textBox55;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.TextBox textBox56;
