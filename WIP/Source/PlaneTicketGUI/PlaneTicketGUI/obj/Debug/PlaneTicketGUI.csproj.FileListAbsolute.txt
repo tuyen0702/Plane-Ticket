@@ -8,3 +8,13 @@ C:\Users\Beatless\Desktop\PlaneTicketGUI\PlaneTicketGUI\obj\Debug\PlaneTicketGUI
 C:\Users\Beatless\Desktop\PlaneTicketGUI\PlaneTicketGUI\obj\Debug\PlaneTicketGUI.csproj.CoreCompileInputs.cache
 C:\Users\Beatless\Desktop\PlaneTicketGUI\PlaneTicketGUI\obj\Debug\PlaneTicketGUI.exe
 C:\Users\Beatless\Desktop\PlaneTicketGUI\PlaneTicketGUI\obj\Debug\PlaneTicketGUI.pdb
+C:\Users\Beatless\Plane-Ticket\WIP\Source\PlaneTicketGUI\PlaneTicketGUI\bin\Debug\PlaneTicketGUI.exe.config
+C:\Users\Beatless\Plane-Ticket\WIP\Source\PlaneTicketGUI\PlaneTicketGUI\bin\Debug\PlaneTicketGUI.exe
+C:\Users\Beatless\Plane-Ticket\WIP\Source\PlaneTicketGUI\PlaneTicketGUI\bin\Debug\PlaneTicketGUI.pdb
+C:\Users\Beatless\Plane-Ticket\WIP\Source\PlaneTicketGUI\PlaneTicketGUI\obj\Debug\PlaneTicketGUI.csprojResolveAssemblyReference.cache
+C:\Users\Beatless\Plane-Ticket\WIP\Source\PlaneTicketGUI\PlaneTicketGUI\obj\Debug\PlaneTicketGUI.Form1.resources
+C:\Users\Beatless\Plane-Ticket\WIP\Source\PlaneTicketGUI\PlaneTicketGUI\obj\Debug\PlaneTicketGUI.Properties.Resources.resources
+C:\Users\Beatless\Plane-Ticket\WIP\Source\PlaneTicketGUI\PlaneTicketGUI\obj\Debug\PlaneTicketGUI.csproj.GenerateResource.cache
+C:\Users\Beatless\Plane-Ticket\WIP\Source\PlaneTicketGUI\PlaneTicketGUI\obj\Debug\PlaneTicketGUI.csproj.CoreCompileInputs.cache
+C:\Users\Beatless\Plane-Ticket\WIP\Source\PlaneTicketGUI\PlaneTicketGUI\obj\Debug\PlaneTicketGUI.exe
+C:\Users\Beatless\Plane-Ticket\WIP\Source\PlaneTicketGUI\PlaneTicketGUI\obj\Debug\PlaneTicketGUI.pdb
