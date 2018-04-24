@@ -18,3 +18,4 @@ C:\Users\Beatless\Plane-Ticket\WIP\Source\PlaneTicketGUI\PlaneTicketGUI\obj\Debu
 C:\Users\Beatless\Plane-Ticket\WIP\Source\PlaneTicketGUI\PlaneTicketGUI\obj\Debug\PlaneTicketGUI.csproj.CoreCompileInputs.cache
 C:\Users\Beatless\Plane-Ticket\WIP\Source\PlaneTicketGUI\PlaneTicketGUI\obj\Debug\PlaneTicketGUI.exe
 C:\Users\Beatless\Plane-Ticket\WIP\Source\PlaneTicketGUI\PlaneTicketGUI\obj\Debug\PlaneTicketGUI.pdb
+C:\Users\Beatless\Plane-Ticket\WIP\Source\PlaneTicketGUI\PlaneTicketGUI\obj\Debug\PlaneTicketGUI.SignInGUI.resources

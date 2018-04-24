@@ -1,6 +1,6 @@
 ﻿namespace PlaneTicketGUI
 {
-    partial class Form1
+    partial class PlaneTicketGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CheckTicketBt = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -244,12 +244,8 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.tabPage19 = new System.Windows.Forms.TabPage();
-            this.label67 = new System.Windows.Forms.Label();
-            this.button20 = new System.Windows.Forms.Button();
-            this.label66 = new System.Windows.Forms.Label();
-            this.textBox59 = new System.Windows.Forms.TextBox();
-            this.textBox60 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -276,7 +272,6 @@
             this.tabControl3.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            this.tabPage19.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -285,11 +280,10 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage19);
-            this.tabControl1.Location = new System.Drawing.Point(3, 12);
+            this.tabControl1.Location = new System.Drawing.Point(3, 41);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(481, 524);
+            this.tabControl1.Size = new System.Drawing.Size(481, 495);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -299,7 +293,7 @@
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.CheckTicketBt);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label8);
@@ -315,7 +309,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(473, 498);
+            this.tabPage1.Size = new System.Drawing.Size(473, 469);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Vé Chuyến Bay";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -353,9 +347,9 @@
             this.listView1.GridLines = true;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(3, 413);
+            this.listView1.Location = new System.Drawing.Point(3, 388);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(462, 79);
+            this.listView1.Size = new System.Drawing.Size(462, 104);
             this.listView1.TabIndex = 46;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -397,14 +391,14 @@
             this.button2.Text = "Đặt Vé";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // CheckTicketBt
             // 
-            this.button1.Location = new System.Drawing.Point(79, 285);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 26);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Kiểm Tra Vé";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CheckTicketBt.Location = new System.Drawing.Point(79, 285);
+            this.CheckTicketBt.Name = "CheckTicketBt";
+            this.CheckTicketBt.Size = new System.Drawing.Size(89, 26);
+            this.CheckTicketBt.TabIndex = 44;
+            this.CheckTicketBt.Text = "Kiểm Tra Vé";
+            this.CheckTicketBt.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -517,7 +511,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(473, 498);
+            this.tabPage2.Size = new System.Drawing.Size(473, 469);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Xử Lý Thông Tin";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1660,7 +1654,7 @@
             this.tabPage3.Controls.Add(this.tabControl2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(473, 498);
+            this.tabPage3.Size = new System.Drawing.Size(473, 469);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Tra Cứu Thông Tin";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -2300,69 +2294,34 @@
             this.button7.Text = "Xuất Báo Cáo";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // tabPage19
+            // button3
             // 
-            this.tabPage19.Controls.Add(this.label67);
-            this.tabPage19.Controls.Add(this.button20);
-            this.tabPage19.Controls.Add(this.label66);
-            this.tabPage19.Controls.Add(this.textBox59);
-            this.tabPage19.Controls.Add(this.textBox60);
-            this.tabPage19.Location = new System.Drawing.Point(4, 22);
-            this.tabPage19.Name = "tabPage19";
-            this.tabPage19.Size = new System.Drawing.Size(473, 498);
-            this.tabPage19.TabIndex = 4;
-            this.tabPage19.Text = "Đăng Nhập";
-            this.tabPage19.UseVisualStyleBackColor = true;
+            this.button3.Location = new System.Drawing.Point(402, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Đăng Xuất";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label67
+            // dateTimePicker1
             // 
-            this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(78, 63);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(53, 13);
-            this.label67.TabIndex = 16;
-            this.label67.Text = "Mật Khẩu";
+            this.dateTimePicker1.Location = new System.Drawing.Point(13, 12);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 5;
             // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(177, 86);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 23);
-            this.button20.TabIndex = 15;
-            this.button20.Text = "Đăng Nhập";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(56, 37);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(75, 13);
-            this.label66.TabIndex = 14;
-            this.label66.Text = "Mã Nhân Viên";
-            // 
-            // textBox59
-            // 
-            this.textBox59.Location = new System.Drawing.Point(137, 60);
-            this.textBox59.Name = "textBox59";
-            this.textBox59.Size = new System.Drawing.Size(181, 20);
-            this.textBox59.TabIndex = 13;
-            // 
-            // textBox60
-            // 
-            this.textBox60.Location = new System.Drawing.Point(137, 34);
-            this.textBox60.Name = "textBox60";
-            this.textBox60.Size = new System.Drawing.Size(181, 20);
-            this.textBox60.TabIndex = 12;
-            // 
-            // Form1
+            // PlaneTicketGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 545);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(486, 545);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "PlaneTicketGUI";
+            this.Text = "Quản Lý Vé Chuyến Bay";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -2402,8 +2361,6 @@
             this.tabPage7.PerformLayout();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
-            this.tabPage19.ResumeLayout(false);
-            this.tabPage19.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2452,7 +2409,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CheckTicketBt;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -2601,12 +2558,6 @@
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.TextBox textBox67;
         private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.TabPage tabPage19;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.TextBox textBox59;
-        private System.Windows.Forms.TextBox textBox60;
         private System.Windows.Forms.TextBox textBox78;
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.TextBox textBox77;
@@ -2630,6 +2581,8 @@
         private System.Windows.Forms.TextBox textBox74;
         private System.Windows.Forms.Label label81;
         private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 

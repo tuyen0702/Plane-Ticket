@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace PlaneTicketGUI
 {
-    public partial class PlaneTicketGUI : Form
+    public partial class SignInGUI : Form
     {
-        public PlaneTicketGUI()
+        public SignInGUI()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Form frm1 = new SignInGUI();
-            frm1.Show();
+            Form frm = new PlaneTicketGUI();
+            frm.Show();
             this.Hide();
         }
     }
