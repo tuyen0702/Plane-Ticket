@@ -1,0 +1,12 @@
+C:\Users\LeeDDwcs\source\repos\Plane_Ticket\DTO\bin\Debug\DTO.dll
+C:\Users\LeeDDwcs\source\repos\Plane_Ticket\DTO\bin\Debug\DTO.pdb
+C:\Users\LeeDDwcs\source\repos\Plane_Ticket\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\LeeDDwcs\source\repos\Plane_Ticket\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\LeeDDwcs\source\repos\Plane_Ticket\DTO\obj\Debug\DTO.dll
+C:\Users\LeeDDwcs\source\repos\Plane_Ticket\DTO\obj\Debug\DTO.pdb
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\bin\Debug\DTO.dll
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\bin\Debug\DTO.pdb
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.dll
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.pdb
