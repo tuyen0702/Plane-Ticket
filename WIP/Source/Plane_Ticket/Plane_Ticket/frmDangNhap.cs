@@ -14,12 +14,26 @@ namespace Plane_Ticket
     {
         public frmDangNhap()
         {
-            InitializeComponent();
+            InitializeComponent();   
         }
+        
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Parent.Dispose();
         }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void frmDangNhap_Shown(object sender, EventArgs e)
+        {
+            txtMaNhanVien.Focus();
+            
+        }
+
+        
     }
 }

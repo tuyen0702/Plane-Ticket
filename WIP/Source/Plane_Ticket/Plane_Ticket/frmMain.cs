@@ -53,7 +53,7 @@ namespace Plane_Ticket
             tabPage.BackgroundImageLayout = ImageLayout.Stretch;
             tabCtrlMain.TabPages.Add(tabPage);
             tabCtrlMain.SelectedTab = tabPage;
-            frm.SetDesktopLocation(280, 0);
+            frm.SetDesktopLocation(tabCtrlMain.Width / 2 - frm.Width / 2, tabCtrlMain.Height / 2 - frm.Height / 2);
             frm.TopLevel = false;
             frm.Parent = tabPage;
             frm.BackColor = Color.LightSkyBlue;
@@ -208,6 +208,78 @@ namespace Plane_Ticket
         private void baoCaoNamToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmBaoCaoNam frm = new frmBaoCaoNam();
+            if (!CheckExistForm(frm))
+            {
+                CreateTabPage(frm);
+            }
+            else
+            {
+                ActiveChildForm(frm);
+            }
+        }
+        private void themSanBayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThemSanBay frm = new frmThemSanBay();
+            if (!CheckExistForm(frm))
+            {
+                CreateTabPage(frm);
+            }
+            else
+            {
+                ActiveChildForm(frm);
+            }
+        }
+        private void themMayBayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThemMayBay frm = new frmThemMayBay();
+            if (!CheckExistForm(frm))
+            {
+                CreateTabPage(frm);
+            }
+            else
+            {
+                ActiveChildForm(frm);
+            }
+        }
+        private void themSanBayTrungGianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThemSanBayTG frm = new frmThemSanBayTG();
+            if (!CheckExistForm(frm))
+            {
+                CreateTabPage(frm);
+            }
+            else
+            {
+                ActiveChildForm(frm);
+            }
+        }
+        private void themHangVeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThemHangVe frm = new frmThemHangVe();
+            if (!CheckExistForm(frm))
+            {
+                CreateTabPage(frm);
+            }
+            else
+            {
+                ActiveChildForm(frm);
+            }
+        }
+        private void themKhachHangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThemKhachHang frm = new frmThemKhachHang();
+            if (!CheckExistForm(frm))
+            {
+                CreateTabPage(frm);
+            }
+            else
+            {
+                ActiveChildForm(frm);
+            }
+        }
+        private void themDonGiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThemDonGia frm = new frmThemDonGia();
             if (!CheckExistForm(frm))
             {
                 CreateTabPage(frm);

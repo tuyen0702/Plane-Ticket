@@ -25,7 +25,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("INSERT INTO VECHUYENBAY(MACHUYENBAY, LOAIGHE, GIATIEN, TINHTRANGVE, NGAYHUY) VALUES('{0}', '{1}', '{2}', '{3}', '{4}')", dto.MaChuyenBay, dto.LoaiGhe, dto.GiaTien, dto.TinhTrang, dto.NgayHuy);
+                string sqlQuery = string.Format("INSERT INTO VECHUYENBAY(MAVE, MACHUYENBAY, MAHANGVE, GIATIEN, TINHTRANGVE, NGAYHUY) VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", dto.MaChuyenBay, dto.MaHangVe, dto.GiaTien, dto.TinhTrang, dto.NgayHuy);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -46,7 +46,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("UPDATE VECHUYENBAY SET MACHUYENBAY='{0}', LOAIGHE='{1}', GIATIEN='{2}', TINHTRANGVE='{3}', NGAYHUY='{4}')", dto.MaChuyenBay, dto.LoaiGhe, dto.GiaTien, dto.TinhTrang, dto.NgayHuy);
+                string sqlQuery = string.Format("UPDATE VECHUYENBAY SET MACHUYENBAY='{0}', MAHANGVE='{1}', GIATIEN='{2}', TINHTRANGVE='{3}', NGAYHUY='{4}', MAVE='{5}')", dto.MaChuyenBay, dto.MaHangVe, dto.GiaTien, dto.TinhTrang, dto.NgayHuy, dto.MaVe);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {

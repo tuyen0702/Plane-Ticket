@@ -25,7 +25,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("INSERT INTO TUYENBAY(MASANBAYDI, MASANBAYDEN, MASANBAYTG, THOIGIANNGHI, THOIGIANBAY) VALUES('{0}', '{1}', '{2}', '{3}', '{4}')", dto.MaTuyenBay, dto.MaSanBayDi, dto.MaSanBayDen, dto.MaSanBayTG, dto.ThoiGianNghi, dto.ThoiGianBay);
+                string sqlQuery = string.Format("INSERT INTO TUYENBAY(MATUYENBAY, MASANBAYDI, MASANBAYDEN) VALUES('{0}', '{1}', '{2}')", dto.MaTuyenBay, dto.MaSanBayDi, dto.MaSanBayDen);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -46,7 +46,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("UPDATE TUYENBAY SET MASANBAYDI='{0}', MASANBAYDEN='{1}', MASANBAYTG='{2}', THOIGIANNGHI='{3}', THOIGIANBAY='{4}')", dto, dto.MaSanBayDi, dto.MaSanBayDen, dto.MaSanBayTG, dto.ThoiGianNghi, dto.ThoiGianBay);
+                string sqlQuery = string.Format("UPDATE TUYENBAY SET MASANBAYDI='{0}', MASANBAYDEN='{1}', MATUYENBAY='{2}')", dto.MaSanBayDi, dto.MaSanBayDen, dto.MaTuyenBay);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {

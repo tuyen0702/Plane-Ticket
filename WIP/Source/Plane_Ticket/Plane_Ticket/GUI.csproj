@@ -94,6 +94,42 @@
     <Compile Include="frmThemChuyenBay.Designer.cs">
       <DependentUpon>frmThemChuyenBay.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThemDonGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemDonGia.Designer.cs">
+      <DependentUpon>frmThemDonGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemHangVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemHangVe.Designer.cs">
+      <DependentUpon>frmThemHangVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemKhachHang.Designer.cs">
+      <DependentUpon>frmThemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemMayBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemMayBay.Designer.cs">
+      <DependentUpon>frmThemMayBay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemSanBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemSanBay.Designer.cs">
+      <DependentUpon>frmThemSanBay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemSanBayTG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemSanBayTG.Designer.cs">
+      <DependentUpon>frmThemSanBayTG.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThemTuyenBay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +191,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemChuyenBay.resx">
       <DependentUpon>frmThemChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemDonGia.resx">
+      <DependentUpon>frmThemDonGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemHangVe.resx">
+      <DependentUpon>frmThemHangVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemKhachHang.resx">
+      <DependentUpon>frmThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemMayBay.resx">
+      <DependentUpon>frmThemMayBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemSanBay.resx">
+      <DependentUpon>frmThemSanBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemSanBayTG.resx">
+      <DependentUpon>frmThemSanBayTG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemTuyenBay.resx">
       <DependentUpon>frmThemTuyenBay.cs</DependentUpon>

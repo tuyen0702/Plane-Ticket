@@ -25,7 +25,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("INSERT INTO GIAODICH(MAVE, MAKHACHHANG, MANHANVIEN, NGAYGIOGD, HINHTUCGD, TINHTRANGGD) VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", dto.MaVe, dto.MaNhanVien, dto.MaNhanVien, dto.NgayGioGD, dto.HinhThucTT, dto.TinhTrangTT);
+                string sqlQuery = string.Format("INSERT INTO GIAODICH(MAVE, MAKHACHHANG, MANHANVIEN, NGAYGIOGD, HINHTUCGD, TINHTRANGGD) VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", dto.MaVe,  dto.MaKhachHang, dto.MaNhanVien, dto.NgayGioGD, dto.HinhThucTT, dto.TinhTrangTT);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -46,7 +46,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("UPDATE GIAODICH SET MAVE='{0}', MAKHACHHANG='{1}', MANHANVIEN='{2}', NGAYGIOGD='{3}', HINHTHUCGD='{4}', TINHTRANGGD='{5)", dto.MaVe, dto.MaKhachHang, dto.MaNhanVien, dto.NgayGioGD, dto.HinhThucTT, dto.TinhTrangTT);
+                string sqlQuery = string.Format("UPDATE GIAODICH SET MAVE='{0}', MAKHACHHANG='{1}', NGAYGIOGD='{2}', HINHTHUCGD='{3}', TINHTRANGGD='{4}', MANHANVIEN='{5}')", dto.MaVe, dto.MaKhachHang, dto.NgayGioGD, dto.HinhThucTT, dto.TinhTrangTT, dto.MaNhanVien);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
@@ -68,7 +68,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("DELETE FROM GIAODICH WHERE MAGIAODICH='{0}'", dto.MaGiaoDich);
+                string sqlQuery = string.Format("DELETE FROM GIAODICH WHERE MAVE='{0}' AMD MAKHACHHANG='{1}'", dto.MaVe, dto.MaKhachHang);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {

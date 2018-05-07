@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    class BUS_VeChuyenBay
+    public class BUS_VeChuyenBay
     {
         DAL_VeChuyenBay dal = new DAL_VeChuyenBay();
 

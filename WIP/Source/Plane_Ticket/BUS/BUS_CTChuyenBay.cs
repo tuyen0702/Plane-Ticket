@@ -9,26 +9,31 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class BUS_HangHangKhong
+    public class BUS_CTChuyenBay
     {
-        DAL_HangHangKhong dal = new DAL_HangHangKhong();
+        DAL_CTChuyenBay dal = new DAL_CTChuyenBay();
 
         public DataTable Get()
         {
             return dal.Get();
         }
-        public bool Add(DTO_HangHangKhong dto)
+        public bool Add(DTO_CTChuyenBay dto)
         {
             return dal.Add(dto);
         }
-        public bool Update(DTO_HangHangKhong dto)
+        public bool Update(DTO_CTChuyenBay dto)
         {
             return dal.Update(dto);
         }
 
-        public bool Delete(DTO_HangHangKhong dto)
+        public bool Delete(DTO_CTChuyenBay dto)
         {
             return dal.Delete(dto);
+        }
+
+        public DataTable TimSanBayTGCuaChuyenBay(string maChuyenBay)
+        {
+            return dal.TimSanBayTGCuaChuyenBay(maChuyenBay);
         }
     }
 }

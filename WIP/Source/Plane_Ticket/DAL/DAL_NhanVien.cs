@@ -25,7 +25,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("INSERT INTO NHANVIEN(TENNHANVIEN) VALUES('{0}')", dto.TenNhanVien);
+                string sqlQuery = string.Format("INSERT INTO NHANVIEN(MANHANVIEN, TENNHANVIEN) VALUES('{0}', '{1}')", dto.MaNhanVien, dto.TenNhanVien);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -46,7 +46,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("UPDATE NHANVIEN SET TENNHANVIEN='{0}')", dto.TenNhanVien);
+                string sqlQuery = string.Format("UPDATE NHANVIEN SET TENNHANVIEN='{0}', MANHANVIEN='{1}')", dto.TenNhanVien, dto.MaNhanVien);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {

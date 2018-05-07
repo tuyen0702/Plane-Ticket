@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,12 +43,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO_ChuyenBay.cs" />
+    <Compile Include="DTO_CTChuyenBay.cs" />
+    <Compile Include="DTO_CTDoanhThuThang.cs" />
+    <Compile Include="DTO_DoanhThuNam.cs" />
+    <Compile Include="DTO_DoanhThuThang.cs" />
+    <Compile Include="DTO_DonGia.cs" />
     <Compile Include="DTO_GiaoDich.cs" />
-    <Compile Include="DTO_HangHangKhong.cs" />
+    <Compile Include="DTO_HangVe.cs" />
     <Compile Include="DTO_KhachHang.cs" />
     <Compile Include="DTO_MayBay.cs" />
     <Compile Include="DTO_NhanVien.cs" />
     <Compile Include="DTO_SanBay.cs" />
+    <Compile Include="DTO_ThamSo.cs" />
+    <Compile Include="DTO_TinhTrangVe.cs" />
     <Compile Include="DTO_TuyenBay.cs" />
     <Compile Include="DTO_VeChuyenBay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

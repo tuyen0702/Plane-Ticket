@@ -41,12 +41,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL_ChuyenBay.cs" />
+    <Compile Include="DAL_CTChuyenBay.cs" />
+    <Compile Include="DAL_CTDoanhThuThang.cs" />
+    <Compile Include="DAL_DoanhThuNam.cs" />
+    <Compile Include="DAL_DoanhThuThang.cs" />
+    <Compile Include="DAL_DonGia.cs" />
     <Compile Include="DAL_GiaoDich.cs" />
-    <Compile Include="DAL_HangHangKhong.cs" />
+    <Compile Include="DAL_HangVe.cs" />
     <Compile Include="DAL_KhachHang.cs" />
     <Compile Include="DAL_MayBay.cs" />
     <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_SanBay.cs" />
+    <Compile Include="DAL_ThamSo.cs" />
+    <Compile Include="DAL_TinhTrangVe.cs" />
     <Compile Include="DAL_TuyenBay.cs" />
     <Compile Include="DAL_VeChuyenBay.cs" />
     <Compile Include="DBConnect.cs" />

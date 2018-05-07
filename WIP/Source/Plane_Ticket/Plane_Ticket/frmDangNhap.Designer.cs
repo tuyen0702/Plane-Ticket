@@ -56,6 +56,7 @@
             this.btnDangNhap.TabIndex = 20;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // label66
             // 
@@ -122,6 +123,7 @@
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Đăng nhập";
+            this.Shown += new System.EventHandler(this.frmDangNhap_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

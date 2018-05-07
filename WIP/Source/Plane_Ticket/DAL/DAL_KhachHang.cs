@@ -25,7 +25,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("INSERT INTO KHACHHANG(TENKHACHHANG, CMND, SDT) VALUES('{0}', '{1}', '{2}')", dto.TenKhachHang, dto.CMND1, dto.SDT1);
+                string sqlQuery = string.Format("INSERT INTO KHACHHANG(MAKHACHHANG, TENKHACHHANG, CMND, SDT) VALUES('{0}', N'{1}', '{2}', '{3}')", dto.MaKhachHang, dto.TenKhachHang, dto.CMND1, dto.SDT1);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -46,7 +46,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("UPDATE KHACHHANG SET TENKHACHHANG='{0}', CMND='{1}', SDT='{2}')", dto.TenKhachHang, dto.CMND1, dto.SDT1);
+                string sqlQuery = string.Format("UPDATE KHACHHANG SET TENKHACHHANG=N'{0}', CMND='{1}', SDT='{2}', MAKHACHHANG='{3}')", dto.TenKhachHang, dto.CMND1, dto.SDT1, dto.MaKhachHang);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
@@ -84,6 +84,14 @@ namespace DAL
                 _con.Close();
             }
             return false;
+        }
+        public DataTable GetOfMaKhachHang(string maKhachHang)
+        {
+            DataTable dt = new DataTable();
+            string sqlQuery = string.Format("SELECT * FROM KHACHHANG WHERE MAKHACHHANG='{0}'", maKhachHang);
+            SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
+            da.Fill(dt);
+            return dt;
         }
     }
 }

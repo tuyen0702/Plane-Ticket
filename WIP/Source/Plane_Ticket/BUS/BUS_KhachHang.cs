@@ -30,5 +30,10 @@ namespace BUS
         {
             return dal.Delete(dto);
         }
+
+        public DataTable GetOfMaKhachHang(string maKhachHang)
+        {
+            return dal.GetOfMaKhachHang(maKhachHang);
+        }
     }
 }

@@ -12,24 +12,24 @@ namespace DTO
         private string maTuyenBay;
         private string maMayBay;
         private DateTime thoiGianKhoiHanh;
-        private DateTime thoiGianKetThuc;
+        private DateTime thoiGianBay;
         public DTO_ChuyenBay()
         {
         }
-        public DTO_ChuyenBay(string maTuyenBay, string maMayBay, DateTime thoiGianKhoiHanh, DateTime thoiGianKetThuc)
+        public DTO_ChuyenBay(string maChuyenBay, string maTuyenBay, string maMayBay, DateTime thoiGianKhoiHanh, DateTime thoiGianKetThuc)
         {
-            
+            this.maChuyenBay = maChuyenBay;
             this.maTuyenBay = maTuyenBay;
             this.maMayBay = maMayBay;
             this.thoiGianKhoiHanh = thoiGianKhoiHanh;
-            this.thoiGianKetThuc = thoiGianKetThuc;
+            this.ThoiGianBay = thoiGianKetThuc;
         }
 
        
         public string MaTuyenBay { get => maTuyenBay; set => maTuyenBay = value; }
         public string MaMayBay { get => maMayBay; set => maMayBay = value; }
         public DateTime ThoiGianKhoiHanh { get => thoiGianKhoiHanh; set => thoiGianKhoiHanh = value; }
-        public DateTime ThoiGianKetThuc { get => thoiGianKetThuc; set => thoiGianKetThuc = value; }
         public string MaChuyenBay { get => maChuyenBay; set => maChuyenBay = value; }
+        public DateTime ThoiGianBay { get => thoiGianBay; set => thoiGianBay = value; }
     }
 }

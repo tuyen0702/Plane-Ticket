@@ -25,7 +25,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("INSERT INTO MAYBAY(TENMAYBAY, MAHHK, SOLUONGGHEH1, SOLUONGGHEH2) VALUES('{0}', '{1}', '{2}', '{3}')", dto.TenMayBay, dto.MaHHK, dto.SoLuongGheH1, dto.SoLuongGheH2);
+                string sqlQuery = string.Format("INSERT INTO MAYBAY(TENMAYBAY, SOLUONGGHE, MAMAYBAY) VALUES('{0}', '{1}', '{2}')", dto.TenMayBay, dto.SoLuongGhe, dto.MaMayBay);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -46,7 +46,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("UPDATE MAYBAY SET TENMAYBAY='{0}', MAHHK='{1}', SOLUONGGHEH1='{2}', SOLUONGGHEH2='{3}')", dto.TenMayBay, dto.MaHHK, dto.SoLuongGheH1, dto.SoLuongGheH2);
+                string sqlQuery = string.Format("UPDATE MAYBAY SET TENMAYBAY='{0}', SOLUONGGHE='{1}', MAMAYBAY='{2}')", dto.TenMayBay, dto.SoLuongGhe, dto.MaMayBay);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {

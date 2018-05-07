@@ -26,10 +26,13 @@ namespace BUS
         {
             return dal.Update(dto);
         }
-
         public bool Delete(DTO_ChuyenBay dto)
         {
             return dal.Delete(dto);
+        }
+        public DataTable GetOfMaChuyenBay(string maChuyenBay)
+        {
+            return dal.GetOfMaChuyenBay(maChuyenBay);
         }
     }
 }
