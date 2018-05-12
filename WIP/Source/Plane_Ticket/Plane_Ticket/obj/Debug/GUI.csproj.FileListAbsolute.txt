@@ -58,3 +58,4 @@ E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmQuanLyChuyenBay.resources
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmQuanLyDonGia.resources
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmQuanLyKhachHang.resources
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmQuanLyNhanVien.resources

@@ -17,6 +17,10 @@ namespace BUS
         {
             return dal.Get();
         }
+        public DataTable GetForDisplay()
+        {
+            return dal.GetForDisplay();
+        }
         public bool Add(DTO_NhanVien dto)
         {
             return dal.Add(dto);
@@ -26,9 +30,17 @@ namespace BUS
             return dal.Update(dto);
         }
 
-        public bool Delete(DTO_NhanVien dto)
+        public bool Delete(string str)
         {
-            return dal.Delete(dto);
+            return dal.Delete(str);
+        }
+        public DataTable SearchOfMaNhanVien(string str)
+        {
+            return dal.SearchOfMaNhanVien(str);
+        }
+        public DataTable GetOfUsernameAndPassword(string username, string password)
+        {
+            return dal.GetOfUsernameAndPassword(username, password);
         }
     }
 }

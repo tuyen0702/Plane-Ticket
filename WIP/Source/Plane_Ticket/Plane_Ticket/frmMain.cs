@@ -13,13 +13,21 @@ namespace Plane_Ticket
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        #region Properties
+
+        #endregion
+
+        #region Initializes
+        public frmMain(DataRow row)
         {
             InitializeComponent();
-            frmDangNhap frm = new frmDangNhap();
-            CreateTabPage(frm);
+            KhoiTaoGiaoDien(row);
         }
+        #endregion
 
+        #region Methods
+
+        #region CreateMenuAndToolStrip
         private bool CheckExistForm(Form frm)
         {
             foreach(TabPage t in tabCtrlMain.TabPages)
@@ -27,12 +35,10 @@ namespace Plane_Ticket
                 if (frm.Text == t.Text) 
                 {
                     return true;
-                    break;
                 }
             }
             return false;
         }
-
         private void ActiveChildForm(Form frm)
         {
             foreach (TabPage t in tabCtrlMain.TabPages)
@@ -44,13 +50,10 @@ namespace Plane_Ticket
                 }
             }
         }
-
         private TabPage CreateTabPage(Form frm)
         {
             TabPage tabPage = new TabPage { Text = frm.Text };
             tabPage.BorderStyle = BorderStyle.None;
-            tabPage.BackgroundImage = Properties.Resources.background;
-            tabPage.BackgroundImageLayout = ImageLayout.Stretch;
             tabCtrlMain.TabPages.Add(tabPage);
             tabCtrlMain.SelectedTab = tabPage;
             frm.TopLevel = false;
@@ -216,11 +219,63 @@ namespace Plane_Ticket
                 ActiveChildForm(frm);
             }
         }
-
         private void themNhanVienToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmQuanLyNhanVien frm = new frmQuanLyNhanVien();
+            if (!CheckExistForm(frm))
+            {
+                CreateTabPage(frm);
+            }
+            else
+            {
+                ActiveChildForm(frm);
+            }
         }
+        private void toolStripBtnDangXuat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đăng xuất không?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                Form frm = new frmDangNhap();
+                frm.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đăng xuất không?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                Form frm = new frmDangNhap();
+                frm.ShowDialog();
+                this.Close();
+            }
+        }
+        #endregion
+
+        private void KhoiTaoGiaoDien(DataRow row)
+        {
+            lbMaNhanVien.Text = "Mã nhân viên: " + row[2].ToString();
+            lbUsername.Text = "Username: " + row[0].ToString();
+            int type = Convert.ToInt32(row[3].ToString());
+            if (type == 0)
+            {
+                mstrMain.Enabled = true;
+                toolStripMain.Enabled = true;
+            }
+            if(type==1)
+            {
+                mstrMain.Enabled = true;
+                toolStripMain.Enabled = true;
+                QuanLyThongTinToolStripMenuItem.Enabled = false;
+                baoCaoToolStripMenuItem.Enabled = false;
+            }
+        }
+
+        #endregion
+
+        
     }
 
 }
