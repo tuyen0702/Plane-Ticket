@@ -216,6 +216,11 @@ namespace Plane_Ticket
                 ActiveChildForm(frm);
             }
         }
+
+        private void themNhanVienToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

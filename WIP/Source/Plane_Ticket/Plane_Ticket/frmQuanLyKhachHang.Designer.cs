@@ -47,17 +47,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.gbxDSTuyenBay = new System.Windows.Forms.GroupBox();
-            this.dtgvTuyenBay = new System.Windows.Forms.DataGridView();
+            this.gbxDSKhachHang = new System.Windows.Forms.GroupBox();
+            this.dtgvKhachHang = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.gbxTTTuyenBay = new System.Windows.Forms.GroupBox();
+            this.gbxTTKhachHang = new System.Windows.Forms.GroupBox();
             this.gbxThaoTac.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.gbxDSTuyenBay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvTuyenBay)).BeginInit();
-            this.gbxTTTuyenBay.SuspendLayout();
+            this.gbxDSKhachHang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvKhachHang)).BeginInit();
+            this.gbxTTKhachHang.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtMaKhachHang
@@ -161,6 +161,7 @@
             this.btnThem.TabIndex = 42;
             this.btnThem.UseCompatibleTextRendering = true;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label5
             // 
@@ -204,6 +205,7 @@
             this.btnSua.Size = new System.Drawing.Size(55, 50);
             this.btnSua.TabIndex = 41;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -217,6 +219,7 @@
             this.btnXoa.Size = new System.Drawing.Size(55, 50);
             this.btnXoa.TabIndex = 41;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // panel1
             // 
@@ -253,28 +256,30 @@
             this.btnThoat.Size = new System.Drawing.Size(55, 50);
             this.btnThoat.TabIndex = 40;
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // gbxDSTuyenBay
+            // gbxDSKhachHang
             // 
-            this.gbxDSTuyenBay.Controls.Add(this.dtgvTuyenBay);
-            this.gbxDSTuyenBay.Controls.Add(this.label7);
-            this.gbxDSTuyenBay.Controls.Add(this.txtTimKiem);
-            this.gbxDSTuyenBay.Controls.Add(this.btnTimKiem);
-            this.gbxDSTuyenBay.Location = new System.Drawing.Point(398, 64);
-            this.gbxDSTuyenBay.Name = "gbxDSTuyenBay";
-            this.gbxDSTuyenBay.Size = new System.Drawing.Size(854, 602);
-            this.gbxDSTuyenBay.TabIndex = 68;
-            this.gbxDSTuyenBay.TabStop = false;
-            this.gbxDSTuyenBay.Text = "Danh sách khách hàng";
+            this.gbxDSKhachHang.Controls.Add(this.dtgvKhachHang);
+            this.gbxDSKhachHang.Controls.Add(this.label7);
+            this.gbxDSKhachHang.Controls.Add(this.txtTimKiem);
+            this.gbxDSKhachHang.Controls.Add(this.btnTimKiem);
+            this.gbxDSKhachHang.Location = new System.Drawing.Point(398, 64);
+            this.gbxDSKhachHang.Name = "gbxDSKhachHang";
+            this.gbxDSKhachHang.Size = new System.Drawing.Size(854, 602);
+            this.gbxDSKhachHang.TabIndex = 68;
+            this.gbxDSKhachHang.TabStop = false;
+            this.gbxDSKhachHang.Text = "Danh sách khách hàng";
             // 
-            // dtgvTuyenBay
+            // dtgvKhachHang
             // 
-            this.dtgvTuyenBay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvTuyenBay.Location = new System.Drawing.Point(6, 63);
-            this.dtgvTuyenBay.Name = "dtgvTuyenBay";
-            this.dtgvTuyenBay.RowTemplate.Height = 24;
-            this.dtgvTuyenBay.Size = new System.Drawing.Size(842, 533);
-            this.dtgvTuyenBay.TabIndex = 47;
+            this.dtgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvKhachHang.Location = new System.Drawing.Point(6, 63);
+            this.dtgvKhachHang.Name = "dtgvKhachHang";
+            this.dtgvKhachHang.RowTemplate.Height = 24;
+            this.dtgvKhachHang.Size = new System.Drawing.Size(842, 533);
+            this.dtgvKhachHang.TabIndex = 47;
+            this.dtgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvKhachHang_CellClick);
             // 
             // label7
             // 
@@ -306,23 +311,24 @@
             this.btnTimKiem.Size = new System.Drawing.Size(33, 30);
             this.btnTimKiem.TabIndex = 40;
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // gbxTTTuyenBay
+            // gbxTTKhachHang
             // 
-            this.gbxTTTuyenBay.Controls.Add(this.txtCMND);
-            this.gbxTTTuyenBay.Controls.Add(this.txtMaKhachHang);
-            this.gbxTTTuyenBay.Controls.Add(this.label3);
-            this.gbxTTTuyenBay.Controls.Add(this.label20);
-            this.gbxTTTuyenBay.Controls.Add(this.label19);
-            this.gbxTTTuyenBay.Controls.Add(this.txtSDT);
-            this.gbxTTTuyenBay.Controls.Add(this.label2);
-            this.gbxTTTuyenBay.Controls.Add(this.txtTenKhachHang);
-            this.gbxTTTuyenBay.Location = new System.Drawing.Point(12, 64);
-            this.gbxTTTuyenBay.Name = "gbxTTTuyenBay";
-            this.gbxTTTuyenBay.Size = new System.Drawing.Size(380, 495);
-            this.gbxTTTuyenBay.TabIndex = 67;
-            this.gbxTTTuyenBay.TabStop = false;
-            this.gbxTTTuyenBay.Text = "Thông tin khách hàng";
+            this.gbxTTKhachHang.Controls.Add(this.txtCMND);
+            this.gbxTTKhachHang.Controls.Add(this.txtMaKhachHang);
+            this.gbxTTKhachHang.Controls.Add(this.label3);
+            this.gbxTTKhachHang.Controls.Add(this.label20);
+            this.gbxTTKhachHang.Controls.Add(this.label19);
+            this.gbxTTKhachHang.Controls.Add(this.txtSDT);
+            this.gbxTTKhachHang.Controls.Add(this.label2);
+            this.gbxTTKhachHang.Controls.Add(this.txtTenKhachHang);
+            this.gbxTTKhachHang.Location = new System.Drawing.Point(12, 64);
+            this.gbxTTKhachHang.Name = "gbxTTKhachHang";
+            this.gbxTTKhachHang.Size = new System.Drawing.Size(380, 495);
+            this.gbxTTKhachHang.TabIndex = 67;
+            this.gbxTTKhachHang.TabStop = false;
+            this.gbxTTKhachHang.Text = "Thông tin khách hàng";
             // 
             // frmQuanLyKhachHang
             // 
@@ -331,19 +337,19 @@
             this.ClientSize = new System.Drawing.Size(1264, 678);
             this.Controls.Add(this.gbxThaoTac);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.gbxDSTuyenBay);
-            this.Controls.Add(this.gbxTTTuyenBay);
+            this.Controls.Add(this.gbxDSKhachHang);
+            this.Controls.Add(this.gbxTTKhachHang);
             this.Name = "frmQuanLyKhachHang";
             this.Text = "Thêm khách hàng";
             this.gbxThaoTac.ResumeLayout(false);
             this.gbxThaoTac.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.gbxDSTuyenBay.ResumeLayout(false);
-            this.gbxDSTuyenBay.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvTuyenBay)).EndInit();
-            this.gbxTTTuyenBay.ResumeLayout(false);
-            this.gbxTTTuyenBay.PerformLayout();
+            this.gbxDSKhachHang.ResumeLayout(false);
+            this.gbxDSKhachHang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvKhachHang)).EndInit();
+            this.gbxTTKhachHang.ResumeLayout(false);
+            this.gbxTTKhachHang.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -367,11 +373,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.GroupBox gbxDSTuyenBay;
-        private System.Windows.Forms.DataGridView dtgvTuyenBay;
+        private System.Windows.Forms.GroupBox gbxDSKhachHang;
+        private System.Windows.Forms.DataGridView dtgvKhachHang;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.GroupBox gbxTTTuyenBay;
+        private System.Windows.Forms.GroupBox gbxTTKhachHang;
     }
 }

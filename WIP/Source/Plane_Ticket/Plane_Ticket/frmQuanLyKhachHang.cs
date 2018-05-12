@@ -30,9 +30,9 @@ namespace Plane_Ticket
 
         #region Methods
 
-        private void btnTaoLai_Click(object sender, EventArgs e)
+        private void TaoLai()
         {
-            TuDongTaoMaKhachHang();
+            TaoBangDSKhachHang();
             txtTenKhachHang.Clear();
             txtCMND.Clear();
             txtSDT.Clear();
@@ -57,7 +57,7 @@ namespace Plane_Ticket
                 }
                 finally
                 {
-                    btnTaoLai_Click(sender, e);
+                    TaoLai();
                 }
             }
             else
@@ -65,38 +65,100 @@ namespace Plane_Ticket
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (txtMaKhachHang.Text.Trim() != "")
+            {
+                if (txtTenKhachHang.Text.Trim() != "" && txtCMND.Text.Trim() != "" && txtSDT.Text.Trim() != "")
+                {
+                    try
+                    {
+                        dtoKhachHang = new DTO_KhachHang(txtMaKhachHang.Text, txtTenKhachHang.Text,txtCMND.Text,txtSDT.Text);
+                        if (busKhachHang.Update(dtoKhachHang))
+                            MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else
+                            MessageBox.Show("Sửa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    catch (Exception a)
+                    {
+                        MessageBox.Show("Sửa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        TaoLai();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một hàng trong danh sách!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (txtMaKhachHang.Text.Trim() != "")
+            {
+                try
+                {
+                    if (busKhachHang.Delete(txtMaKhachHang.Text))
+                        MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                catch (Exception a)
+                {
+                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    TaoLai();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một hàng trong danh sách!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            dtgvKhachHang.DataSource = busKhachHang.SearchOfMaKhachHang(txtTimKiem.Text);
+        }
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Parent.Dispose();
         }
-        private void TuDongTaoMaKhachHang()
-        {
-            DataTable dt = busKhachHang.Get();
-            int count = dt.Rows.Count;
-            if (count == 0)
-            {
-                txtMaKhachHang.Text = "KH000" + count;
-                return;
-            }
-            string strSoKhong = "";
-            int temp = count;
-            int dem = 0;
-            while (temp > 0)
-            {
-                temp /= 10;
-                dem++;
-            }
-            for (int i = 0; i < 4 - dem; i++)
-            {
-                strSoKhong += "0";
-            }
-            txtMaKhachHang.Text = "KH" + strSoKhong + count;
-        }
         private void KhoiTaoGiaoDien()
         {
-            TuDongTaoMaKhachHang();
-        }
+            TaoBangDSKhachHang();
 
+            AcceptButton = btnThem;
+            CancelButton = btnThoat;
+        }
+        private void TaoBangDSKhachHang()
+        {
+            DataTable dtKhachHang = busKhachHang.GetForDisplay();
+            dtgvKhachHang.DataSource = dtKhachHang;
+            dtgvKhachHang.Sort(dtgvKhachHang.Columns[0], ListSortDirection.Descending);
+            dtgvKhachHang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgvKhachHang.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+        }
+        private void dtgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+                return;
+            DataGridViewRow row = dtgvKhachHang.Rows[e.RowIndex];
+            txtMaKhachHang.Text = row.Cells[0].Value.ToString();
+            txtTenKhachHang.Text = row.Cells[1].Value.ToString();
+            txtCMND.Text = row.Cells[2].Value.ToString();
+            txtSDT.Text = row.Cells[3].Value.ToString();
+        }
         #endregion
+
+
     }
 }

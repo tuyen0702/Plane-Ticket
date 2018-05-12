@@ -17,6 +17,10 @@ namespace BUS
         {
             return dal.Get();
         }
+        public DataTable GetForDisplay()
+        {
+            return dal.GetForDisplay();
+        }
         public bool Add(DTO_KhachHang dto)
         {
             return dal.Add(dto);
@@ -25,15 +29,17 @@ namespace BUS
         {
             return dal.Update(dto);
         }
-
-        public bool Delete(DTO_KhachHang dto)
+        public bool Delete(string str)
         {
-            return dal.Delete(dto);
+            return dal.Delete(str);
         }
-
         public DataTable GetOfMaKhachHang(string maKhachHang)
         {
             return dal.GetOfMaKhachHang(maKhachHang);
+        }
+        public DataTable SearchOfMaKhachHang(string str)
+        {
+            return dal.SearchOfMaKhachHang(str);
         }
     }
 }
