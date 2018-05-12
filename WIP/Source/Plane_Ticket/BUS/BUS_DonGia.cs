@@ -17,6 +17,10 @@ namespace BUS
         {
             return dal.Get();
         }
+        public DataTable GetForDisplay()
+        {
+            return dal.GetForDisplay();
+        }
         public bool Add(DTO_DonGia dto)
         {
             return dal.Add(dto);
@@ -29,9 +33,9 @@ namespace BUS
         {
             return dal.Delete(dto);
         }
-        public DataTable GetOfMaTuyenBayAndMaHangVe(string maTuyenBay, string maHangVe)
+        public DataTable SearchOfMaTuyenBayAndMaHangVe(string maTuyenBay, string maHangVe)
         {
-            return dal.GetOfMaTuyenBayAndMaHangVe(maTuyenBay, maHangVe);
+            return dal.SearchOfMaTuyenBayAndMaHangVe(maTuyenBay, maHangVe);
         }
     }
 }

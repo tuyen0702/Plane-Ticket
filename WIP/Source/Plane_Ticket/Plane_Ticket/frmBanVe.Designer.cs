@@ -355,7 +355,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(532, 596);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnMuaVe);
@@ -387,10 +387,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboMaHanhKhach);
             this.Controls.Add(this.cboMaChuyenBay);
-            this.Location = new System.Drawing.Point(270, 0);
             this.Name = "frmBanVe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Bán vé chuyến bay";
+            this.Load += new System.EventHandler(this.frmBanVe_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

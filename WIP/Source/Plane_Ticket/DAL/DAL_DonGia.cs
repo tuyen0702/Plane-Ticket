@@ -19,7 +19,14 @@ namespace DAL
             da.Fill(dt);
             return dt;
         }
-
+        public DataTable GetForDisplay()
+        {
+            string sqlQuery = "SELECT MATUYENBAY[Mã tuyến bay], MAHANGVE[Mã hạng vé], DONGIA[Đơn giá] FROM DONGIA";
+            SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
         public bool Add(DTO_DonGia dto)
         {
             try
@@ -45,7 +52,8 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("UPDATE DONGIA SET MATUYENBAY='{0}', MAHANGVE='{1}', DONGIA='{2}')", dto.MaTuyenBay, dto.MaHangVe, dto.DonGia);
+                string sqlQuery = string.Format("UPDATE DONGIA SET DONGIA='{0}' " +
+                    "WHERE MATUYENBAY='{1}' AND MAHANGVE='{2}'", dto.DonGia, dto.MaTuyenBay, dto.MaHangVe);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
@@ -84,7 +92,7 @@ namespace DAL
             }
             return false;
         }
-        public DataTable GetOfMaTuyenBayAndMaHangVe(string maTuyenBay, string maHangVe)
+        public DataTable SearchOfMaTuyenBayAndMaHangVe(string maTuyenBay, string maHangVe)
         {
             DataTable dt = new DataTable();
             string sqlQuery = string.Format("SELECT * FROM DONGIA WHERE MATUYENBAY='{0}' AND MAHANGVE='{1}'", maTuyenBay, maHangVe);

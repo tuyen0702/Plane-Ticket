@@ -19,13 +19,21 @@ namespace DAL
             da.Fill(dt);
             return dt;
         }
-
+        public DataTable GetForDisplayOfMaChuyenBay(string str)
+        {
+            string sqlQuery = string.Format("SELECT H.TENHANGVE[Tên hạng vé], T.TONGSOGHE[Số ghế] " +
+                "FROM TINHTRANGVE T INNER JOIN HANGVE H ON T.MAHANGVE=H.MAHANGVE WHERE T.MACHUYENBAY='{0}'",str);
+            SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
         public bool Add(DTO_TinhTrangVe dto)
         {
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("INSERT INTO TINHTRANGVE(MACHUYENBAY, MAHANGVE, TONGSOGHE, SOGHETRONG) VALUES('{0}', '{1}', '{2}', '{3}')", dto.MaChuyenBay, dto.MaHangVe, dto.TongSoGhe, dto.SoGheTrong);
+                string sqlQuery = string.Format("INSERT INTO TINHTRANGVE(MACHUYENBAY, MAHANGVE, TONGSOGHE, SOGHETRONG) VALUES('{0}', '{1}', '{2}', '{3}')", dto.MaChuyenBay, dto.MaHangVe, dto.TongSoGhe, dto.TongSoGhe);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -46,7 +54,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("UPDATE TINHTRANGVE SET MACHUYENBAY='{0}', MAHANGVE='{1}', TONGSOGHE='{2}', SOGHETRONG='{3}')", dto.MaChuyenBay, dto.MaHangVe, dto.TongSoGhe, dto.SoGheTrong);
+                string sqlQuery = string.Format("UPDATE TINHTRANGVE SET TONGSOGHE='{0}' WHERE MACHUYENBAY='{1}' AND MAHANGVE='{2}'", dto.TongSoGhe, dto.MaChuyenBay, dto.MaHangVe);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {

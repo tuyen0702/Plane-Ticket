@@ -35,5 +35,9 @@ namespace BUS
         {
             return dal.TimSanBayTGCuaChuyenBay(maChuyenBay);
         }
+        public DataTable GetForDisplayOfMaChuyenBay(string str)
+        {
+            return dal.GetForDisplayOfMaChuyenBay(str);
+        }
     }
 }

@@ -17,6 +17,10 @@ namespace BUS
         {
             return dal.Get();
         }
+        public DataTable GetForDisplay()
+        {
+            return dal.GetForDisplay();
+        }
         public bool Add(DTO_MayBay dto)
         {
             return dal.Add(dto);
@@ -26,9 +30,13 @@ namespace BUS
             return dal.Update(dto);
         }
 
-        public bool Delete(DTO_MayBay dto)
+        public bool Delete(string str)
         {
-            return dal.Delete(dto);
+            return dal.Delete(str);
+        }
+        public DataTable SearchOfMaMayBay(string str)
+        {
+            return dal.SearchOfMaMayBay(str);
         }
     }
 }

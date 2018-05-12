@@ -13,7 +13,15 @@ namespace DAL
     {
         public DataTable Get()
         {
-            string sqlQuery = "SELECT* FROM HANGVE";
+            string sqlQuery = "SELECT * FROM HANGVE ";
+            SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+        public DataTable GetForDisplay()
+        {
+            string sqlQuery = "SELECT MAHANGVE[Mã hạng vé], TENHANGVE[Tên hạng vé] FROM HANGVE ";
             SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -25,7 +33,8 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("INSERT INTO HANGVE(MAHANGVE, TENHANGVE) VALUES('{0}', N'{1}')", dto.MaHangVe, dto.TenHangVe);
+                string maHangVe = TaoMaHangVe();
+                string sqlQuery = string.Format("INSERT INTO HANGVE(MAHANGVE, TENHANGVE) VALUES('{0}', N'{1}')", maHangVe, dto.TenHangVe);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -40,13 +49,12 @@ namespace DAL
             }
             return false;
         }
-
         public bool Update(DTO_HangVe dto)
         {
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("UPDATE HANGVE SET MAHANGVE='{0}', TENHANGVE='{1}')", dto.MaHangVe, dto.TenHangVe);
+                string sqlQuery = string.Format("UPDATE HANGVE SET TENHANGVE=N'{0}' WHERE MAHANGVE='{1}'", dto.TenHangVe, dto.MaHangVe);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
@@ -63,12 +71,12 @@ namespace DAL
             }
             return false;
         }
-        public bool Delete(DTO_HangVe dto)
+        public bool Delete(string str)
         {
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("DELETE FROM HANGVE WHERE MAHANGVE='{0}'", dto.MaHangVe);
+                string sqlQuery = string.Format("DELETE FROM HANGVE WHERE MAHANGVE='{0}'", str);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
@@ -84,6 +92,45 @@ namespace DAL
                 _con.Close();
             }
             return false;
+        }
+        public DataTable GetAndSortDesc()
+        {
+            string sqlQuery = "SELECT * FROM HANGVE ORDER BY MAHANGVE DESC";
+            SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+        private string TaoMaHangVe()
+        {
+            DataTable dt = this.GetAndSortDesc();
+            if (dt.Rows.Count == 0)
+                return "HV000" + dt.Rows.Count;
+            DataRow row = dt.Rows[0];
+            string maTuyenBay = row[0].ToString().Substring(2);
+            int count = int.Parse(maTuyenBay) + 1;
+            int temp = count;
+            string strSoKhong = "";
+            int dem = 0;
+            while (temp > 0)
+            {
+                temp /= 10;
+                dem++;
+            }
+            for (int i = 0; i < 4 - dem; i++)
+            {
+                strSoKhong += "0";
+            }
+            return "HV" + strSoKhong + count;
+        }
+        public DataTable SearchOfMaHangVe(string str)
+        {
+            string sqlQuery = string.Format("SELECT MAHANGVE[Mã hạng vé], TENHANGVE[Tên hạng vé] FROM HANGVE " +
+                "WHERE MAHANGVE LIKE('%{0}%')", str);
+            SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
         }
     }
 }

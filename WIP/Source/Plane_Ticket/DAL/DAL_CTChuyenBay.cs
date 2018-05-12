@@ -19,13 +19,22 @@ namespace DAL
             da.Fill(dt);
             return dt;
         }
-
+        public DataTable GetForDisplayOfMaChuyenBay(string str)
+        {
+            string sqlQuery = string.Format("SELECT S.TENSANBAY[Tên sân bay], " +
+                "C.THOIGIANDUNG[Thời gian dừng],C.GHICHU[Ghi chú] FROM CTCHUYENBAY C " +
+                "INNER JOIN SANBAY S ON C.MASANBAYTG=S.MASANBAY WHERE C.MACHUYENBAY='{0}'", str);
+            SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
         public bool Add(DTO_CTChuyenBay dto)
         {
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("INSERT INTO CTCHUYENBAY(MACHUYENBAY, MASANBAYTG, THOIGIANDUNG, GHICHU) VALUES('{0}', '{1}', '{2}', '{3}')", dto.MaChuyenBay, dto.MaSanBayTG, dto.ThoiGianDung, dto.GhiChu);
+                string sqlQuery = string.Format("INSERT INTO CTCHUYENBAY(MACHUYENBAY, MASANBAYTG, THOIGIANDUNG, GHICHU) VALUES('{0}', '{1}', '{2}', N'{3}')", dto.MaChuyenBay, dto.MaSanBayTG, dto.ThoiGianDung, dto.GhiChu);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -46,7 +55,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("UPDATE CTCHUYENBAY SET MACHUYENBAY='{0}', MASANBAYTG='{1}', THOIGIANDUNG='{2}', GHICHU='{3}')", dto.MaChuyenBay, dto.MaSanBayTG, dto.ThoiGianDung, dto.GhiChu);
+                string sqlQuery = string.Format("UPDATE CTCHUYENBAY SET THOIGIANDUNG='{0}', GHICHU=N'{1}' WHERE MACHUYENBAY='{2}' AND MASANBAYTG='{3}'", dto.ThoiGianDung, dto.GhiChu, dto.MaChuyenBay, dto.MaSanBayTG);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {

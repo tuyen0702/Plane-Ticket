@@ -17,6 +17,10 @@ namespace BUS
         {
             return dal.Get();
         }
+        public DataTable GetForDisplayOfMaChuyenBay(string str)
+        {
+            return dal.GetForDisplayOfMaChuyenBay(str);
+        }
         public bool Add(DTO_TinhTrangVe dto)
         {
             return dal.Add(dto);

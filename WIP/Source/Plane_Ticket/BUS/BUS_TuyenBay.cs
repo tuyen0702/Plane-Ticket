@@ -17,6 +17,13 @@ namespace BUS
         {
             return dal.Get();
         }
+        public DataTable GetForDisplay()
+        {
+            return dal.GetForDisplay();
+        }
+        public DataTable GetForDSTuyenBay()
+        {
+            return dal.GetForDSTuyenBay();        }
         public bool Add(DTO_TuyenBay dto)
         {
             return dal.Add(dto);
@@ -26,9 +33,21 @@ namespace BUS
             return dal.Update(dto);
         }
 
-        public bool Delete(DTO_TuyenBay dto)
+        public bool Delete(string str)
         {
-            return dal.Delete(dto);
+            return dal.Delete(str);
+        }
+        public DataTable SearchOfMaTuyenBay(string maTuyenBay)
+        {
+            return dal.SearchOfMaTuyenBay(maTuyenBay);
+        }
+        public DataTable GetOfMaTuyenBay(string str)
+        {
+            return dal.GetOfMaTuyenBay(str);
+        }
+        public DataTable GetOfMaSanBay(string maSBDi, string maSBDen)
+        {
+            return dal.GetOfMaSanBay(maSBDi, maSBDen);
         }
     }
 }

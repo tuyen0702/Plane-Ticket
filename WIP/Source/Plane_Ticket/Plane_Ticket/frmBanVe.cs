@@ -132,15 +132,19 @@ namespace Plane_Ticket
         private void cboHangVe_SelectedValueChanged(object sender, EventArgs e)
         {
             BUS_DonGia busDonGia = new BUS_DonGia();
-            DataTable dtDonGia = busDonGia.GetOfMaTuyenBayAndMaHangVe(txtMaTuyenBay.Text, cboHangVe.SelectedValue.ToString());
+            DataTable dtDonGia = busDonGia.SearchOfMaTuyenBayAndMaHangVe(txtMaTuyenBay.Text, cboHangVe.SelectedValue.ToString());
 
             foreach (DataRow row in dtDonGia.Rows)
             {
                 txtGiaTien.Text = row["DONGIA"].ToString();
             }
         }
+
         #endregion
 
+        private void frmBanVe_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -53,10 +53,9 @@ namespace Plane_Ticket
             tabPage.BackgroundImageLayout = ImageLayout.Stretch;
             tabCtrlMain.TabPages.Add(tabPage);
             tabCtrlMain.SelectedTab = tabPage;
-            frm.SetDesktopLocation(tabCtrlMain.Width / 2 - frm.Width / 2, tabCtrlMain.Height / 2 - frm.Height / 2);
             frm.TopLevel = false;
             frm.Parent = tabPage;
-            frm.BackColor = Color.LightSkyBlue;
+            frm.BackColor = Color.White;
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.Show();
             return tabPage;
@@ -87,7 +86,7 @@ namespace Plane_Ticket
         }
         private void themTuyenBayToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThemTuyenBay frm = new frmThemTuyenBay();
+            frmQuanLyTuyenBay frm = new frmQuanLyTuyenBay();
             if (!CheckExistForm(frm))
             {
                 CreateTabPage(frm);
@@ -99,67 +98,7 @@ namespace Plane_Ticket
         }
         private void themChuyenBayToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmThemChuyenBay frm = new frmThemChuyenBay();
-            if (!CheckExistForm(frm))
-            {
-                CreateTabPage(frm);
-            }
-            else
-            {
-                ActiveChildForm(frm);
-            }
-        }
-        private void thayDoiChuyenBayToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmThayDoiThongTinChuyenBay frm = new frmThayDoiThongTinChuyenBay();
-            if (!CheckExistForm(frm))
-            {
-                CreateTabPage(frm);
-            }
-            else
-            {
-                ActiveChildForm(frm);
-            }
-        }
-        private void thayDoiKhachHangToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            frmThayDoiThongTinKhachHang frm = new frmThayDoiThongTinKhachHang();
-            if (!CheckExistForm(frm))
-            {
-                CreateTabPage(frm);
-            }
-            else
-            {
-                ActiveChildForm(frm);
-            }
-        }
-        private void xoaTuyenBayToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            frmXoaThongTinTuyenBay frm = new frmXoaThongTinTuyenBay();
-            if (!CheckExistForm(frm))
-            {
-                CreateTabPage(frm);
-            }
-            else
-            {
-                ActiveChildForm(frm);
-            }
-        }
-        private void xoaChuyenBayToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            frmXoaThongTinChuyenBay frm = new frmXoaThongTinChuyenBay();
-            if (!CheckExistForm(frm))
-            {
-                CreateTabPage(frm);
-            }
-            else
-            {
-                ActiveChildForm(frm);
-            }
-        }
-        private void xoaDatVeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmXoaThongTinDatVe frm = new frmXoaThongTinDatVe();
+            frmQuanLyChuyenBay frm = new frmQuanLyChuyenBay();
             if (!CheckExistForm(frm))
             {
                 CreateTabPage(frm);
@@ -219,7 +158,7 @@ namespace Plane_Ticket
         }
         private void themSanBayToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThemSanBay frm = new frmThemSanBay();
+            frmQuanLySanBay frm = new frmQuanLySanBay();
             if (!CheckExistForm(frm))
             {
                 CreateTabPage(frm);
@@ -231,19 +170,7 @@ namespace Plane_Ticket
         }
         private void themMayBayToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThemMayBay frm = new frmThemMayBay();
-            if (!CheckExistForm(frm))
-            {
-                CreateTabPage(frm);
-            }
-            else
-            {
-                ActiveChildForm(frm);
-            }
-        }
-        private void themSanBayTrungGianToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmThemSanBayTG frm = new frmThemSanBayTG();
+            frmQuanLyMayBay frm = new frmQuanLyMayBay();
             if (!CheckExistForm(frm))
             {
                 CreateTabPage(frm);
@@ -255,7 +182,7 @@ namespace Plane_Ticket
         }
         private void themHangVeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThemHangVe frm = new frmThemHangVe();
+            frmQuanLyHangVe frm = new frmQuanLyHangVe();
             if (!CheckExistForm(frm))
             {
                 CreateTabPage(frm);
@@ -267,7 +194,7 @@ namespace Plane_Ticket
         }
         private void themKhachHangToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThemKhachHang frm = new frmThemKhachHang();
+            frmQuanLyKhachHang frm = new frmQuanLyKhachHang();
             if (!CheckExistForm(frm))
             {
                 CreateTabPage(frm);
@@ -279,7 +206,7 @@ namespace Plane_Ticket
         }
         private void themDonGiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThemDonGia frm = new frmThemDonGia();
+            frmQuanLyDonGia frm = new frmQuanLyDonGia();
             if (!CheckExistForm(frm))
             {
                 CreateTabPage(frm);

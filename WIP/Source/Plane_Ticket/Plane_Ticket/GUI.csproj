@@ -76,65 +76,47 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThayDoiThongTinChuyenBay.cs">
+    <Compile Include="frmQuanLyChuyenBay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThayDoiThongTinChuyenBay.Designer.cs">
-      <DependentUpon>frmThayDoiThongTinChuyenBay.cs</DependentUpon>
+    <Compile Include="frmQuanLyChuyenBay.Designer.cs">
+      <DependentUpon>frmQuanLyChuyenBay.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThayDoiThongTinKhachHang.cs">
+    <Compile Include="frmQuanLyDonGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThayDoiThongTinKhachHang.Designer.cs">
-      <DependentUpon>frmThayDoiThongTinKhachHang.cs</DependentUpon>
+    <Compile Include="frmQuanLyDonGia.Designer.cs">
+      <DependentUpon>frmQuanLyDonGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThemChuyenBay.cs">
+    <Compile Include="frmQuanLyHangVe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThemChuyenBay.Designer.cs">
-      <DependentUpon>frmThemChuyenBay.cs</DependentUpon>
+    <Compile Include="frmQuanLyHangVe.Designer.cs">
+      <DependentUpon>frmQuanLyHangVe.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThemDonGia.cs">
+    <Compile Include="frmQuanLyKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThemDonGia.Designer.cs">
-      <DependentUpon>frmThemDonGia.cs</DependentUpon>
+    <Compile Include="frmQuanLyKhachHang.Designer.cs">
+      <DependentUpon>frmQuanLyKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThemHangVe.cs">
+    <Compile Include="frmQuanLyMayBay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThemHangVe.Designer.cs">
-      <DependentUpon>frmThemHangVe.cs</DependentUpon>
+    <Compile Include="frmQuanLyMayBay.Designer.cs">
+      <DependentUpon>frmQuanLyMayBay.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThemKhachHang.cs">
+    <Compile Include="frmQuanLySanBay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThemKhachHang.Designer.cs">
-      <DependentUpon>frmThemKhachHang.cs</DependentUpon>
+    <Compile Include="frmQuanLySanBay.Designer.cs">
+      <DependentUpon>frmQuanLySanBay.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThemMayBay.cs">
+    <Compile Include="frmQuanLyTuyenBay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThemMayBay.Designer.cs">
-      <DependentUpon>frmThemMayBay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThemSanBay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThemSanBay.Designer.cs">
-      <DependentUpon>frmThemSanBay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThemSanBayTG.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThemSanBayTG.Designer.cs">
-      <DependentUpon>frmThemSanBayTG.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThemTuyenBay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThemTuyenBay.Designer.cs">
-      <DependentUpon>frmThemTuyenBay.cs</DependentUpon>
+    <Compile Include="frmQuanLyTuyenBay.Designer.cs">
+      <DependentUpon>frmQuanLyTuyenBay.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTraCuuChuyenBay.cs">
       <SubType>Form</SubType>
@@ -147,24 +129,6 @@
     </Compile>
     <Compile Include="frmTraCuuKhachHang.Designer.cs">
       <DependentUpon>frmTraCuuKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmXoaThongTinChuyenBay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmXoaThongTinChuyenBay.Designer.cs">
-      <DependentUpon>frmXoaThongTinChuyenBay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmXoaThongTinDatVe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmXoaThongTinDatVe.Designer.cs">
-      <DependentUpon>frmXoaThongTinDatVe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmXoaThongTinTuyenBay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmXoaThongTinTuyenBay.Designer.cs">
-      <DependentUpon>frmXoaThongTinTuyenBay.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -183,50 +147,32 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThayDoiThongTinChuyenBay.resx">
-      <DependentUpon>frmThayDoiThongTinChuyenBay.cs</DependentUpon>
+    <EmbeddedResource Include="frmQuanLyChuyenBay.resx">
+      <DependentUpon>frmQuanLyChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThayDoiThongTinKhachHang.resx">
-      <DependentUpon>frmThayDoiThongTinKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="frmQuanLyDonGia.resx">
+      <DependentUpon>frmQuanLyDonGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThemChuyenBay.resx">
-      <DependentUpon>frmThemChuyenBay.cs</DependentUpon>
+    <EmbeddedResource Include="frmQuanLyHangVe.resx">
+      <DependentUpon>frmQuanLyHangVe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThemDonGia.resx">
-      <DependentUpon>frmThemDonGia.cs</DependentUpon>
+    <EmbeddedResource Include="frmQuanLyKhachHang.resx">
+      <DependentUpon>frmQuanLyKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThemHangVe.resx">
-      <DependentUpon>frmThemHangVe.cs</DependentUpon>
+    <EmbeddedResource Include="frmQuanLyMayBay.resx">
+      <DependentUpon>frmQuanLyMayBay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThemKhachHang.resx">
-      <DependentUpon>frmThemKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="frmQuanLySanBay.resx">
+      <DependentUpon>frmQuanLySanBay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThemMayBay.resx">
-      <DependentUpon>frmThemMayBay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThemSanBay.resx">
-      <DependentUpon>frmThemSanBay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThemSanBayTG.resx">
-      <DependentUpon>frmThemSanBayTG.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThemTuyenBay.resx">
-      <DependentUpon>frmThemTuyenBay.cs</DependentUpon>
+    <EmbeddedResource Include="frmQuanLyTuyenBay.resx">
+      <DependentUpon>frmQuanLyTuyenBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTraCuuChuyenBay.resx">
       <DependentUpon>frmTraCuuChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTraCuuKhachHang.resx">
       <DependentUpon>frmTraCuuKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmXoaThongTinChuyenBay.resx">
-      <DependentUpon>frmXoaThongTinChuyenBay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmXoaThongTinDatVe.resx">
-      <DependentUpon>frmXoaThongTinDatVe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmXoaThongTinTuyenBay.resx">
-      <DependentUpon>frmXoaThongTinTuyenBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -278,6 +224,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\toolDangXuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnCancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnThem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnXoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnTimKiem.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
