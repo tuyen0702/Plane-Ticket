@@ -3,7 +3,7 @@
 
 ## Điều kiện cài đặt
 ```
-Hệ điều hành: Windows
+Hệ điều hành: Windows 10
 Hệ quản trị cở sở dữ liệu: Microsoft SQL Sever
 ```
 
