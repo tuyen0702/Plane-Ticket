@@ -94,10 +94,10 @@ namespace DAL
             }
             return false;
         }
-        public DataTable GetOfMaKhachHang(string maKhachHang)
+        public DataTable GetOfCMND(string CMND)
         {
             DataTable dt = new DataTable();
-            string sqlQuery = string.Format("SELECT * FROM KHACHHANG WHERE MAKHACHHANG='{0}'", maKhachHang);
+            string sqlQuery = string.Format("SELECT * FROM KHACHHANG WHERE CMND='{0}'", CMND);
             SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
             da.Fill(dt);
             return dt;

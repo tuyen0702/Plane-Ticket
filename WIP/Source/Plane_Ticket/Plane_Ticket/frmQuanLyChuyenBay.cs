@@ -42,6 +42,20 @@ namespace Plane_Ticket
             KhoiTaoGiaoDienHangVe();
             KhoiTaoGiaoDienSBTG();
         }
+        private void gbxThemHangVeChoChuyenBay_CursorChanged(object sender, EventArgs e)
+        {
+            AcceptButton = btnThemHV;
+        }
+
+        private void gbxThemSanBayTGChoChuyenBay_CursorChanged(object sender, EventArgs e)
+        {
+            AcceptButton = btnThemSBTG;
+        }
+
+        private void gbxTTChuyenBay_CursorChanged(object sender, EventArgs e)
+        {
+            AcceptButton = btnThem;
+        }
 
         #region ChuyenBay
         private void TaoLaiChuyenBay()
@@ -170,12 +184,10 @@ namespace Plane_Ticket
             DataTable dtTuyenBay = new DataTable();
             DataTable dtMayBay = new DataTable();
             DataTable dtHangVe = new DataTable();
-            DataTable dtSanBay = new DataTable();
 
             dtTuyenBay = busTuyenBay.Get();
             dtMayBay = busMayBay.Get();
             dtHangVe = busHangVe.Get();
-            dtSanBay = busSanBay.Get();
 
             cboMaTuyenBay.DataSource = dtTuyenBay;
             cboMaTuyenBay.DisplayMember = "MATUYENBAY";
@@ -189,16 +201,16 @@ namespace Plane_Ticket
             cboMaHangVe.DisplayMember = "TENHANGVE";
             cboMaHangVe.ValueMember = "MAHANGVE";
 
-            BUS_SanBay busSanBayDi = new BUS_SanBay();
+            busSanBay = new BUS_SanBay();
             DataTable dtSanBayDi = new DataTable();
-            dtSanBayDi = busSanBayDi.Get();
+            dtSanBayDi = busSanBay.Get();
             cboSanBayDi.DataSource = dtSanBayDi;
             cboSanBayDi.DisplayMember = "TENSANBAY";
             cboSanBayDi.ValueMember = "MASANBAY";
 
             
             DataTable dtSanBayDen = new DataTable();
-            dtSanBayDen = busSanBayDi.Get();
+            dtSanBayDen = busSanBay.Get();
             cboSanBayDen.DataSource = dtSanBayDen;
             cboSanBayDen.DisplayMember = "TENSANBAY";
             cboSanBayDen.ValueMember = "MASANBAY";
@@ -511,6 +523,7 @@ namespace Plane_Ticket
         }
 
         #endregion
+
         #endregion
 
         

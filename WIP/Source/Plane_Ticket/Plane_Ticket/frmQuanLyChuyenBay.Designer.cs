@@ -97,6 +97,7 @@
             this.txtThoiGianBay.Name = "txtThoiGianBay";
             this.txtThoiGianBay.Size = new System.Drawing.Size(218, 22);
             this.txtThoiGianBay.TabIndex = 29;
+            this.txtThoiGianBay.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // label26
             // 
@@ -107,6 +108,7 @@
             this.label26.Size = new System.Drawing.Size(94, 17);
             this.label26.TabIndex = 28;
             this.label26.Text = "Thời gian bay";
+            this.label26.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // label27
             // 
@@ -117,6 +119,7 @@
             this.label27.Size = new System.Drawing.Size(93, 17);
             this.label27.TabIndex = 26;
             this.label27.Text = "Mã tuyến bay";
+            this.label27.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // cboMaTuyenBay
             // 
@@ -126,6 +129,7 @@
             this.cboMaTuyenBay.Size = new System.Drawing.Size(218, 24);
             this.cboMaTuyenBay.TabIndex = 36;
             this.cboMaTuyenBay.SelectionChangeCommitted += new System.EventHandler(this.cboMaTuyenBay_SelectionChangeCommitted);
+            this.cboMaTuyenBay.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // label25
             // 
@@ -136,6 +140,7 @@
             this.label25.Size = new System.Drawing.Size(133, 17);
             this.label25.TabIndex = 31;
             this.label25.Text = "Thời gian khởi hành";
+            this.label25.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // txtMaChuyenBay
             // 
@@ -145,6 +150,7 @@
             this.txtMaChuyenBay.ReadOnly = true;
             this.txtMaChuyenBay.Size = new System.Drawing.Size(218, 22);
             this.txtMaChuyenBay.TabIndex = 33;
+            this.txtMaChuyenBay.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // label24
             // 
@@ -155,6 +161,7 @@
             this.label24.Size = new System.Drawing.Size(84, 17);
             this.label24.TabIndex = 30;
             this.label24.Text = "Mã máy bay";
+            this.label24.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // cboMaMayBay
             // 
@@ -163,6 +170,7 @@
             this.cboMaMayBay.Name = "cboMaMayBay";
             this.cboMaMayBay.Size = new System.Drawing.Size(218, 24);
             this.cboMaMayBay.TabIndex = 36;
+            this.cboMaMayBay.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // label2
             // 
@@ -173,6 +181,7 @@
             this.label2.Size = new System.Drawing.Size(104, 17);
             this.label2.TabIndex = 26;
             this.label2.Text = "Mã chuyến bay";
+            this.label2.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // txtThoiGianKH
             // 
@@ -181,6 +190,7 @@
             this.txtThoiGianKH.Name = "txtThoiGianKH";
             this.txtThoiGianKH.Size = new System.Drawing.Size(218, 22);
             this.txtThoiGianKH.TabIndex = 29;
+            this.txtThoiGianKH.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // label3
             // 
@@ -191,6 +201,7 @@
             this.label3.Size = new System.Drawing.Size(61, 17);
             this.label3.TabIndex = 26;
             this.label3.Text = "Hạng vé";
+            this.label3.Click += new System.EventHandler(this.gbxThemHangVeChoChuyenBay_CursorChanged);
             // 
             // cboMaHangVe
             // 
@@ -199,6 +210,7 @@
             this.cboMaHangVe.Name = "cboMaHangVe";
             this.cboMaHangVe.Size = new System.Drawing.Size(258, 24);
             this.cboMaHangVe.TabIndex = 36;
+            this.cboMaHangVe.Click += new System.EventHandler(this.gbxThemHangVeChoChuyenBay_CursorChanged);
             // 
             // txtTongSoGhe
             // 
@@ -207,6 +219,7 @@
             this.txtTongSoGhe.Name = "txtTongSoGhe";
             this.txtTongSoGhe.Size = new System.Drawing.Size(258, 22);
             this.txtTongSoGhe.TabIndex = 29;
+            this.txtTongSoGhe.Click += new System.EventHandler(this.gbxThemHangVeChoChuyenBay_CursorChanged);
             // 
             // label4
             // 
@@ -217,6 +230,7 @@
             this.label4.Size = new System.Drawing.Size(135, 17);
             this.label4.TabIndex = 31;
             this.label4.Text = "Số ghế của hạng vé";
+            this.label4.Click += new System.EventHandler(this.gbxThemHangVeChoChuyenBay_CursorChanged);
             // 
             // gbxThaoTac
             // 
@@ -420,6 +434,7 @@
             this.gbxTTChuyenBay.TabIndex = 67;
             this.gbxTTChuyenBay.TabStop = false;
             this.gbxTTChuyenBay.Text = "Thông tin chuyến bay";
+            this.gbxTTChuyenBay.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // label15
             // 
@@ -430,6 +445,7 @@
             this.label15.Size = new System.Drawing.Size(88, 17);
             this.label15.TabIndex = 26;
             this.label15.Text = "Sân bay đến";
+            this.label15.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // label14
             // 
@@ -440,6 +456,7 @@
             this.label14.Size = new System.Drawing.Size(75, 17);
             this.label14.TabIndex = 26;
             this.label14.Text = "Sân bay đi";
+            this.label14.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // cboSanBayDen
             // 
@@ -449,6 +466,7 @@
             this.cboSanBayDen.Size = new System.Drawing.Size(218, 24);
             this.cboSanBayDen.TabIndex = 36;
             this.cboSanBayDen.SelectionChangeCommitted += new System.EventHandler(this.cboSanBayDi_SelectionChangeCommitted);
+            this.cboSanBayDen.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // cboSanBayDi
             // 
@@ -458,6 +476,7 @@
             this.cboSanBayDi.Size = new System.Drawing.Size(218, 24);
             this.cboSanBayDi.TabIndex = 36;
             this.cboSanBayDi.SelectionChangeCommitted += new System.EventHandler(this.cboSanBayDi_SelectionChangeCommitted);
+            this.cboSanBayDi.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // gbxThemHangVeChoChuyenBay
             // 
@@ -475,6 +494,7 @@
             this.gbxThemHangVeChoChuyenBay.TabIndex = 71;
             this.gbxThemHangVeChoChuyenBay.TabStop = false;
             this.gbxThemHangVeChoChuyenBay.Text = "Thêm hạng vé cho chuyến bay";
+            this.gbxThemHangVeChoChuyenBay.CursorChanged += new System.EventHandler(this.gbxThemHangVeChoChuyenBay_CursorChanged);
             // 
             // btnThemHV
             // 
@@ -500,6 +520,7 @@
             this.dtgvHangVe.Size = new System.Drawing.Size(408, 134);
             this.dtgvHangVe.TabIndex = 47;
             this.dtgvHangVe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvHangVe_CellClick);
+            this.dtgvHangVe.Click += new System.EventHandler(this.gbxThemHangVeChoChuyenBay_CursorChanged);
             // 
             // btnSuaHV
             // 
@@ -547,6 +568,7 @@
             this.gbxThemSanBayTGChoChuyenBay.TabIndex = 71;
             this.gbxThemSanBayTGChoChuyenBay.TabStop = false;
             this.gbxThemSanBayTGChoChuyenBay.Text = "Thêm sân bay TG cho chuyến bay";
+            this.gbxThemSanBayTGChoChuyenBay.CursorChanged += new System.EventHandler(this.gbxThemSanBayTGChoChuyenBay_CursorChanged);
             // 
             // btnThemSBTG
             // 
@@ -570,6 +592,7 @@
             this.cboTenSanBayTG.Name = "cboTenSanBayTG";
             this.cboTenSanBayTG.Size = new System.Drawing.Size(266, 24);
             this.cboTenSanBayTG.TabIndex = 53;
+            this.cboTenSanBayTG.CursorChanged += new System.EventHandler(this.gbxThemSanBayTGChoChuyenBay_CursorChanged);
             // 
             // label11
             // 
@@ -580,6 +603,7 @@
             this.label11.Size = new System.Drawing.Size(87, 17);
             this.label11.TabIndex = 48;
             this.label11.Text = "Tên sân bay";
+            this.label11.CursorChanged += new System.EventHandler(this.gbxThemSanBayTGChoChuyenBay_CursorChanged);
             // 
             // txtGhiChu
             // 
@@ -588,6 +612,7 @@
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(265, 22);
             this.txtGhiChu.TabIndex = 51;
+            this.txtGhiChu.CursorChanged += new System.EventHandler(this.gbxThemSanBayTGChoChuyenBay_CursorChanged);
             // 
             // txtThoiGianNghi
             // 
@@ -596,6 +621,7 @@
             this.txtThoiGianNghi.Name = "txtThoiGianNghi";
             this.txtThoiGianNghi.Size = new System.Drawing.Size(265, 22);
             this.txtThoiGianNghi.TabIndex = 52;
+            this.txtThoiGianNghi.CursorChanged += new System.EventHandler(this.gbxThemSanBayTGChoChuyenBay_CursorChanged);
             // 
             // label12
             // 
@@ -606,6 +632,7 @@
             this.label12.Size = new System.Drawing.Size(57, 17);
             this.label12.TabIndex = 49;
             this.label12.Text = "Ghi chú";
+            this.label12.CursorChanged += new System.EventHandler(this.gbxThemSanBayTGChoChuyenBay_CursorChanged);
             // 
             // btnSuaSBTG
             // 
@@ -630,6 +657,7 @@
             this.label13.Size = new System.Drawing.Size(98, 17);
             this.label13.TabIndex = 50;
             this.label13.Text = "Thời gian nghỉ";
+            this.label13.CursorChanged += new System.EventHandler(this.gbxThemSanBayTGChoChuyenBay_CursorChanged);
             // 
             // dtgvSanBayTG
             // 
@@ -640,6 +668,7 @@
             this.dtgvSanBayTG.Size = new System.Drawing.Size(410, 134);
             this.dtgvSanBayTG.TabIndex = 47;
             this.dtgvSanBayTG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvSanBayTG_CellClick);
+            this.dtgvSanBayTG.CursorChanged += new System.EventHandler(this.gbxThemSanBayTGChoChuyenBay_CursorChanged);
             // 
             // btnXoaSBTG
             // 

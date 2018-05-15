@@ -46,7 +46,6 @@
     <Compile Include="BUS_DoanhThuNam.cs" />
     <Compile Include="BUS_DoanhThuThang.cs" />
     <Compile Include="BUS_DonGia.cs" />
-    <Compile Include="BUS_GiaoDich.cs" />
     <Compile Include="BUS_HangVe.cs" />
     <Compile Include="BUS_KhachHang.cs" />
     <Compile Include="BUS_MayBay.cs" />

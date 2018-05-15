@@ -46,7 +46,6 @@
     <Compile Include="DAL_DoanhThuNam.cs" />
     <Compile Include="DAL_DoanhThuThang.cs" />
     <Compile Include="DAL_DonGia.cs" />
-    <Compile Include="DAL_GiaoDich.cs" />
     <Compile Include="DAL_HangVe.cs" />
     <Compile Include="DAL_KhachHang.cs" />
     <Compile Include="DAL_MayBay.cs" />

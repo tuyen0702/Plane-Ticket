@@ -28,206 +28,274 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.colHderMaChuyenBay = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colHderMaTuyenBay = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colHderMaMayBay = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colHderTGKH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colHderTGKT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayKHTu = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayKHDen = new System.Windows.Forms.DateTimePicker();
+            this.gbxThaoTac = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.gbxDSChyenBay = new System.Windows.Forms.GroupBox();
+            this.dtgvChuyenBay = new System.Windows.Forms.DataGridView();
+            this.gbxTTChuyenBay = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cboSanBayDen = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.cboSanBayDi = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtMaTuyenBay = new System.Windows.Forms.TextBox();
+            this.btnBanVe = new System.Windows.Forms.Button();
+            this.gbxThaoTac.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.gbxDSChyenBay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvChuyenBay)).BeginInit();
+            this.gbxTTChuyenBay.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button5
+            // btnTimKiem
             // 
-            this.button5.Location = new System.Drawing.Point(237, 194);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(107, 42);
-            this.button5.TabIndex = 90;
-            this.button5.Text = "Tra Cứu";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Location = new System.Drawing.Point(56, 35);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(106, 42);
+            this.btnTimKiem.TabIndex = 90;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(19, 123);
+            this.label15.Location = new System.Drawing.Point(7, 139);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(123, 17);
             this.label15.TabIndex = 87;
             this.label15.Text = "Ngày khởi hành từ";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(67, 53);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(75, 17);
-            this.label14.TabIndex = 86;
-            this.label14.Text = "Sân bay đi";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(161, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(296, 29);
-            this.label1.TabIndex = 114;
-            this.label1.Text = "TRA CỨU CHUYẾN BAY";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 89);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 17);
-            this.label2.TabIndex = 86;
-            this.label2.Text = "Sân bay đến";
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colHderMaChuyenBay,
-            this.colHderMaTuyenBay,
-            this.colHderMaMayBay,
-            this.colHderTGKH,
-            this.colHderTGKT,
-            this.columnHeader6});
-            this.listView1.Location = new System.Drawing.Point(8, 256);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(638, 357);
-            this.listView1.TabIndex = 115;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // colHderMaChuyenBay
-            // 
-            this.colHderMaChuyenBay.Text = "Mã chuyến bay";
-            this.colHderMaChuyenBay.Width = 103;
-            // 
-            // colHderMaTuyenBay
-            // 
-            this.colHderMaTuyenBay.Text = "Mã tuyến bay";
-            this.colHderMaTuyenBay.Width = 94;
-            // 
-            // colHderMaMayBay
-            // 
-            this.colHderMaMayBay.Text = "Mã máy bay";
-            this.colHderMaMayBay.Width = 92;
-            // 
-            // colHderTGKH
-            // 
-            this.colHderTGKH.Text = "TG khởi hành";
-            this.colHderTGKH.Width = 94;
-            // 
-            // colHderTGKT
-            // 
-            this.colHderTGKT.Text = "TG kết thúc";
-            this.colHderTGKT.Width = 81;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(199, 50);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 24);
-            this.comboBox1.TabIndex = 116;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(199, 82);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 24);
-            this.comboBox2.TabIndex = 116;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(110, 158);
+            this.label3.Location = new System.Drawing.Point(98, 174);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 17);
             this.label3.TabIndex = 87;
             this.label3.Text = "đến";
             // 
-            // dateTimePicker1
+            // dtpNgayKHTu
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(199, 118);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 117;
+            this.dtpNgayKHTu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayKHTu.Location = new System.Drawing.Point(174, 134);
+            this.dtpNgayKHTu.Name = "dtpNgayKHTu";
+            this.dtpNgayKHTu.Size = new System.Drawing.Size(199, 22);
+            this.dtpNgayKHTu.TabIndex = 117;
             // 
-            // dateTimePicker2
+            // dtpNgayKHDen
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(199, 153);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 117;
+            this.dtpNgayKHDen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayKHDen.Location = new System.Drawing.Point(174, 169);
+            this.dtpNgayKHDen.Name = "dtpNgayKHDen";
+            this.dtpNgayKHDen.Size = new System.Drawing.Size(199, 22);
+            this.dtpNgayKHDen.TabIndex = 117;
+            // 
+            // gbxThaoTac
+            // 
+            this.gbxThaoTac.Controls.Add(this.btnBanVe);
+            this.gbxThaoTac.Controls.Add(this.btnTimKiem);
+            this.gbxThaoTac.Location = new System.Drawing.Point(12, 565);
+            this.gbxThaoTac.Name = "gbxThaoTac";
+            this.gbxThaoTac.Size = new System.Drawing.Size(380, 101);
+            this.gbxThaoTac.TabIndex = 121;
+            this.gbxThaoTac.TabStop = false;
+            this.gbxThaoTac.Text = "Thao tác";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.btnThoat);
+            this.panel1.Location = new System.Drawing.Point(-4, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1276, 58);
+            this.panel1.TabIndex = 120;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(479, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(296, 29);
+            this.label7.TabIndex = 39;
+            this.label7.Text = "TRA CỨU CHUYẾN BAY";
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnThoat.BackgroundImage = global::Plane_Ticket.Properties.Resources.btnCancel;
+            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.White;
+            this.btnThoat.Location = new System.Drawing.Point(1206, 4);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(55, 50);
+            this.btnThoat.TabIndex = 40;
+            this.btnThoat.UseVisualStyleBackColor = false;
+            // 
+            // gbxDSChyenBay
+            // 
+            this.gbxDSChyenBay.Controls.Add(this.dtgvChuyenBay);
+            this.gbxDSChyenBay.Location = new System.Drawing.Point(398, 64);
+            this.gbxDSChyenBay.Name = "gbxDSChyenBay";
+            this.gbxDSChyenBay.Size = new System.Drawing.Size(854, 602);
+            this.gbxDSChyenBay.TabIndex = 119;
+            this.gbxDSChyenBay.TabStop = false;
+            this.gbxDSChyenBay.Text = "Danh sách chuyến bay";
+            // 
+            // dtgvChuyenBay
+            // 
+            this.dtgvChuyenBay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvChuyenBay.Location = new System.Drawing.Point(6, 28);
+            this.dtgvChuyenBay.Name = "dtgvChuyenBay";
+            this.dtgvChuyenBay.RowTemplate.Height = 24;
+            this.dtgvChuyenBay.Size = new System.Drawing.Size(842, 568);
+            this.dtgvChuyenBay.TabIndex = 47;
+            // 
+            // gbxTTChuyenBay
+            // 
+            this.gbxTTChuyenBay.Controls.Add(this.label20);
+            this.gbxTTChuyenBay.Controls.Add(this.label18);
+            this.gbxTTChuyenBay.Controls.Add(this.cboSanBayDen);
+            this.gbxTTChuyenBay.Controls.Add(this.label19);
+            this.gbxTTChuyenBay.Controls.Add(this.dtpNgayKHDen);
+            this.gbxTTChuyenBay.Controls.Add(this.cboSanBayDi);
+            this.gbxTTChuyenBay.Controls.Add(this.dtpNgayKHTu);
+            this.gbxTTChuyenBay.Controls.Add(this.txtMaTuyenBay);
+            this.gbxTTChuyenBay.Controls.Add(this.label15);
+            this.gbxTTChuyenBay.Controls.Add(this.label3);
+            this.gbxTTChuyenBay.Location = new System.Drawing.Point(12, 64);
+            this.gbxTTChuyenBay.Name = "gbxTTChuyenBay";
+            this.gbxTTChuyenBay.Size = new System.Drawing.Size(380, 495);
+            this.gbxTTChuyenBay.TabIndex = 118;
+            this.gbxTTChuyenBay.TabStop = false;
+            this.gbxTTChuyenBay.Text = "Thông tin chuyến bay";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(7, 102);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(88, 17);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "Sân bay đến";
+            // 
+            // cboSanBayDen
+            // 
+            this.cboSanBayDen.FormattingEnabled = true;
+            this.cboSanBayDen.Location = new System.Drawing.Point(174, 95);
+            this.cboSanBayDen.Name = "cboSanBayDen";
+            this.cboSanBayDen.Size = new System.Drawing.Size(200, 24);
+            this.cboSanBayDen.TabIndex = 43;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(7, 70);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(75, 17);
+            this.label19.TabIndex = 16;
+            this.label19.Text = "Sân bay đi";
+            // 
+            // cboSanBayDi
+            // 
+            this.cboSanBayDi.FormattingEnabled = true;
+            this.cboSanBayDi.Location = new System.Drawing.Point(174, 63);
+            this.cboSanBayDi.Name = "cboSanBayDi";
+            this.cboSanBayDi.Size = new System.Drawing.Size(200, 24);
+            this.cboSanBayDi.TabIndex = 43;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(7, 33);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(108, 17);
+            this.label20.TabIndex = 15;
+            this.label20.Text = "Mã chuyến bay ";
+            // 
+            // txtMaTuyenBay
+            // 
+            this.txtMaTuyenBay.Location = new System.Drawing.Point(173, 28);
+            this.txtMaTuyenBay.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaTuyenBay.Name = "txtMaTuyenBay";
+            this.txtMaTuyenBay.ReadOnly = true;
+            this.txtMaTuyenBay.Size = new System.Drawing.Size(200, 22);
+            this.txtMaTuyenBay.TabIndex = 17;
+            // 
+            // btnBanVe
+            // 
+            this.btnBanVe.Location = new System.Drawing.Point(184, 35);
+            this.btnBanVe.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBanVe.Name = "btnBanVe";
+            this.btnBanVe.Size = new System.Drawing.Size(106, 42);
+            this.btnBanVe.TabIndex = 90;
+            this.btnBanVe.Text = "Bán vé cho chuyến bay";
+            this.btnBanVe.UseVisualStyleBackColor = true;
+            this.btnBanVe.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // frmTraCuuChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 625);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
+            this.ClientSize = new System.Drawing.Size(1264, 678);
+            this.Controls.Add(this.gbxThaoTac);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.gbxDSChyenBay);
+            this.Controls.Add(this.gbxTTChuyenBay);
             this.Name = "frmTraCuuChuyenBay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tra cứu chuyến bay";
+            this.gbxThaoTac.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.gbxDSChyenBay.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvChuyenBay)).EndInit();
+            this.gbxTTChuyenBay.ResumeLayout(false);
+            this.gbxTTChuyenBay.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader colHderMaChuyenBay;
-        private System.Windows.Forms.ColumnHeader colHderMaTuyenBay;
-        private System.Windows.Forms.ColumnHeader colHderMaMayBay;
-        private System.Windows.Forms.ColumnHeader colHderTGKH;
-        private System.Windows.Forms.ColumnHeader colHderTGKT;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpNgayKHTu;
+        private System.Windows.Forms.DateTimePicker dtpNgayKHDen;
+        private System.Windows.Forms.GroupBox gbxThaoTac;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.GroupBox gbxDSChyenBay;
+        private System.Windows.Forms.DataGridView dtgvChuyenBay;
+        private System.Windows.Forms.GroupBox gbxTTChuyenBay;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox cboSanBayDen;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox cboSanBayDi;
+        private System.Windows.Forms.TextBox txtMaTuyenBay;
+        private System.Windows.Forms.Button btnBanVe;
     }
 }

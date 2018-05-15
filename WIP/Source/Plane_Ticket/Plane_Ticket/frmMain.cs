@@ -14,14 +14,15 @@ namespace Plane_Ticket
     public partial class frmMain : Form
     {
         #region Properties
-
+        DataRow rowTTNhanVien;
         #endregion
 
         #region Initializes
         public frmMain(DataRow row)
         {
             InitializeComponent();
-            KhoiTaoGiaoDien(row);
+            rowTTNhanVien = row;
+            KhoiTaoGiaoDien();
         }
         #endregion
 
@@ -77,7 +78,7 @@ namespace Plane_Ticket
         }
         private void banVeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBanVe frm = new frmBanVe();
+            frmBanVe frm = new frmBanVe(rowTTNhanVien);
             if (!CheckExistForm(frm))
             {
                 CreateTabPage(frm);
@@ -254,11 +255,11 @@ namespace Plane_Ticket
         }
         #endregion
 
-        private void KhoiTaoGiaoDien(DataRow row)
+        private void KhoiTaoGiaoDien()
         {
-            lbMaNhanVien.Text = "Mã nhân viên: " + row[2].ToString();
-            lbUsername.Text = "Username: " + row[0].ToString();
-            int type = Convert.ToInt32(row[3].ToString());
+            lbMaNhanVien.Text = "Mã nhân viên: " + rowTTNhanVien[2].ToString();
+            lbUsername.Text = "Username: " + rowTTNhanVien[0].ToString();
+            int type = Convert.ToInt32(rowTTNhanVien[3].ToString());
             if (type == 0)
             {
                 mstrMain.Enabled = true;

@@ -99,7 +99,6 @@ namespace Plane_Ticket
                 MessageBox.Show("Vui lòng chọn một hàng trong danh sách!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (flagCellClick)
@@ -201,21 +200,20 @@ namespace Plane_Ticket
             dtgvDonGia.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvDonGia.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
         }
-
-
-
-        #endregion
-
         private void dtgvDonGia_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1)
                 return;
             DataGridViewRow row = dtgvDonGia.Rows[e.RowIndex];
-            cboMaTuyenBay.SelectedValue= row.Cells[0].Value.ToString();
-            cboMaHangVe.SelectedValue= row.Cells[1].Value.ToString();
-            txtDonGia.Text= row.Cells[2].Value.ToString();
+            cboMaTuyenBay.SelectedValue = row.Cells[0].Value.ToString();
+            cboMaHangVe.SelectedValue = row.Cells[1].Value.ToString();
+            txtDonGia.Text = row.Cells[2].Value.ToString();
             flagCellClick = true;
             cboMaTuyenBay_SelectionChangeCommitted(sender, e);
         }
+
+        #endregion
+
+
     }
 }

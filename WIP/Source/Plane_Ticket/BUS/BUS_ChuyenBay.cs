@@ -42,5 +42,9 @@ namespace BUS
         {
             return dal.SearchOfMaChuyenBay(str);
         }
+        public DataTable Search(string maSanBayDi, string maSanBayDen, DateTime ngayKHTu, DateTime ngayKHDen)
+        {
+            return dal.Search(maSanBayDi, maSanBayDen, ngayKHTu, ngayKHDen);
+        }
     }
 }

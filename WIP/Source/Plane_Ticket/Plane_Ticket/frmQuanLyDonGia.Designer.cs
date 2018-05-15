@@ -87,9 +87,9 @@
             this.label19.Location = new System.Drawing.Point(7, 144);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(82, 17);
+            this.label19.Size = new System.Drawing.Size(88, 17);
             this.label19.TabIndex = 46;
-            this.label19.Text = "Mã hạng vé";
+            this.label19.Text = "Tên hạng vé";
             // 
             // label18
             // 

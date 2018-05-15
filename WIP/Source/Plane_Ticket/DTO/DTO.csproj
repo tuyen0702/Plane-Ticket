@@ -48,7 +48,6 @@
     <Compile Include="DTO_DoanhThuNam.cs" />
     <Compile Include="DTO_DoanhThuThang.cs" />
     <Compile Include="DTO_DonGia.cs" />
-    <Compile Include="DTO_GiaoDich.cs" />
     <Compile Include="DTO_HangVe.cs" />
     <Compile Include="DTO_KhachHang.cs" />
     <Compile Include="DTO_MayBay.cs" />

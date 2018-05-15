@@ -44,7 +44,7 @@ namespace Plane_Ticket
             {
                 try
                 {
-                    dtoKhachHang = new DTO_KhachHang(txtMaKhachHang.Text, txtTenKhachHang.Text, txtCMND.Text, txtSDT.Text);
+                    dtoKhachHang = new DTO_KhachHang(null, txtTenKhachHang.Text, txtCMND.Text, txtSDT.Text);
                     if (busKhachHang.Add(dtoKhachHang))
                         MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else

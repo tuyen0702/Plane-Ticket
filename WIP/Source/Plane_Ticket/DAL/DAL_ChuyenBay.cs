@@ -108,8 +108,11 @@ namespace DAL
         public DataTable GetOfMaChuyenBay(string maChuyenBay)
         {
             DataTable dt = new DataTable();
-            string sqlQuery = string.Format("SELECT * FROM CHUYENBAY C INNER JOIN TUYENBAY T " +
-                "ON C.MATUYENBAY=T.MATUYENBAY WHERE MACHUYENBAY='{0}'", maChuyenBay);
+            string sqlQuery = string.Format("SELECT C.MACHUYENBAY, T.MATUYENBAY, C.MAMAYBAY, " +
+                "C.THOIGIANKHOIHANH, C.THOIGIANBAY, S1.TENSANBAY[TENSANBAYDI], S2.TENSANBAY[TENSANBAYDEN] " +
+                "FROM CHUYENBAY C INNER JOIN TUYENBAY T " +
+                "ON C.MATUYENBAY=T.MATUYENBAY INNER JOIN SANBAY S1 ON T.MASANBAYDI=S1.MASANBAY " +
+                "INNER JOIN SANBAY S2 ON T.MASANBAYDEN = S2.MASANBAY WHERE MACHUYENBAY='{0}'", maChuyenBay);
             SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
             da.Fill(dt);
             return dt;
@@ -143,6 +146,19 @@ namespace DAL
                 "THOIGIANBAY[Thời gian bay] FROM CHUYENBAY WHERE MACHUYENBAY LIKE('%{0}%')", str);
             SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
             DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+        public DataTable Search(string maSanBayDi, string maSanBayDen, DateTime thoiGianKHTu, DateTime thoiGianKHDen)
+        {
+            DataTable dt = new DataTable();
+            string sqlQuery = string.Format("SELECT C.MACHUYENBAY[Mã chuyến bay], " +
+                "C.THOIGIANKHOIHANH[Thời gian KH], C.THOIGIANBAY[Thời gian bay] " +
+                "FROM CHUYENBAY C INNER JOIN TUYENBAY T " +
+                "ON C.MATUYENBAY=T.MATUYENBAY WHERE T.MASANBAYDI = '{0}' " +
+                "AND T.MASANBAYDEN ='{1}' AND C.THOIGIANKHOIHANH BETWEEN('{2}') AND ('{3}') "
+                , maSanBayDi, maSanBayDen,thoiGianKHTu, thoiGianKHDen);
+            SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
             da.Fill(dt);
             return dt;
         }
