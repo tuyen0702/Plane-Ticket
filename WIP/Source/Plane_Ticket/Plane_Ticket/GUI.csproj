@@ -249,5 +249,14 @@
   <ItemGroup>
     <None Include="Resources\btnTimKiem.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnMua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDat.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

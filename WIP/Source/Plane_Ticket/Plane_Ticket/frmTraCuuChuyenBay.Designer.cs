@@ -41,13 +41,13 @@
             this.gbxDSChyenBay = new System.Windows.Forms.GroupBox();
             this.dtgvChuyenBay = new System.Windows.Forms.DataGridView();
             this.gbxTTChuyenBay = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.cboSanBayDen = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.cboSanBayDi = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.txtMaTuyenBay = new System.Windows.Forms.TextBox();
-            this.btnBanVe = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbxThaoTac.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gbxDSChyenBay.SuspendLayout();
@@ -57,12 +57,15 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(56, 35);
+            this.btnTimKiem.BackgroundImage = global::Plane_Ticket.Properties.Resources.btnTimKiem;
+            this.btnTimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Location = new System.Drawing.Point(163, 22);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(106, 42);
+            this.btnTimKiem.Size = new System.Drawing.Size(55, 50);
             this.btnTimKiem.TabIndex = 90;
-            this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
@@ -104,7 +107,7 @@
             // 
             // gbxThaoTac
             // 
-            this.gbxThaoTac.Controls.Add(this.btnBanVe);
+            this.gbxThaoTac.Controls.Add(this.label1);
             this.gbxThaoTac.Controls.Add(this.btnTimKiem);
             this.gbxThaoTac.Location = new System.Drawing.Point(12, 565);
             this.gbxThaoTac.Name = "gbxThaoTac";
@@ -167,6 +170,7 @@
             this.dtgvChuyenBay.RowTemplate.Height = 24;
             this.dtgvChuyenBay.Size = new System.Drawing.Size(842, 568);
             this.dtgvChuyenBay.TabIndex = 47;
+            this.dtgvChuyenBay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvChuyenBay_CellClick);
             // 
             // gbxTTChuyenBay
             // 
@@ -186,6 +190,16 @@
             this.gbxTTChuyenBay.TabIndex = 118;
             this.gbxTTChuyenBay.TabStop = false;
             this.gbxTTChuyenBay.Text = "Thông tin chuyến bay";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(7, 33);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(108, 17);
+            this.label20.TabIndex = 15;
+            this.label20.Text = "Mã chuyến bay ";
             // 
             // label18
             // 
@@ -223,16 +237,6 @@
             this.cboSanBayDi.Size = new System.Drawing.Size(200, 24);
             this.cboSanBayDi.TabIndex = 43;
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(7, 33);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(108, 17);
-            this.label20.TabIndex = 15;
-            this.label20.Text = "Mã chuyến bay ";
-            // 
             // txtMaTuyenBay
             // 
             this.txtMaTuyenBay.Location = new System.Drawing.Point(173, 28);
@@ -242,16 +246,14 @@
             this.txtMaTuyenBay.Size = new System.Drawing.Size(200, 22);
             this.txtMaTuyenBay.TabIndex = 17;
             // 
-            // btnBanVe
+            // label1
             // 
-            this.btnBanVe.Location = new System.Drawing.Point(184, 35);
-            this.btnBanVe.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBanVe.Name = "btnBanVe";
-            this.btnBanVe.Size = new System.Drawing.Size(106, 42);
-            this.btnBanVe.TabIndex = 90;
-            this.btnBanVe.Text = "Bán vé cho chuyến bay";
-            this.btnBanVe.UseVisualStyleBackColor = true;
-            this.btnBanVe.Click += new System.EventHandler(this.btnTimKiem_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(156, 78);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 17);
+            this.label1.TabIndex = 91;
+            this.label1.Text = "Tìm kiếm";
             // 
             // frmTraCuuChuyenBay
             // 
@@ -266,6 +268,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tra cứu chuyến bay";
             this.gbxThaoTac.ResumeLayout(false);
+            this.gbxThaoTac.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.gbxDSChyenBay.ResumeLayout(false);
@@ -296,6 +299,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox cboSanBayDi;
         private System.Windows.Forms.TextBox txtMaTuyenBay;
-        private System.Windows.Forms.Button btnBanVe;
+        private System.Windows.Forms.Label label1;
     }
 }

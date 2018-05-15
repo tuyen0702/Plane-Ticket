@@ -86,6 +86,15 @@ namespace Plane_Ticket
             dtgvChuyenBay.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvChuyenBay.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
         }
+        private void dtgvChuyenBay_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+                return;
+            DataGridViewRow row = dtgvChuyenBay.Rows[e.RowIndex];
+            txtMaTuyenBay.Text = row.Cells[0].Value.ToString();
+        }
+
+        
         #endregion
 
 

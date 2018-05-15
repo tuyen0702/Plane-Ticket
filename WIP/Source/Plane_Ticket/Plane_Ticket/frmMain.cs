@@ -76,7 +76,7 @@ namespace Plane_Ticket
                 ActiveChildForm(frm);
             }  
         }
-        private void banVeToolStripMenuItem_Click(object sender, EventArgs e)
+        public void banVeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmBanVe frm = new frmBanVe(rowTTNhanVien);
             if (!CheckExistForm(frm))
