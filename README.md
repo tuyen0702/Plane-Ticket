@@ -6,14 +6,14 @@
 ## Điều kiện cài đặt
 ```
 Hệ điều hành: Windows 10
-Hệ quản trị cở sở dữ liệu: Microsoft SQL Sever
+Hệ quản trị cở sở dữ liệu: Microsoft SQL Sever 2012 hoặc cao hơn
 ```
 
 ## Các bước cài đặt
 
 ## Xây dựng với
-* [Visual studio](https://www.visualstudio.com/) - Môi trường phát triển tích hợp
-* [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) - Hệ thống quản lý cơ sở dữ liệu quan hệ
+* [Visual studio 2017](https://www.visualstudio.com/) - Môi trường phát triển tích hợp
+* [SQL Server Management Studio 2012](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) - Hệ thống quản lý cơ sở dữ liệu quan hệ
 
 ## Nguồn tham khảo
 * [Flaticon](https://www.flaticon.com/) - Trang web cung cấp biểu tượng vector miễn phí
