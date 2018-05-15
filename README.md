@@ -1,6 +1,8 @@
 # Đồ án phần mềm quản lý bán vé máy bay
 Đồ án có mục đích tạo ra phần mềm giúp quản lý các nghiệp vụ của đại lý bán vé máy bay.
 
+![](demo.png)
+
 ## Điều kiện cài đặt
 ```
 Hệ điều hành: Windows 10
