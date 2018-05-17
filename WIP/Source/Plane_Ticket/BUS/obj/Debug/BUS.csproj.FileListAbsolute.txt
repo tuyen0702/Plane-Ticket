@@ -20,3 +20,14 @@ E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\BUS\obj\Debug\BUS.csproj.CoreCompile
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\BUS\obj\Debug\BUS.csproj.CopyComplete
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\BUS\obj\Debug\BUS.dll
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\BUS\obj\Debug\BUS.pdb
+C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\BUS\bin\Debug\BUS.dll
+C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\BUS\bin\Debug\BUS.pdb
+C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\BUS\bin\Debug\DAL.dll
+C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\BUS\bin\Debug\DTO.dll
+C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\BUS\bin\Debug\DAL.pdb
+C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\BUS\bin\Debug\DTO.pdb
+C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\BUS\obj\Debug\BUS.dll
+C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\BUS\obj\Debug\BUS.pdb
