@@ -26,10 +26,25 @@ namespace BUS
         {
             return dal.Update(dto);
         }
-
-        public bool Delete(DTO_ChuyenBay dto)
+        public bool Delete(string str)
         {
-            return dal.Delete(dto);
+            return dal.Delete(str);
+        }
+        public DataTable GetOfMaChuyenBay(string maChuyenBay)
+        {
+            return dal.GetOfMaChuyenBay(maChuyenBay);
+        }
+        public DataTable GetToDisplay()
+        {
+            return dal.GetToDisplay();
+        }
+        public DataTable SearchOfMaChuyenBay(string str)
+        {
+            return dal.SearchOfMaChuyenBay(str);
+        }
+        public DataTable Search(string maSanBayDi, string maSanBayDen, DateTime ngayKHTu, DateTime ngayKHDen)
+        {
+            return dal.Search(maSanBayDi, maSanBayDen, ngayKHTu, ngayKHDen);
         }
     }
 }

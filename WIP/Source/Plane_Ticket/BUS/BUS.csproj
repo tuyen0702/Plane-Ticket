@@ -41,12 +41,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS_ChuyenBay.cs" />
-    <Compile Include="BUS_GiaoDich.cs" />
-    <Compile Include="BUS_HangHangKhong.cs" />
+    <Compile Include="BUS_CTChuyenBay.cs" />
+    <Compile Include="BUS_CTDoanhThuThang.cs" />
+    <Compile Include="BUS_DoanhThuNam.cs" />
+    <Compile Include="BUS_DoanhThuThang.cs" />
+    <Compile Include="BUS_DonGia.cs" />
+    <Compile Include="BUS_HangVe.cs" />
     <Compile Include="BUS_KhachHang.cs" />
     <Compile Include="BUS_MayBay.cs" />
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_SanBay.cs" />
+    <Compile Include="BUS_ThamSo.cs" />
+    <Compile Include="BUS_TinhTrangVe.cs" />
     <Compile Include="BUS_TuyenBay.cs" />
     <Compile Include="BUS_VeChuyenBay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

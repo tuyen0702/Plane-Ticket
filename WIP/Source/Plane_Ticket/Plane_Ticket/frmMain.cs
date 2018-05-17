@@ -13,13 +13,22 @@ namespace Plane_Ticket
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        #region Properties
+        DataRow rowTTNhanVien;
+        #endregion
+
+        #region Initializes
+        public frmMain(DataRow row)
         {
             InitializeComponent();
-            frmDangNhap frm = new frmDangNhap();
-            CreateTabPage(frm);
+            rowTTNhanVien = row;
+            KhoiTaoGiaoDien();
         }
+        #endregion
 
+        #region Methods
+
+        #region CreateMenuAndToolStrip
         private bool CheckExistForm(Form frm)
         {
             foreach(TabPage t in tabCtrlMain.TabPages)
@@ -27,12 +36,10 @@ namespace Plane_Ticket
                 if (frm.Text == t.Text) 
                 {
                     return true;
-                    break;
                 }
             }
             return false;
         }
-
         private void ActiveChildForm(Form frm)
         {
             foreach (TabPage t in tabCtrlMain.TabPages)
@@ -44,19 +51,15 @@ namespace Plane_Ticket
                 }
             }
         }
-
         private TabPage CreateTabPage(Form frm)
         {
             TabPage tabPage = new TabPage { Text = frm.Text };
             tabPage.BorderStyle = BorderStyle.None;
-            tabPage.BackgroundImage = Properties.Resources.background;
-            tabPage.BackgroundImageLayout = ImageLayout.Stretch;
             tabCtrlMain.TabPages.Add(tabPage);
             tabCtrlMain.SelectedTab = tabPage;
-            frm.SetDesktopLocation(280, 0);
             frm.TopLevel = false;
             frm.Parent = tabPage;
-            frm.BackColor = Color.LightSkyBlue;
+            frm.BackColor = Color.White;
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.Show();
             return tabPage;
@@ -73,9 +76,9 @@ namespace Plane_Ticket
                 ActiveChildForm(frm);
             }  
         }
-        private void banVeToolStripMenuItem_Click(object sender, EventArgs e)
+        public void banVeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBanVe frm = new frmBanVe();
+            frmBanVe frm = new frmBanVe(rowTTNhanVien);
             if (!CheckExistForm(frm))
             {
                 CreateTabPage(frm);
@@ -87,7 +90,7 @@ namespace Plane_Ticket
         }
         private void themTuyenBayToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThemTuyenBay frm = new frmThemTuyenBay();
+            frmQuanLyTuyenBay frm = new frmQuanLyTuyenBay();
             if (!CheckExistForm(frm))
             {
                 CreateTabPage(frm);
@@ -99,67 +102,7 @@ namespace Plane_Ticket
         }
         private void themChuyenBayToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmThemChuyenBay frm = new frmThemChuyenBay();
-            if (!CheckExistForm(frm))
-            {
-                CreateTabPage(frm);
-            }
-            else
-            {
-                ActiveChildForm(frm);
-            }
-        }
-        private void thayDoiChuyenBayToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmThayDoiThongTinChuyenBay frm = new frmThayDoiThongTinChuyenBay();
-            if (!CheckExistForm(frm))
-            {
-                CreateTabPage(frm);
-            }
-            else
-            {
-                ActiveChildForm(frm);
-            }
-        }
-        private void thayDoiKhachHangToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            frmThayDoiThongTinKhachHang frm = new frmThayDoiThongTinKhachHang();
-            if (!CheckExistForm(frm))
-            {
-                CreateTabPage(frm);
-            }
-            else
-            {
-                ActiveChildForm(frm);
-            }
-        }
-        private void xoaTuyenBayToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            frmXoaThongTinTuyenBay frm = new frmXoaThongTinTuyenBay();
-            if (!CheckExistForm(frm))
-            {
-                CreateTabPage(frm);
-            }
-            else
-            {
-                ActiveChildForm(frm);
-            }
-        }
-        private void xoaChuyenBayToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            frmXoaThongTinChuyenBay frm = new frmXoaThongTinChuyenBay();
-            if (!CheckExistForm(frm))
-            {
-                CreateTabPage(frm);
-            }
-            else
-            {
-                ActiveChildForm(frm);
-            }
-        }
-        private void xoaDatVeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmXoaThongTinDatVe frm = new frmXoaThongTinDatVe();
+            frmQuanLyChuyenBay frm = new frmQuanLyChuyenBay();
             if (!CheckExistForm(frm))
             {
                 CreateTabPage(frm);
@@ -217,6 +160,123 @@ namespace Plane_Ticket
                 ActiveChildForm(frm);
             }
         }
+        private void themSanBayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLySanBay frm = new frmQuanLySanBay();
+            if (!CheckExistForm(frm))
+            {
+                CreateTabPage(frm);
+            }
+            else
+            {
+                ActiveChildForm(frm);
+            }
+        }
+        private void themMayBayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLyMayBay frm = new frmQuanLyMayBay();
+            if (!CheckExistForm(frm))
+            {
+                CreateTabPage(frm);
+            }
+            else
+            {
+                ActiveChildForm(frm);
+            }
+        }
+        private void themHangVeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLyHangVe frm = new frmQuanLyHangVe();
+            if (!CheckExistForm(frm))
+            {
+                CreateTabPage(frm);
+            }
+            else
+            {
+                ActiveChildForm(frm);
+            }
+        }
+        private void themKhachHangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLyKhachHang frm = new frmQuanLyKhachHang();
+            if (!CheckExistForm(frm))
+            {
+                CreateTabPage(frm);
+            }
+            else
+            {
+                ActiveChildForm(frm);
+            }
+        }
+        private void themDonGiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLyDonGia frm = new frmQuanLyDonGia();
+            if (!CheckExistForm(frm))
+            {
+                CreateTabPage(frm);
+            }
+            else
+            {
+                ActiveChildForm(frm);
+            }
+        }
+        private void themNhanVienToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLyNhanVien frm = new frmQuanLyNhanVien();
+            if (!CheckExistForm(frm))
+            {
+                CreateTabPage(frm);
+            }
+            else
+            {
+                ActiveChildForm(frm);
+            }
+        }
+        private void toolStripBtnDangXuat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đăng xuất không?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                Form frm = new frmDangNhap();
+                frm.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đăng xuất không?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                Form frm = new frmDangNhap();
+                frm.ShowDialog();
+                this.Close();
+            }
+        }
+        #endregion
+
+        private void KhoiTaoGiaoDien()
+        {
+            lbMaNhanVien.Text = "Mã nhân viên: " + rowTTNhanVien[2].ToString();
+            lbUsername.Text = "Username: " + rowTTNhanVien[0].ToString();
+            int type = Convert.ToInt32(rowTTNhanVien[3].ToString());
+            if (type == 0)
+            {
+                mstrMain.Enabled = true;
+                toolStripMain.Enabled = true;
+            }
+            if(type==1)
+            {
+                mstrMain.Enabled = true;
+                toolStripMain.Enabled = true;
+                QuanLyThongTinToolStripMenuItem.Enabled = false;
+                baoCaoToolStripMenuItem.Enabled = false;
+            }
+        }
+
+        #endregion
+
+        
     }
 
 }

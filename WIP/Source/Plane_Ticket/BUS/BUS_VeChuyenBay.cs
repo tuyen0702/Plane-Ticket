@@ -9,13 +9,17 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    class BUS_VeChuyenBay
+    public class BUS_VeChuyenBay
     {
         DAL_VeChuyenBay dal = new DAL_VeChuyenBay();
 
         public DataTable Get()
         {
             return dal.Get();
+        }
+        public DataTable GetForDisplay()
+        {
+            return dal.GetForDisplay();
         }
         public bool Add(DTO_VeChuyenBay dto)
         {
@@ -26,9 +30,9 @@ namespace BUS
             return dal.Update(dto);
         }
 
-        public bool Delete(DTO_VeChuyenBay dto)
+        public bool Delete(string str)
         {
-            return dal.Delete(dto);
+            return dal.Delete(str);
         }
     }
 }

@@ -1,17 +1,25 @@
-# Đồ án phần mềm quản lý bán vé máy bay
+![logoUIT](https://github.com/TokumeiShi/Plane-Ticket/blob/master/logo.png)
+
+# PHẦN MỀM QUẢN LÝ VÉ MÁY BAY
 Đồ án có mục đích tạo ra phần mềm giúp quản lý các nghiệp vụ của đại lý bán vé máy bay.
+
+![screenshot](https://github.com/TokumeiShi/Plane-Ticket/blob/master/demo.PNG)
 
 ## Điều kiện cài đặt
 ```
-Hệ điều hành: Windows
-Hệ quản trị cở sở dữ liệu: Microsoft SQL Sever
+Hệ điều hành: Windows 10
+Hệ quản trị cở sở dữ liệu: Microsoft SQL Sever 2012 hoặc cao hơn
 ```
 
 ## Các bước cài đặt
 
 ## Xây dựng với
-* [Visual studio](https://www.visualstudio.com/) - Môi trường phát triển tích hợp
-* [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) - Hệ thống quản lý cơ sở dữ liệu quan hệ
+* [Visual studio 2017](https://www.visualstudio.com/) - Môi trường phát triển tích hợp
+* [SQL Server Management Studio 2012](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) - Hệ thống quản lý cơ sở dữ liệu quan hệ
+
+## Nguồn tham khảo
+* [Flaticon](https://www.flaticon.com/) - Trang web cung cấp biểu tượng vector miễn phí
+* [Lập trình Winform cơ bản HowKteam](http://www.howkteam.vn/course/lap-trinh-winform-co-ban-27) - Trang web dạy winform cở bản miễn phí
 
 ## Tác giả
 * **Lê Văn Phước**

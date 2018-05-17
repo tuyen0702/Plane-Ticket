@@ -10,15 +10,26 @@ namespace DTO
     {
         private string maNhanVien;
         private string tenNhanVien;
+        private string username;
+        private string password;
+        private int type;
         public DTO_NhanVien()
         {
         }
-        public DTO_NhanVien(string maNhanVien, string tenNhanVien)
+
+        public DTO_NhanVien(string maNhanVien, string tenNhanVien, string username, string password, int type)
         {
-            this.maNhanVien = maNhanVien;
-            this.tenNhanVien = tenNhanVien;
+            MaNhanVien = maNhanVien;
+            TenNhanVien = tenNhanVien;
+            Username = username;
+            Password = password;
+            Type = type;
         }
+
         public string MaNhanVien { get => maNhanVien; set => maNhanVien = value; }
         public string TenNhanVien { get => tenNhanVien; set => tenNhanVien = value; }
+        public string Username { get => username; set => username = value; }
+        public string Password { get => password; set => password = value; }
+        public int Type { get => type; set => type = value; }
     }
 }

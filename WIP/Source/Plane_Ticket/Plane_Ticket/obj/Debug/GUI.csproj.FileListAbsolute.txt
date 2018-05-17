@@ -43,21 +43,15 @@ E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmBaoCaoThang.resources
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmDangNhap.resources
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmMain.resources
-E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmThayDoiThongTinChuyenBay.resources
-E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmThayDoiThongTinKhachHang.resources
-E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmThemChuyenBay.resources
-E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmThemTuyenBay.resources
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmTraCuuChuyenBay.resources
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmTraCuuKhachHang.resources
-E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmXoaThongTinChuyenBay.resources
-E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmXoaThongTinDatVe.resources
-E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmXoaThongTinTuyenBay.resources
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.Properties.Resources.resources
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\GUI.csproj.GenerateResource.cache
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\GUI.csproj.CopyComplete
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.exe
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.pdb
+<<<<<<< HEAD
 C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\bin\Debug\Plane_Ticket.exe.config
 C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\bin\Debug\Plane_Ticket.exe
 C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\bin\Debug\Plane_Ticket.pdb
@@ -88,3 +82,13 @@ C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\GU
 C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.exe
 C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.pdb
+=======
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmQuanLyTuyenBay.resources
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmQuanLySanBay.resources
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmQuanLyMayBay.resources
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmQuanLyHangVe.resources
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmQuanLyChuyenBay.resources
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmQuanLyDonGia.resources
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmQuanLyKhachHang.resources
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmQuanLyNhanVien.resources
+>>>>>>> 2e2b19d20abb04bd60f6f04520d70bbc8dc082f2
