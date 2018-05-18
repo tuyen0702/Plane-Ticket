@@ -169,13 +169,13 @@ namespace Plane_Ticket
         private void cboMaTuyenBay_SelectionChangeCommitted(object sender, EventArgs e)
         {
             BUS_TuyenBay busTuyenBay = new BUS_TuyenBay();
-            DataTable dtTuyenBay = busTuyenBay.GetOfMaTuyenBay(cboMaTuyenBay.Text);
+            DataTable dtTuyenBay = busTuyenBay.GetOfMaTuyenBay(cboMaTuyenBay.SelectedValue.ToString());
             if (dtTuyenBay.Rows.Count == 0)
                 return;
             DataRow row = dtTuyenBay.Rows[0];
-            cboSanBayDi.Text = row["TENSANBAYDI"].ToString();
+
             cboSanBayDi.SelectedValue = row["MASANBAYDI"].ToString();
-            cboSanBayDen.Text = row["TENSANBAYDEN"].ToString();
+
             cboSanBayDen.SelectedValue = row["MASANBAYDEN"].ToString();
         }
         private void cboSanBayDi_SelectionChangeCommitted(object sender, EventArgs e)

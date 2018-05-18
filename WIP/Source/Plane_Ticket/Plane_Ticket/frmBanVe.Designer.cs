@@ -51,19 +51,19 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtMaTuyenBay = new System.Windows.Forms.TextBox();
             this.gbxThaoTac = new System.Windows.Forms.GroupBox();
+            this.btnMuaVe = new System.Windows.Forms.Button();
             this.btnDatVe = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.gbxDSVe = new System.Windows.Forms.GroupBox();
             this.dtgvVe = new System.Windows.Forms.DataGridView();
             this.label18 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.gbxTTVe = new System.Windows.Forms.GroupBox();
-            this.btnMuaVe = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.gbxTTVe = new System.Windows.Forms.GroupBox();
             this.gbxThaoTac.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gbxDSVe.SuspendLayout();
@@ -77,7 +77,7 @@
             this.txtTenKhachHang.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenKhachHang.Name = "txtTenKhachHang";
             this.txtTenKhachHang.Size = new System.Drawing.Size(221, 22);
-            this.txtTenKhachHang.TabIndex = 69;
+            this.txtTenKhachHang.TabIndex = 2;
             // 
             // txtSDT
             // 
@@ -85,7 +85,7 @@
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(221, 22);
-            this.txtSDT.TabIndex = 68;
+            this.txtSDT.TabIndex = 3;
             // 
             // txtCMND
             // 
@@ -93,7 +93,7 @@
             this.txtCMND.Margin = new System.Windows.Forms.Padding(4);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(221, 22);
-            this.txtCMND.TabIndex = 67;
+            this.txtCMND.TabIndex = 1;
             this.txtCMND.TextChanged += new System.EventHandler(this.txtCMND_TextChanged);
             // 
             // label10
@@ -153,7 +153,7 @@
             this.cboHangVe.Margin = new System.Windows.Forms.Padding(4);
             this.cboHangVe.Name = "cboHangVe";
             this.cboHangVe.Size = new System.Drawing.Size(221, 24);
-            this.cboHangVe.TabIndex = 58;
+            this.cboHangVe.TabIndex = 4;
             this.cboHangVe.SelectedValueChanged += new System.EventHandler(this.cboHangVe_SelectedValueChanged);
             // 
             // label3
@@ -193,7 +193,7 @@
             this.cboMaChuyenBay.Margin = new System.Windows.Forms.Padding(4);
             this.cboMaChuyenBay.Name = "cboMaChuyenBay";
             this.cboMaChuyenBay.Size = new System.Drawing.Size(221, 24);
-            this.cboMaChuyenBay.TabIndex = 52;
+            this.cboMaChuyenBay.TabIndex = 0;
             this.cboMaChuyenBay.TextUpdate += new System.EventHandler(this.cboMaChuyenBay_SelectedValueChanged);
             this.cboMaChuyenBay.SelectedValueChanged += new System.EventHandler(this.cboMaChuyenBay_SelectedValueChanged);
             // 
@@ -205,6 +205,7 @@
             this.txtSanBayDi.ReadOnly = true;
             this.txtSanBayDi.Size = new System.Drawing.Size(221, 22);
             this.txtSanBayDi.TabIndex = 69;
+            this.txtSanBayDi.TabStop = false;
             // 
             // txtSanBayDen
             // 
@@ -214,6 +215,7 @@
             this.txtSanBayDen.ReadOnly = true;
             this.txtSanBayDen.Size = new System.Drawing.Size(221, 22);
             this.txtSanBayDen.TabIndex = 69;
+            this.txtSanBayDen.TabStop = false;
             // 
             // txtThoiGianKhoiHanh
             // 
@@ -223,6 +225,7 @@
             this.txtThoiGianKhoiHanh.ReadOnly = true;
             this.txtThoiGianKhoiHanh.Size = new System.Drawing.Size(221, 22);
             this.txtThoiGianKhoiHanh.TabIndex = 69;
+            this.txtThoiGianKhoiHanh.TabStop = false;
             // 
             // label11
             // 
@@ -242,6 +245,7 @@
             this.txtGiaTien.ReadOnly = true;
             this.txtGiaTien.Size = new System.Drawing.Size(221, 22);
             this.txtGiaTien.TabIndex = 68;
+            this.txtGiaTien.TabStop = false;
             // 
             // label12
             // 
@@ -261,6 +265,7 @@
             this.txtThoiGIanBay.ReadOnly = true;
             this.txtThoiGIanBay.Size = new System.Drawing.Size(221, 22);
             this.txtThoiGIanBay.TabIndex = 69;
+            this.txtThoiGIanBay.TabStop = false;
             // 
             // label13
             // 
@@ -280,6 +285,7 @@
             this.txtMaTuyenBay.ReadOnly = true;
             this.txtMaTuyenBay.Size = new System.Drawing.Size(221, 22);
             this.txtMaTuyenBay.TabIndex = 69;
+            this.txtMaTuyenBay.TabStop = false;
             // 
             // gbxThaoTac
             // 
@@ -290,9 +296,23 @@
             this.gbxThaoTac.Location = new System.Drawing.Point(12, 565);
             this.gbxThaoTac.Name = "gbxThaoTac";
             this.gbxThaoTac.Size = new System.Drawing.Size(380, 101);
-            this.gbxThaoTac.TabIndex = 76;
+            this.gbxThaoTac.TabIndex = 1;
             this.gbxThaoTac.TabStop = false;
             this.gbxThaoTac.Text = "Thao tác";
+            // 
+            // btnMuaVe
+            // 
+            this.btnMuaVe.BackgroundImage = global::Plane_Ticket.Properties.Resources.btnMua;
+            this.btnMuaVe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMuaVe.FlatAppearance.BorderSize = 0;
+            this.btnMuaVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMuaVe.Location = new System.Drawing.Point(99, 22);
+            this.btnMuaVe.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMuaVe.Name = "btnMuaVe";
+            this.btnMuaVe.Size = new System.Drawing.Size(55, 50);
+            this.btnMuaVe.TabIndex = 5;
+            this.btnMuaVe.UseVisualStyleBackColor = true;
+            this.btnMuaVe.Click += new System.EventHandler(this.btnMuaVe_Click);
             // 
             // btnDatVe
             // 
@@ -304,9 +324,29 @@
             this.btnDatVe.Margin = new System.Windows.Forms.Padding(4);
             this.btnDatVe.Name = "btnDatVe";
             this.btnDatVe.Size = new System.Drawing.Size(55, 50);
-            this.btnDatVe.TabIndex = 66;
+            this.btnDatVe.TabIndex = 6;
             this.btnDatVe.UseVisualStyleBackColor = true;
             this.btnDatVe.Click += new System.EventHandler(this.btnDatVe_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(226, 76);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 17);
+            this.label5.TabIndex = 63;
+            this.label5.Text = "Đặt vé";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(101, 76);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 17);
+            this.label2.TabIndex = 63;
+            this.label2.Text = "Mua vé";
             // 
             // panel1
             // 
@@ -328,6 +368,24 @@
             this.label17.TabIndex = 39;
             this.label17.Text = "BÁN VÉ MÁY BAY";
             // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnThoat.BackgroundImage = global::Plane_Ticket.Properties.Resources.btnCancel;
+            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.White;
+            this.btnThoat.Location = new System.Drawing.Point(1206, 4);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(55, 50);
+            this.btnThoat.TabIndex = 10;
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
             // gbxDSVe
             // 
             this.gbxDSVe.Controls.Add(this.dtgvVe);
@@ -337,7 +395,7 @@
             this.gbxDSVe.Location = new System.Drawing.Point(398, 64);
             this.gbxDSVe.Name = "gbxDSVe";
             this.gbxDSVe.Size = new System.Drawing.Size(854, 602);
-            this.gbxDSVe.TabIndex = 74;
+            this.gbxDSVe.TabIndex = 2;
             this.gbxDSVe.TabStop = false;
             this.gbxDSVe.Text = "Danh sách vé";
             // 
@@ -348,7 +406,7 @@
             this.dtgvVe.Name = "dtgvVe";
             this.dtgvVe.RowTemplate.Height = 24;
             this.dtgvVe.Size = new System.Drawing.Size(842, 533);
-            this.dtgvVe.TabIndex = 47;
+            this.dtgvVe.TabIndex = 9;
             // 
             // label18
             // 
@@ -366,7 +424,20 @@
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(165, 22);
-            this.txtTimKiem.TabIndex = 17;
+            this.txtTimKiem.TabIndex = 7;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackgroundImage = global::Plane_Ticket.Properties.Resources.btnTimKiem;
+            this.btnTimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Location = new System.Drawing.Point(814, 20);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(33, 30);
+            this.btnTimKiem.TabIndex = 8;
+            this.btnTimKiem.UseVisualStyleBackColor = true;
             // 
             // gbxTTVe
             // 
@@ -395,74 +466,9 @@
             this.gbxTTVe.Location = new System.Drawing.Point(12, 64);
             this.gbxTTVe.Name = "gbxTTVe";
             this.gbxTTVe.Size = new System.Drawing.Size(380, 495);
-            this.gbxTTVe.TabIndex = 73;
+            this.gbxTTVe.TabIndex = 0;
             this.gbxTTVe.TabStop = false;
             this.gbxTTVe.Text = "Thông tin vé";
-            // 
-            // btnMuaVe
-            // 
-            this.btnMuaVe.BackgroundImage = global::Plane_Ticket.Properties.Resources.btnMua;
-            this.btnMuaVe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMuaVe.FlatAppearance.BorderSize = 0;
-            this.btnMuaVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMuaVe.Location = new System.Drawing.Point(99, 22);
-            this.btnMuaVe.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMuaVe.Name = "btnMuaVe";
-            this.btnMuaVe.Size = new System.Drawing.Size(55, 50);
-            this.btnMuaVe.TabIndex = 71;
-            this.btnMuaVe.UseVisualStyleBackColor = true;
-            this.btnMuaVe.Click += new System.EventHandler(this.btnMuaVe_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnThoat.BackgroundImage = global::Plane_Ticket.Properties.Resources.btnCancel;
-            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnThoat.FlatAppearance.BorderSize = 0;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(1206, 4);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(55, 50);
-            this.btnThoat.TabIndex = 40;
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackgroundImage = global::Plane_Ticket.Properties.Resources.btnTimKiem;
-            this.btnTimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTimKiem.FlatAppearance.BorderSize = 0;
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.Location = new System.Drawing.Point(814, 20);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(33, 30);
-            this.btnTimKiem.TabIndex = 40;
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(101, 76);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 17);
-            this.label2.TabIndex = 63;
-            this.label2.Text = "Mua vé";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(226, 76);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 17);
-            this.label5.TabIndex = 63;
-            this.label5.Text = "Đặt vé";
             // 
             // frmBanVe
             // 

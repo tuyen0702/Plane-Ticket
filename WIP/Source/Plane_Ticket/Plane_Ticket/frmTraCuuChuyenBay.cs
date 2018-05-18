@@ -94,9 +94,13 @@ namespace Plane_Ticket
             txtMaTuyenBay.Text = row.Cells[0].Value.ToString();
         }
 
-        
+
+
         #endregion
 
-
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Parent.Dispose();
+        }
     }
 }

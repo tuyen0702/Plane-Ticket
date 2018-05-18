@@ -14,7 +14,7 @@ namespace Plane_Ticket
     public partial class frmMain : Form
     {
         #region Properties
-        DataRow rowTTNhanVien;
+        private DataRow rowTTNhanVien;
         #endregion
 
         #region Initializes

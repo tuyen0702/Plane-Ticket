@@ -35,6 +35,7 @@
             this.dtpNgayKHTu = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayKHDen = new System.Windows.Forms.DateTimePicker();
             this.gbxThaoTac = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.cboSanBayDi = new System.Windows.Forms.ComboBox();
             this.txtMaTuyenBay = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.gbxThaoTac.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gbxDSChyenBay.SuspendLayout();
@@ -91,7 +91,8 @@
             // 
             // dtpNgayKHTu
             // 
-            this.dtpNgayKHTu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayKHTu.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayKHTu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayKHTu.Location = new System.Drawing.Point(174, 134);
             this.dtpNgayKHTu.Name = "dtpNgayKHTu";
             this.dtpNgayKHTu.Size = new System.Drawing.Size(199, 22);
@@ -99,7 +100,8 @@
             // 
             // dtpNgayKHDen
             // 
-            this.dtpNgayKHDen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayKHDen.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayKHDen.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayKHDen.Location = new System.Drawing.Point(174, 169);
             this.dtpNgayKHDen.Name = "dtpNgayKHDen";
             this.dtpNgayKHDen.Size = new System.Drawing.Size(199, 22);
@@ -115,6 +117,15 @@
             this.gbxThaoTac.TabIndex = 121;
             this.gbxThaoTac.TabStop = false;
             this.gbxThaoTac.Text = "Thao tác";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(156, 78);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 17);
+            this.label1.TabIndex = 91;
+            this.label1.Text = "Tìm kiếm";
             // 
             // panel1
             // 
@@ -151,6 +162,7 @@
             this.btnThoat.Size = new System.Drawing.Size(55, 50);
             this.btnThoat.TabIndex = 40;
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // gbxDSChyenBay
             // 
@@ -245,15 +257,6 @@
             this.txtMaTuyenBay.ReadOnly = true;
             this.txtMaTuyenBay.Size = new System.Drawing.Size(200, 22);
             this.txtMaTuyenBay.TabIndex = 17;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(156, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 17);
-            this.label1.TabIndex = 91;
-            this.label1.Text = "Tìm kiếm";
             // 
             // frmTraCuuChuyenBay
             // 
