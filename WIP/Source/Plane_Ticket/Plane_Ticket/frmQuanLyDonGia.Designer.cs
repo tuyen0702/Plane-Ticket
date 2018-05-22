@@ -49,6 +49,7 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.gbxTTMayBay = new System.Windows.Forms.GroupBox();
+            this.lbDonGia = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.cboSanBayDen = new System.Windows.Forms.ComboBox();
@@ -282,6 +283,7 @@
             // 
             // gbxTTMayBay
             // 
+            this.gbxTTMayBay.Controls.Add(this.lbDonGia);
             this.gbxTTMayBay.Controls.Add(this.label15);
             this.gbxTTMayBay.Controls.Add(this.label14);
             this.gbxTTMayBay.Controls.Add(this.cboSanBayDen);
@@ -298,6 +300,14 @@
             this.gbxTTMayBay.TabIndex = 55;
             this.gbxTTMayBay.TabStop = false;
             this.gbxTTMayBay.Text = "Thông tin đơn giá";
+            // 
+            // lbDonGia
+            // 
+            this.lbDonGia.AutoSize = true;
+            this.lbDonGia.Location = new System.Drawing.Point(257, 178);
+            this.lbDonGia.Name = "lbDonGia";
+            this.lbDonGia.Size = new System.Drawing.Size(0, 17);
+            this.lbDonGia.TabIndex = 59;
             // 
             // label15
             // 
@@ -341,8 +351,9 @@
             // 
             this.txtDonGia.Location = new System.Drawing.Point(141, 173);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(233, 22);
+            this.txtDonGia.Size = new System.Drawing.Size(110, 22);
             this.txtDonGia.TabIndex = 54;
+            this.txtDonGia.TextChanged += new System.EventHandler(this.txtDonGia_TextChanged);
             // 
             // cboMaHangVe
             // 
@@ -363,6 +374,7 @@
             this.Controls.Add(this.gbxTTMayBay);
             this.Name = "frmQuanLyDonGia";
             this.Text = "Thêm đơn giá";
+            this.Shown += new System.EventHandler(this.frmQuanLyDonGia_Shown);
             this.gbxThaoTac.ResumeLayout(false);
             this.gbxThaoTac.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -403,5 +415,6 @@
         private System.Windows.Forms.ComboBox cboSanBayDi;
         private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.ComboBox cboMaHangVe;
+        private System.Windows.Forms.Label lbDonGia;
     }
 }

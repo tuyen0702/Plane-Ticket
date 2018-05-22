@@ -341,6 +341,7 @@
             this.Controls.Add(this.gbxTTKhachHang);
             this.Name = "frmQuanLyKhachHang";
             this.Text = "Thêm khách hàng";
+            this.Shown += new System.EventHandler(this.frmQuanLyKhachHang_Shown);
             this.gbxThaoTac.ResumeLayout(false);
             this.gbxThaoTac.PerformLayout();
             this.panel1.ResumeLayout(false);

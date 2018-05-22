@@ -246,6 +246,7 @@
             this.txtGiaTien.Size = new System.Drawing.Size(221, 22);
             this.txtGiaTien.TabIndex = 68;
             this.txtGiaTien.TabStop = false;
+            this.txtGiaTien.TextChanged += new System.EventHandler(this.txtGiaTien_TextChanged);
             // 
             // label12
             // 
@@ -407,6 +408,7 @@
             this.dtgvVe.RowTemplate.Height = 24;
             this.dtgvVe.Size = new System.Drawing.Size(842, 533);
             this.dtgvVe.TabIndex = 9;
+            this.dtgvVe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvVe_CellClick);
             // 
             // label18
             // 
@@ -485,6 +487,7 @@
             this.Name = "frmBanVe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Bán vé chuyến bay";
+            this.Shown += new System.EventHandler(this.frmBanVe_Shown);
             this.gbxThaoTac.ResumeLayout(false);
             this.gbxThaoTac.PerformLayout();
             this.panel1.ResumeLayout(false);

@@ -22,7 +22,7 @@ namespace DAL
         public DataTable GetForDisplay()
         {
             string sqlQuery = "SELECT V.MAVE[Mã vé], K.TENKHACHHANG[Tên khách hàng], " +
-                "V.MACHUYENBAY[Mã chuyến bay], H.TENHANGVE[Tên hạng vé], V.MANHANVIEN[Tên nhân viên], " +
+                "K.CMND[CMND], V.MACHUYENBAY[Mã chuyến bay], H.TENHANGVE[Tên hạng vé], " +
                 "V.GIATIEN[Giá tiền], V.NGAYGIOGD[Ngày giờ giao dịch], V.NGAYHUY[Ngày hủy], " +
                 "V.LOAIVE[Loại vé] FROM VECHUYENBAY V INNER JOIN KHACHHANG K " +
                 "ON V.MAKHACHHANG=K.MAKHACHHANG INNER JOIN HANGVE H ON V.MAHANGVE=H.MAHANGVE";

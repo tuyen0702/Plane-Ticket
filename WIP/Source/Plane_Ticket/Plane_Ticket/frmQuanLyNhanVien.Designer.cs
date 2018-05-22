@@ -376,6 +376,7 @@
             this.Controls.Add(this.gbxTTNhanVien);
             this.Name = "frmQuanLyNhanVien";
             this.Text = "Quản lý nhân viên";
+            this.Shown += new System.EventHandler(this.frmQuanLyNhanVien_Shown);
             this.gbxThaoTac.ResumeLayout(false);
             this.gbxThaoTac.PerformLayout();
             this.panel1.ResumeLayout(false);

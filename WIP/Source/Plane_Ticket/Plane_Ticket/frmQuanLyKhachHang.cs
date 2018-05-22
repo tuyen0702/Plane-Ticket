@@ -24,12 +24,14 @@ namespace Plane_Ticket
         {
             InitializeComponent();
             busKhachHang = new BUS_KhachHang();
-            KhoiTaoGiaoDien();
         }
         #endregion
 
         #region Methods
-
+        private void frmQuanLyKhachHang_Shown(object sender, EventArgs e)
+        {
+            KhoiTaoGiaoDien();
+        }
         private void TaoLai()
         {
             TaoBangDSKhachHang();
@@ -157,8 +159,9 @@ namespace Plane_Ticket
             txtCMND.Text = row.Cells[2].Value.ToString();
             txtSDT.Text = row.Cells[3].Value.ToString();
         }
+
         #endregion
 
-
+        
     }
 }

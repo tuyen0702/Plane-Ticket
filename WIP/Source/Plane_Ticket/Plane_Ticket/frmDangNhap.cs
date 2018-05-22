@@ -55,7 +55,6 @@ namespace Plane_Ticket
             else
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
             }
         }
         private void frmDangNhap_Shown(object sender, EventArgs e)
@@ -76,6 +75,7 @@ namespace Plane_Ticket
 
             AcceptButton = btnDangNhap;
             CancelButton = btnThoat;
+
         }
 
         #endregion

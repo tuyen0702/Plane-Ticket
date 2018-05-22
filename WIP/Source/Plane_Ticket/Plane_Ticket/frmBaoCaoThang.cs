@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,16 @@ namespace Plane_Ticket
 
         private void btnXuatBaoCao_Click(object sender, EventArgs e)
         {
+            BUS_SanBay busSanBay = new BUS_SanBay();
+            DataTable dtBaoCaoThang = busSanBay.Get();
+            crBaoCaoThang cr = new crBaoCaoThang();
+            cr.SetDataSource(dtBaoCaoThang);
+            crvBaoCaoThang.ReportSource = cr;
+        }
 
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Parent.Dispose();
         }
     }
 }

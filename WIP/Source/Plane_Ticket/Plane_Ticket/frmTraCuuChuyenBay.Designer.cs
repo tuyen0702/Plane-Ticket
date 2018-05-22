@@ -270,6 +270,7 @@
             this.Name = "frmTraCuuChuyenBay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tra cứu chuyến bay";
+            this.Shown += new System.EventHandler(this.frmTraCuuChuyenBay_Shown);
             this.gbxThaoTac.ResumeLayout(false);
             this.gbxThaoTac.PerformLayout();
             this.panel1.ResumeLayout(false);

@@ -31,7 +31,6 @@ namespace Plane_Ticket
             busChuyenBay = new BUS_ChuyenBay();
             busTinhTrangVe = new BUS_TinhTrangVe();
             busCTChuyenBay = new BUS_CTChuyenBay();
-            KhoiTaoGiaoDien();
         }
         #endregion
 
@@ -41,6 +40,10 @@ namespace Plane_Ticket
             KhoiTaoGiaoDienChuyenBay();
             KhoiTaoGiaoDienHangVe();
             KhoiTaoGiaoDienSBTG();
+        }
+        private void frmQuanLyChuyenBay_Shown(object sender, EventArgs e)
+        {
+            KhoiTaoGiaoDien();
         }
         private void gbxThemHangVeChoChuyenBay_CursorChanged(object sender, EventArgs e)
         {
@@ -521,6 +524,7 @@ namespace Plane_Ticket
 
             flagSBTGCellClick = true;
         }
+
 
         #endregion
 

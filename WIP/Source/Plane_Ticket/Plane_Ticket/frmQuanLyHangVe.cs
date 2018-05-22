@@ -145,7 +145,7 @@ namespace Plane_Ticket
         }
         private void frmQuanLyHangVe_Shown(object sender, EventArgs e)
         {
-            txtTenHangVe.Focus();
+            KhoiTaoGiaoDien();
         }
         private void TaoBangDSHangVe()
         {

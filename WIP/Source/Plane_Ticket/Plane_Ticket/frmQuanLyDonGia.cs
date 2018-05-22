@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,6 @@ namespace Plane_Ticket
             InitializeComponent();
             busDonGia = new BUS_DonGia();
             flagCellClick = false;
-            KhoiTaoGiaoDien();
         }
         #endregion
 
@@ -199,6 +199,7 @@ namespace Plane_Ticket
             dtgvDonGia.Sort(dtgvDonGia.Columns[0], ListSortDirection.Descending);
             dtgvDonGia.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvDonGia.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dtgvDonGia.Columns[2].DefaultCellStyle.Format = "#,####.####";
         }
         private void dtgvDonGia_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -211,7 +212,21 @@ namespace Plane_Ticket
             flagCellClick = true;
             cboMaTuyenBay_SelectionChangeCommitted(sender, e);
         }
+        private void txtDonGia_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDonGia.Text == "")
+            {
+                lbDonGia.Text = "";
+                return;
+            }
+            decimal value = Convert.ToDecimal(txtDonGia.Text);
+            lbDonGia.Text = string.Format("{0:0,0 VNĐ}", value);
+        }
 
+        private void frmQuanLyDonGia_Shown(object sender, EventArgs e)
+        {
+            KhoiTaoGiaoDien();
+        }
         #endregion
 
 

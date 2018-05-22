@@ -24,7 +24,6 @@ namespace Plane_Ticket
         {
             InitializeComponent();
             busMayBay = new BUS_MayBay();
-            KhoiTaoGiaoDien();
         }
         #endregion
 
@@ -151,7 +150,7 @@ namespace Plane_Ticket
         }
         private void frmQuanLyMayBay_Shown(object sender, EventArgs e)
         {
-            txtTenMayBay.Focus();
+            KhoiTaoGiaoDien();
         }
         private void KhoiTaoGiaoDien()
         {

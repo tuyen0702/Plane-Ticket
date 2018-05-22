@@ -24,7 +24,6 @@ namespace Plane_Ticket
         {
             InitializeComponent();
             busTuyenBay = new BUS_TuyenBay();
-            KhoiTaoGiaoDien();
         }
         #endregion
 
@@ -178,7 +177,7 @@ namespace Plane_Ticket
         }
         private void frmQuanLyTuyenBay_Shown(object sender, EventArgs e)
         {
-            cboSanBayDi.Focus();
+            KhoiTaoGiaoDien();
         }
         private void dtgvTuyenBay_CellClick(object sender, DataGridViewCellEventArgs e)
         {

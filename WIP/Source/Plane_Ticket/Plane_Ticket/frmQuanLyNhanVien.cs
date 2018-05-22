@@ -24,11 +24,14 @@ namespace Plane_Ticket
         {
             InitializeComponent();
             busNhanVien = new BUS_NhanVien();
-            KhoiTaoGiaoDien();
         }
         #endregion
 
         #region Methods
+        private void frmQuanLyNhanVien_Shown(object sender, EventArgs e)
+        {
+            KhoiTaoGiaoDien();
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
 
@@ -179,5 +182,7 @@ namespace Plane_Ticket
                 rdbtnNVBanVe.Checked = false;
         }
         #endregion
+
+        
     }
 }

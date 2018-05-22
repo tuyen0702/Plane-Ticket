@@ -24,7 +24,6 @@ namespace Plane_Ticket
         {
             InitializeComponent();
             busSanBay = new BUS_SanBay();
-            KhoiTaoGiaoDien();
         }
         #endregion
 
@@ -174,7 +173,7 @@ namespace Plane_Ticket
         }
         private void frmQuanLySanBay_Shown(object sender, EventArgs e)
         {
-            txtTenSanBay.Focus();
+            KhoiTaoGiaoDien();
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {

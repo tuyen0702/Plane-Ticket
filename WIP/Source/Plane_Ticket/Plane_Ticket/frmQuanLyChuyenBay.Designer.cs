@@ -698,6 +698,7 @@
             this.Name = "frmQuanLyChuyenBay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm chuyến bay";
+            this.Shown += new System.EventHandler(this.frmQuanLyChuyenBay_Shown);
             this.gbxThaoTac.ResumeLayout(false);
             this.gbxThaoTac.PerformLayout();
             this.panel1.ResumeLayout(false);

@@ -28,7 +28,6 @@ namespace Plane_Ticket
             InitializeComponent();
             busVeChuyenBay = new BUS_VeChuyenBay();
             busKhachHang = new BUS_KhachHang();
-            KhoiTaoGiaoDien();
             this.maNhanVien = row["MANHANVIEN"].ToString();
         }
         #endregion
@@ -144,10 +143,6 @@ namespace Plane_Ticket
                 txtThoiGIanBay.Text = row["THOIGIANBAY"].ToString();
             }
         }
-        private void cboMaHanhKhach_SelectedValueChanged(object sender, EventArgs e)
-        {
-
-        }
         private void cboHangVe_SelectedValueChanged(object sender, EventArgs e)
         {
             BUS_DonGia busDonGia = new BUS_DonGia();
@@ -158,9 +153,6 @@ namespace Plane_Ticket
                 txtGiaTien.Text = row["DONGIA"].ToString();
             }
         }
-
-        #endregion
-
         private void txtCMND_TextChanged(object sender, EventArgs e)
         {
             BUS_KhachHang busKhachHang = new BUS_KhachHang();
@@ -234,9 +226,32 @@ namespace Plane_Ticket
             }
         }
 
-        private void btnTaoLai_Click(object sender, EventArgs e)
+        private void txtGiaTien_TextChanged(object sender, EventArgs e)
         {
-
+            if (txtGiaTien.Text == "")
+                return;
+            string text = txtGiaTien.Text.Replace(",", "");
+            text = txtGiaTien.Text.Replace("VNĐ", "");
+            decimal value = Convert.ToDecimal(text);
+            txtGiaTien.Text = string.Format("{0:0,0 VNĐ}", value);
+            
         }
+
+        private void dtgvVe_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+                return;
+            DataGridViewRow row = dtgvVe.Rows[e.RowIndex];
+            txtCMND.Text = row.Cells[2].Value.ToString();
+            cboMaChuyenBay.SelectedValue= row.Cells[3].Value.ToString();
+            cboHangVe.Text = row.Cells[4].Value.ToString();
+        }
+        private void frmBanVe_Shown(object sender, EventArgs e)
+        {
+            KhoiTaoGiaoDien();
+        }
+        #endregion
+
+
     }
 }

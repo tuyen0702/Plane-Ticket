@@ -124,18 +124,6 @@ namespace Plane_Ticket
                 ActiveChildForm(frm);
             }
         }
-        private void traCuuKhachHangToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmTraCuuKhachHang frm = new frmTraCuuKhachHang();
-            if (!CheckExistForm(frm))
-            {
-                CreateTabPage(frm);
-            }
-            else
-            {
-                ActiveChildForm(frm);
-            }
-        }
         private void baoCaoThangToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmBaoCaoThang frm = new frmBaoCaoThang();

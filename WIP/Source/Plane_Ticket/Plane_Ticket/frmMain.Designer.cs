@@ -46,7 +46,6 @@
             this.themNhanVienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.traCuuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.traCuuChuyenBayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.traCuuKhachHangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baoCaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baoCaoThangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baoCaoNamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,12 +55,11 @@
             this.toolStripMain = new System.Windows.Forms.ToolStrip();
             this.toolStripBtnBanVe = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnTraCuuChuyenBay = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnTraCuuKhachHang = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnDangXuat = new System.Windows.Forms.ToolStripButton();
             this.tabCtrlMain = new System.Windows.Forms.TabControl();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbMaNhanVien = new System.Windows.Forms.Label();
             this.lbUsername = new System.Windows.Forms.Label();
+            this.lbMaNhanVien = new System.Windows.Forms.Label();
             this.mstrMain.SuspendLayout();
             this.toolStripMain.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -96,7 +94,7 @@
             // dangXuatToolStripMenuItem
             // 
             this.dangXuatToolStripMenuItem.Name = "dangXuatToolStripMenuItem";
-            this.dangXuatToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.dangXuatToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.dangXuatToolStripMenuItem.Text = "Đăng xuất";
             this.dangXuatToolStripMenuItem.Click += new System.EventHandler(this.dangXuatToolStripMenuItem_Click);
             // 
@@ -202,8 +200,7 @@
             // traCuuToolStripMenuItem
             // 
             this.traCuuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.traCuuChuyenBayToolStripMenuItem,
-            this.traCuuKhachHangToolStripMenuItem});
+            this.traCuuChuyenBayToolStripMenuItem});
             this.traCuuToolStripMenuItem.Name = "traCuuToolStripMenuItem";
             this.traCuuToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
             this.traCuuToolStripMenuItem.Text = "Tra cứu";
@@ -211,16 +208,9 @@
             // traCuuChuyenBayToolStripMenuItem
             // 
             this.traCuuChuyenBayToolStripMenuItem.Name = "traCuuChuyenBayToolStripMenuItem";
-            this.traCuuChuyenBayToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.traCuuChuyenBayToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.traCuuChuyenBayToolStripMenuItem.Text = "Chuyến bay";
             this.traCuuChuyenBayToolStripMenuItem.Click += new System.EventHandler(this.traCuuChuyenBayToolStripMenuItem_Click);
-            // 
-            // traCuuKhachHangToolStripMenuItem
-            // 
-            this.traCuuKhachHangToolStripMenuItem.Name = "traCuuKhachHangToolStripMenuItem";
-            this.traCuuKhachHangToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
-            this.traCuuKhachHangToolStripMenuItem.Text = "Khách hàng";
-            this.traCuuKhachHangToolStripMenuItem.Click += new System.EventHandler(this.traCuuKhachHangToolStripMenuItem_Click);
             // 
             // baoCaoToolStripMenuItem
             // 
@@ -274,7 +264,6 @@
             this.toolStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripBtnBanVe,
             this.toolStripBtnTraCuuChuyenBay,
-            this.toolStripBtnTraCuuKhachHang,
             this.toolStripBtnDangXuat});
             this.toolStripMain.Location = new System.Drawing.Point(0, 28);
             this.toolStripMain.Name = "toolStripMain";
@@ -303,17 +292,6 @@
             this.toolStripBtnTraCuuChuyenBay.Text = "Tra cứu chuyến bay";
             this.toolStripBtnTraCuuChuyenBay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripBtnTraCuuChuyenBay.Click += new System.EventHandler(this.traCuuChuyenBayToolStripMenuItem_Click);
-            // 
-            // toolStripBtnTraCuuKhachHang
-            // 
-            this.toolStripBtnTraCuuKhachHang.AutoSize = false;
-            this.toolStripBtnTraCuuKhachHang.Image = global::Plane_Ticket.Properties.Resources.toolTraCuuKhachHang;
-            this.toolStripBtnTraCuuKhachHang.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnTraCuuKhachHang.Name = "toolStripBtnTraCuuKhachHang";
-            this.toolStripBtnTraCuuKhachHang.Size = new System.Drawing.Size(120, 94);
-            this.toolStripBtnTraCuuKhachHang.Text = "Tra cứu khách hàng";
-            this.toolStripBtnTraCuuKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripBtnTraCuuKhachHang.Click += new System.EventHandler(this.traCuuKhachHangToolStripMenuItem_Click);
             // 
             // toolStripBtnDangXuat
             // 
@@ -344,15 +322,6 @@
             this.panel1.Size = new System.Drawing.Size(221, 85);
             this.panel1.TabIndex = 3;
             // 
-            // lbMaNhanVien
-            // 
-            this.lbMaNhanVien.AutoSize = true;
-            this.lbMaNhanVien.Location = new System.Drawing.Point(3, 13);
-            this.lbMaNhanVien.Name = "lbMaNhanVien";
-            this.lbMaNhanVien.Size = new System.Drawing.Size(46, 17);
-            this.lbMaNhanVien.TabIndex = 0;
-            this.lbMaNhanVien.Text = "label1";
-            // 
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
@@ -361,6 +330,15 @@
             this.lbUsername.Size = new System.Drawing.Size(46, 17);
             this.lbUsername.TabIndex = 0;
             this.lbUsername.Text = "label1";
+            // 
+            // lbMaNhanVien
+            // 
+            this.lbMaNhanVien.AutoSize = true;
+            this.lbMaNhanVien.Location = new System.Drawing.Point(3, 13);
+            this.lbMaNhanVien.Name = "lbMaNhanVien";
+            this.lbMaNhanVien.Size = new System.Drawing.Size(46, 17);
+            this.lbMaNhanVien.TabIndex = 0;
+            this.lbMaNhanVien.Text = "label1";
             // 
             // frmMain
             // 
@@ -398,7 +376,6 @@
         private System.Windows.Forms.ToolStripMenuItem quanLyTuyenBayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem traCuuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem traCuuChuyenBayToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem traCuuKhachHangToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baoCaoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baoCaoThangToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baoCaoNamToolStripMenuItem;
@@ -409,7 +386,6 @@
         private System.Windows.Forms.ToolStrip toolStripMain;
         private System.Windows.Forms.ToolStripButton toolStripBtnBanVe;
         private System.Windows.Forms.ToolStripButton toolStripBtnTraCuuChuyenBay;
-        private System.Windows.Forms.ToolStripButton toolStripBtnTraCuuKhachHang;
         private System.Windows.Forms.ToolStripMenuItem quanLySanBayToolStripMenuItem;
         private System.Windows.Forms.TabControl tabCtrlMain;
         private System.Windows.Forms.ToolStripButton toolStripBtnDangXuat;
