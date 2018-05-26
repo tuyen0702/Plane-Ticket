@@ -20,10 +20,10 @@ namespace Plane_Ticket
 
         private void btnXuatBaoCao_Click(object sender, EventArgs e)
         {
-            BUS_SanBay busSanBay = new BUS_SanBay();
-            DataTable dtBaoCaoThang = busSanBay.Get();
-            crBaoCaoThang cr = new crBaoCaoThang();
-            cr.SetDataSource(dtBaoCaoThang);
+            BUS_DoanhThuThang busDoanhThuThang = new BUS_DoanhThuThang();
+            DataTable dtDoanhThuThang = busDoanhThuThang.Get();
+            crDoanhThuThang cr = new crDoanhThuThang();
+            cr.SetDataSource(dtDoanhThuThang);
             crvBaoCaoThang.ReportSource = cr;
         }
 

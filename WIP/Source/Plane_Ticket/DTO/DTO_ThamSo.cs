@@ -8,16 +8,17 @@ namespace DTO
 {
     public class DTO_ThamSo
     {
-        private DateTime thoiGianBayToiThieu;
+        private float thoiGianBayToiThieu;
         private int soSanBayTGToiDa;
-        private DateTime thoiGianDungToiThieu;
-        private DateTime thoiGianDungToiDa;
-        private DateTime thoiGianChamNhatDatVe;
-        private DateTime thoiGianChamNhatHuyVe;
+        private float thoiGianDungToiThieu;
+        private float thoiGianDungToiDa;
+        private float thoiGianChamNhatDatVe;
+        private float thoiGianChamNhatHuyVe;
         public DTO_ThamSo()
         {
         }
-        public DTO_ThamSo(DateTime thoiGianBayToiThieu, int soSanBayTGToiDa, DateTime thoiGianDungToiThieu, DateTime thoiGianDungToiDa, DateTime thoiGianChamNhatDatVe, DateTime thoiGianChamNhatHuyVe)
+
+        public DTO_ThamSo(float thoiGianBayToiThieu, int soSanBayTGToiDa, float thoiGianDungToiThieu, float thoiGianDungToiDa, float thoiGianChamNhatDatVe, float thoiGianChamNhatHuyVe)
         {
             this.ThoiGianBayToiThieu = thoiGianBayToiThieu;
             this.SoSanBayTGToiDa = soSanBayTGToiDa;
@@ -27,11 +28,11 @@ namespace DTO
             this.ThoiGianChamNhatHuyVe = thoiGianChamNhatHuyVe;
         }
 
+        public float ThoiGianBayToiThieu { get => thoiGianBayToiThieu; set => thoiGianBayToiThieu = value; }
         public int SoSanBayTGToiDa { get => soSanBayTGToiDa; set => soSanBayTGToiDa = value; }
-        public DateTime ThoiGianChamNhatDatVe { get => thoiGianChamNhatDatVe; set => thoiGianChamNhatDatVe = value; }
-        public DateTime ThoiGianChamNhatHuyVe { get => thoiGianChamNhatHuyVe; set => thoiGianChamNhatHuyVe = value; }
-        public DateTime ThoiGianDungToiThieu { get => thoiGianDungToiThieu; set => thoiGianDungToiThieu = value; }
-        public DateTime ThoiGianBayToiThieu { get => thoiGianBayToiThieu; set => thoiGianBayToiThieu = value; }
-        public DateTime ThoiGianDungToiDa { get => thoiGianDungToiDa; set => thoiGianDungToiDa = value; }
+        public float ThoiGianDungToiThieu { get => thoiGianDungToiThieu; set => thoiGianDungToiThieu = value; }
+        public float ThoiGianDungToiDa { get => thoiGianDungToiDa; set => thoiGianDungToiDa = value; }
+        public float ThoiGianChamNhatDatVe { get => thoiGianChamNhatDatVe; set => thoiGianChamNhatDatVe = value; }
+        public float ThoiGianChamNhatHuyVe { get => thoiGianChamNhatHuyVe; set => thoiGianChamNhatHuyVe = value; }
     }
 }

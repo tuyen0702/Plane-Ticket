@@ -8,27 +8,25 @@ namespace DTO
 {
     public class DTO_DoanhThuThang
     {
-        private string maDoanhThuThang;
-        private string maDoanhThuNam;
         private string thang;
+        private string nam;
         private int soChuyenBay;
         private long doanhThu;
 
         public DTO_DoanhThuThang()
         {
         }
-        public DTO_DoanhThuThang(string maDoanhThuThang, string maDoanhThuNam, string thang, int soChuyenBay, long doanhThu)
+
+        public DTO_DoanhThuThang(string thang, string nam, int soChuyenBay, long doanhThu)
         {
-            this.MaDoanhThuThang = maDoanhThuThang;
-            this.MaDoanhThuNam = MaDoanhThuNam;
             this.Thang = thang;
+            this.Nam = nam;
             this.SoChuyenBay = soChuyenBay;
             this.DoanhThu = doanhThu;
         }
 
-        public string MaDoanhThuNam { get => maDoanhThuNam; set => maDoanhThuNam = value; }
-        public string MaDoanhThuThang { get => maDoanhThuThang; set => maDoanhThuThang = value; }
         public string Thang { get => thang; set => thang = value; }
+        public string Nam { get => nam; set => nam = value; }
         public int SoChuyenBay { get => soChuyenBay; set => soChuyenBay = value; }
         public long DoanhThu { get => doanhThu; set => doanhThu = value; }
     }

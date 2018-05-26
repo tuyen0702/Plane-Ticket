@@ -19,13 +19,12 @@ namespace DAL
             da.Fill(dt);
             return dt;
         }
-
         public bool Add(DTO_DoanhThuNam dto)
         {
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("INSERT INTO DOANHTHUNAM(MADOANHTHUNAM, NAM, DOANHTHU) VALUES('{0}', '{1}', '{2}')", dto.MaDoanhThuNam, dto.Nam, dto.DoanhThu);
+                string sqlQuery = string.Format("INSERT INTO DOANHTHUNAM(NAM, DOANHTHU) VALUES('{0}', '{1}')", dto.Nam, dto.DoanhThu);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -40,13 +39,12 @@ namespace DAL
             }
             return false;
         }
-
         public bool Update(DTO_DoanhThuNam dto)
         {
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("UPDATE DOANHTHUNAM SET MADOANHTHUNAM='{0}', NAM='{1}', DOANHTHU='{2}')", dto.MaDoanhThuNam, dto.Nam, dto.DoanhThu);
+                string sqlQuery = string.Format("UPDATE DOANHTHUNAM SET DOANHTHU='{0}' WHERE NAM='{1}')", dto.DoanhThu, dto.Nam);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
@@ -68,7 +66,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("DELETE FROM DOANHTHUNAM WHERE MADOANHTHUNAM='{0}'", dto.MaDoanhThuNam);
+                string sqlQuery = string.Format("DELETE FROM DOANHTHUNAM WHERE NAM='{0}'", dto.Nam);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
@@ -84,6 +82,14 @@ namespace DAL
                 _con.Close();
             }
             return false;
+        }
+        public DataTable GetOfNam(string str)
+        {
+            string sqlQuery = string.Format("SELECT* FROM DOANHTHUNAM WHERE NAM='{0}'",str);
+            SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
         }
     }
 }

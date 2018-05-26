@@ -81,7 +81,7 @@ namespace Plane_Ticket
             {
                 try
                 {
-                    dtoChuyenBay = new DTO_ChuyenBay(txtMaChuyenBay.Text, cboMaTuyenBay.Text, cboMaMayBay.Text, Convert.ToDateTime(txtThoiGianKH.Text),Convert.ToDateTime(txtThoiGianBay.Text));
+                    dtoChuyenBay = new DTO_ChuyenBay(txtMaChuyenBay.Text, cboMaTuyenBay.Text, cboMaMayBay.Text, Convert.ToDateTime(txtThoiGianKH.Text),float.Parse(txtThoiGianBay.Text));
                     if(busChuyenBay.Add(dtoChuyenBay))
                         MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
@@ -110,7 +110,7 @@ namespace Plane_Ticket
                 {
                     try
                     {
-                        dtoChuyenBay = new DTO_ChuyenBay(txtMaChuyenBay.Text, cboMaTuyenBay.Text, cboMaMayBay.Text, Convert.ToDateTime(txtThoiGianKH.Text), Convert.ToDateTime(txtThoiGianBay.Text));
+                        dtoChuyenBay = new DTO_ChuyenBay(txtMaChuyenBay.Text, cboMaTuyenBay.Text, cboMaMayBay.Text, Convert.ToDateTime(txtThoiGianKH.Text), float.Parse(txtThoiGianBay.Text));
                         if (busChuyenBay.Update(dtoChuyenBay))
                             MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         else
@@ -228,15 +228,18 @@ namespace Plane_Ticket
         }
         private void cboMaTuyenBay_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            BUS_TuyenBay busTuyenBay = new BUS_TuyenBay();
-            DataTable dtTuyenBay = busTuyenBay.GetOfMaTuyenBay(cboMaTuyenBay.SelectedValue.ToString());
-            if (dtTuyenBay.Rows.Count == 0)
-                return;
-            DataRow row = dtTuyenBay.Rows[0];
-            cboSanBayDi.Text = row["TENSANBAYDI"].ToString();
-            cboSanBayDi.SelectedValue = row["MASANBAYDI"].ToString();
-            cboSanBayDen.Text = row["TENSANBAYDEN"].ToString();
-            cboSanBayDen.SelectedValue = row["MASANBAYDEN"].ToString();
+            if (cboMaTuyenBay.SelectedValue != null)
+            {
+                BUS_TuyenBay busTuyenBay = new BUS_TuyenBay();
+                DataTable dtTuyenBay = busTuyenBay.GetOfMaTuyenBay(cboMaTuyenBay.SelectedValue.ToString());
+                if (dtTuyenBay.Rows.Count == 0)
+                    return;
+                DataRow row = dtTuyenBay.Rows[0];
+                cboSanBayDi.Text = row["TENSANBAYDI"].ToString();
+                cboSanBayDi.SelectedValue = row["MASANBAYDI"].ToString();
+                cboSanBayDen.Text = row["TENSANBAYDEN"].ToString();
+                cboSanBayDen.SelectedValue = row["MASANBAYDEN"].ToString();
+            }
         }
         private void cboSanBayDi_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -258,8 +261,8 @@ namespace Plane_Ticket
                 return;
             DataGridViewRow row = dtgvChuyenBay.Rows[e.RowIndex];
             txtMaChuyenBay.Text = row.Cells[0].Value.ToString();
-            cboMaTuyenBay.SelectedValue = row.Cells[1].Value.ToString();
-            cboMaMayBay.SelectedValue= row.Cells[2].Value.ToString();
+            cboMaTuyenBay.Text = row.Cells[1].Value.ToString();
+            cboMaMayBay.Text = row.Cells[2].Value.ToString();
             txtThoiGianKH.Text= row.Cells[3].Value.ToString();
             txtThoiGianBay.Text = row.Cells[3].Value.ToString();
             cboMaTuyenBay_SelectionChangeCommitted(sender, e);
@@ -413,7 +416,7 @@ namespace Plane_Ticket
             {
                 try
                 {
-                    dtoCTChuyenBay = new DTO_CTChuyenBay(txtMaChuyenBay.Text,cboTenSanBayTG.SelectedValue.ToString(),Convert.ToDateTime(txtThoiGianNghi.Text),txtGhiChu.Text);
+                    dtoCTChuyenBay = new DTO_CTChuyenBay(txtMaChuyenBay.Text,cboTenSanBayTG.SelectedValue.ToString(), float.Parse(txtThoiGianNghi.Text),txtGhiChu.Text);
                     if (busCTChuyenBay.Add(dtoCTChuyenBay))
                         MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
@@ -442,7 +445,7 @@ namespace Plane_Ticket
                 {
                     try
                     {
-                        dtoCTChuyenBay = new DTO_CTChuyenBay(txtMaChuyenBay.Text, cboTenSanBayTG.SelectedValue.ToString(), Convert.ToDateTime(txtThoiGianNghi.Text), txtGhiChu.Text);
+                        dtoCTChuyenBay = new DTO_CTChuyenBay(txtMaChuyenBay.Text, cboTenSanBayTG.SelectedValue.ToString(), float.Parse(txtThoiGianNghi.Text), txtGhiChu.Text);
                         if (busCTChuyenBay.Update(dtoCTChuyenBay))
                             MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         else
@@ -473,7 +476,7 @@ namespace Plane_Ticket
             {
                 try
                 {
-                    dtoCTChuyenBay = new DTO_CTChuyenBay(txtMaChuyenBay.Text, cboTenSanBayTG.SelectedValue.ToString(), Convert.ToDateTime(txtThoiGianNghi.Text), txtGhiChu.Text);
+                    dtoCTChuyenBay = new DTO_CTChuyenBay(txtMaChuyenBay.Text, cboTenSanBayTG.SelectedValue.ToString(), float.Parse(txtThoiGianNghi.Text), txtGhiChu.Text);
                     if (busCTChuyenBay.Delete(dtoCTChuyenBay))
                         MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
@@ -529,7 +532,5 @@ namespace Plane_Ticket
         #endregion
 
         #endregion
-
-        
     }
 }

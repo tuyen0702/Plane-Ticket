@@ -117,6 +117,14 @@ namespace DAL
             da.Fill(dt);
             return dt;
         }
+        public DateTime GetDateTimeOfMaChuyenBay(string str)
+        {
+            string sqlQuery = string.Format("SELECT THOIGIANKHOIHANH FROM CHUYENBAY WHERE MACHUYENBAY='{0}'",str);
+            SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return Convert.ToDateTime(dt.Rows[0].ToString());
+        }
         private string TaoMaChuyenBay()
         {
             DataTable dt = this.GetAndSortDesc();

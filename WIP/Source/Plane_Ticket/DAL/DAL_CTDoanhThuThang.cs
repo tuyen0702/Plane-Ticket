@@ -25,7 +25,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("INSERT INTO CTDOANHTHUTHANG(MADOANHTHUTHANG, MACHUYENBAY, SOVEBANDUOC, DOANHTHU) VALUES('{0}', '{1}', '{2}', '{3}')", dto.MaDoanhThuThang, dto.MaChuyenBay, dto.SoVeBanDuoc, dto.DoanhThu);
+                string sqlQuery = string.Format("INSERT INTO CTDOANHTHUTHANG(THANG, MACHUYENBAY, SOVEBANDUOC, DOANHTHU) VALUES('{0}', '{1}', '{2}', '{3}')", dto.Thang, dto.MaChuyenBay, dto.SoVeBanDuoc, dto.DoanhThu);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -46,7 +46,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("UPDATE CTDOANHTHUTHANG SET MADOANHTHUTHANG='{0}', MACHUYENBAY='{1}', SOVEBANDUOC='{2}', DOANHTHU='{3}')", dto.MaDoanhThuThang, dto.MaChuyenBay, dto.SoVeBanDuoc, dto.DoanhThu);
+                string sqlQuery = string.Format("UPDATE CTDOANHTHUTHANG SET SOVEBANDUOC='{0}', DOANHTHU='{1}' WHERE THANG='{2}' MACHUYENBAY='{3}')", dto.SoVeBanDuoc, dto.DoanhThu, dto.Thang, dto.MaChuyenBay);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
@@ -68,7 +68,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("DELETE FROM CTDOANHTHUTHANG WHERE MADOANHTHUTHANG='{0}' AND MACHUYENBAY='{1}'", dto.MaDoanhThuThang, dto.MaChuyenBay);
+                string sqlQuery = string.Format("DELETE FROM CTDOANHTHUTHANG WHERE THANG='{0}' AND MACHUYENBAY='{1}'", dto.Thang, dto.MaChuyenBay);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {

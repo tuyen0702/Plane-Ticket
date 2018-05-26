@@ -33,25 +33,21 @@ namespace Plane_Ticket
         #endregion
 
         #region Methods
-
         private void TaoLai()
         {
-            cboMaChuyenBay.Text = "";
-            txtMaTuyenBay.Clear();
-            txtSanBayDi.Clear();
-            txtSanBayDen.Clear();
-            txtThoiGIanBay.Clear();
-            txtThoiGianKhoiHanh.Clear();
+            TaoBangDSVeChuyenBay();
             txtCMND.Clear();
             txtSDT.Clear();
             txtTenKhachHang.Clear();
-            cboHangVe.Text = "";
-            txtGiaTien.Clear();
-
-            TaoBangDSVeChuyenBay();
+            LoadDaTatxtSoGheTrong();
         }
         private void btnMuaVe_Click(object sender, EventArgs e)
         {
+            if(txtSoGheTrong.Text=="0" || txtSoGheTrong.Text=="")
+            {
+                MessageBox.Show("Không còn vé cho hạng vé này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             if (cboMaChuyenBay.Text.Trim()!="" && txtCMND.Text.Trim()!="" && txtTenKhachHang.Text.Trim()!="" && txtSDT.Text.Trim()!="" && cboHangVe.Text.Trim()!="")
             {
                 try
@@ -59,6 +55,7 @@ namespace Plane_Ticket
                     string maKhachHang;
                     string loaiVe = "Vé mua";
                     DataTable dtKhachHang = busKhachHang.GetOfCMND(txtCMND.Text);
+
                     if (dtKhachHang.Rows.Count > 0)
                     {
                         DataRow row = dtKhachHang.Rows[0];
@@ -77,7 +74,8 @@ namespace Plane_Ticket
                         DataRow row = dtKhachHang.Rows[0];
                         maKhachHang = row["MAKHACHHANG"].ToString();
                     }
-                    dtoVeChuyenBay = new DTO_VeChuyenBay(null, maKhachHang, cboMaChuyenBay.Text, cboHangVe.SelectedValue.ToString(), maNhanVien, Convert.ToInt32(txtGiaTien.Text),DateTime.Now,Convert.ToDateTime(null), loaiVe);
+
+                    dtoVeChuyenBay = new DTO_VeChuyenBay(null, maKhachHang, cboMaChuyenBay.Text, cboHangVe.SelectedValue.ToString(), maNhanVien, Convert.ToDecimal(txtGiaTien.Text),DateTime.Now,Convert.ToDateTime(null), loaiVe);
                     if (busVeChuyenBay.Add(dtoVeChuyenBay))
                         MessageBox.Show("Mua vé thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
@@ -141,16 +139,29 @@ namespace Plane_Ticket
                 txtSanBayDen.Text = row["TENSANBAYDEN"].ToString();
                 txtThoiGianKhoiHanh.Text = row["THOIGIANKHOIHANH"].ToString();
                 txtThoiGIanBay.Text = row["THOIGIANBAY"].ToString();
+                LoadDaTatxtSoGheTrong();
             }
         }
         private void cboHangVe_SelectedValueChanged(object sender, EventArgs e)
         {
-            BUS_DonGia busDonGia = new BUS_DonGia();
-            DataTable dtDonGia = busDonGia.SearchOfMaTuyenBayAndMaHangVe(txtMaTuyenBay.Text, cboHangVe.SelectedValue.ToString());
-
-            foreach (DataRow row in dtDonGia.Rows)
+            if (cboHangVe.SelectedValue != null)
             {
-                txtGiaTien.Text = row["DONGIA"].ToString();
+                BUS_DonGia busDonGia = new BUS_DonGia();
+                DataTable dtDonGia = busDonGia.SearchOfMaTuyenBayAndMaHangVe(txtMaTuyenBay.Text, cboHangVe.SelectedValue.ToString());
+
+                foreach (DataRow row in dtDonGia.Rows)
+                {
+                    txtGiaTien.Text = row["DONGIA"].ToString();
+                }
+                LoadDaTatxtSoGheTrong();
+            }
+        }
+        private void LoadDaTatxtSoGheTrong()
+        {
+            if (cboHangVe.SelectedValue != null)
+            {
+                BUS_TinhTrangVe busTinhTrangVe = new BUS_TinhTrangVe();
+                txtSoGheTrong.Text = busTinhTrangVe.GetSoGheTrongOfMaChuyenBayAndMaHangVe(cboMaChuyenBay.Text, cboHangVe.SelectedValue.ToString());
             }
         }
         private void txtCMND_TextChanged(object sender, EventArgs e)
@@ -177,7 +188,6 @@ namespace Plane_Ticket
             dtgvVe.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvVe.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
         }
-
         private void btnDatVe_Click(object sender, EventArgs e)
         {
             if (cboMaChuyenBay.Text.Trim() != "" && txtCMND.Text.Trim() != "" && txtTenKhachHang.Text.Trim() != "" && txtSDT.Text.Trim() != "" && cboHangVe.Text.Trim() != "")
@@ -205,7 +215,7 @@ namespace Plane_Ticket
                         DataRow row = dtKhachHang.Rows[0];
                         maKhachHang = row["MAKHACHHANG"].ToString();
                     }
-                    dtoVeChuyenBay = new DTO_VeChuyenBay(null, maKhachHang, cboMaChuyenBay.Text, cboHangVe.SelectedValue.ToString(), maNhanVien, Convert.ToInt32(txtGiaTien.Text), DateTime.Now, Convert.ToDateTime(null), loaiVe);
+                    dtoVeChuyenBay = new DTO_VeChuyenBay(null, maKhachHang, cboMaChuyenBay.Text, cboHangVe.SelectedValue.ToString(), maNhanVien, Convert.ToDecimal(txtGiaTien.Text), DateTime.Now, Convert.ToDateTime(null), loaiVe);
                     if (busVeChuyenBay.Add(dtoVeChuyenBay))
                         MessageBox.Show("Đặt vé thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
@@ -225,18 +235,15 @@ namespace Plane_Ticket
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
         private void txtGiaTien_TextChanged(object sender, EventArgs e)
         {
             if (txtGiaTien.Text == "")
                 return;
             string text = txtGiaTien.Text.Replace(",", "");
-            text = txtGiaTien.Text.Replace("VNĐ", "");
             decimal value = Convert.ToDecimal(text);
-            txtGiaTien.Text = string.Format("{0:0,0 VNĐ}", value);
+            txtGiaTien.Text = string.Format("{0:0,0}", value);
             
         }
-
         private void dtgvVe_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1)
@@ -249,6 +256,11 @@ namespace Plane_Ticket
         private void frmBanVe_Shown(object sender, EventArgs e)
         {
             KhoiTaoGiaoDien();
+        }
+        private void btnChiTietGheTrong_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmTinhTrangVe(cboMaChuyenBay.Text);
+            frm.Show();
         }
         #endregion
 

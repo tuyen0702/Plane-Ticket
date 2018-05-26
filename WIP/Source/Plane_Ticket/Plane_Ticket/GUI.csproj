@@ -53,10 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="crBaoCaoThang.cs">
+    <Compile Include="crDoanhThuThang.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>crBaoCaoThang.rpt</DependentUpon>
+      <DependentUpon>crDoanhThuThang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="dsBaoCaoThang.Designer.cs">
@@ -142,6 +142,12 @@
     <Compile Include="frmQuanLyTuyenBay.Designer.cs">
       <DependentUpon>frmQuanLyTuyenBay.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTinhTrangVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTinhTrangVe.Designer.cs">
+      <DependentUpon>frmTinhTrangVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTraCuuChuyenBay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,9 +161,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="crBaoCaoThang.rpt">
+    <EmbeddedResource Include="crDoanhThuThang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crBaoCaoThang.cs</LastGenOutput>
+      <LastGenOutput>crDoanhThuThang.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBanVe.resx">
       <DependentUpon>frmBanVe.cs</DependentUpon>
@@ -198,6 +204,9 @@
     <EmbeddedResource Include="frmQuanLyTuyenBay.resx">
       <DependentUpon>frmQuanLyTuyenBay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTinhTrangVe.resx">
+      <DependentUpon>frmTinhTrangVe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTraCuuChuyenBay.resx">
       <DependentUpon>frmTraCuuChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +220,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="dsBaoCaoThang.xsc">
       <DependentUpon>dsBaoCaoThang.xsd</DependentUpon>
     </None>

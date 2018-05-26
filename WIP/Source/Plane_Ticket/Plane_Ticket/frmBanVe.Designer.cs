@@ -64,6 +64,10 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.gbxTTVe = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtSoGheTrong = new System.Windows.Forms.TextBox();
+            this.btnChiTietGheTrong = new System.Windows.Forms.Button();
             this.gbxThaoTac.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gbxDSVe.SuspendLayout();
@@ -99,7 +103,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 390);
+            this.label10.Location = new System.Drawing.Point(6, 390);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(88, 17);
@@ -230,7 +234,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(9, 430);
+            this.label11.Location = new System.Drawing.Point(7, 473);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(57, 17);
@@ -239,11 +243,11 @@
             // 
             // txtGiaTien
             // 
-            this.txtGiaTien.Location = new System.Drawing.Point(152, 425);
+            this.txtGiaTien.Location = new System.Drawing.Point(150, 468);
             this.txtGiaTien.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiaTien.Name = "txtGiaTien";
             this.txtGiaTien.ReadOnly = true;
-            this.txtGiaTien.Size = new System.Drawing.Size(221, 22);
+            this.txtGiaTien.Size = new System.Drawing.Size(179, 22);
             this.txtGiaTien.TabIndex = 68;
             this.txtGiaTien.TabStop = false;
             this.txtGiaTien.TextChanged += new System.EventHandler(this.txtGiaTien_TextChanged);
@@ -443,6 +447,7 @@
             // 
             // gbxTTVe
             // 
+            this.gbxTTVe.Controls.Add(this.btnChiTietGheTrong);
             this.gbxTTVe.Controls.Add(this.txtThoiGIanBay);
             this.gbxTTVe.Controls.Add(this.cboMaChuyenBay);
             this.gbxTTVe.Controls.Add(this.label1);
@@ -450,14 +455,17 @@
             this.gbxTTVe.Controls.Add(this.label6);
             this.gbxTTVe.Controls.Add(this.txtGiaTien);
             this.gbxTTVe.Controls.Add(this.txtTenKhachHang);
+            this.gbxTTVe.Controls.Add(this.txtSoGheTrong);
             this.gbxTTVe.Controls.Add(this.txtSDT);
             this.gbxTTVe.Controls.Add(this.txtSanBayDen);
+            this.gbxTTVe.Controls.Add(this.label14);
             this.gbxTTVe.Controls.Add(this.label11);
             this.gbxTTVe.Controls.Add(this.label3);
             this.gbxTTVe.Controls.Add(this.label4);
             this.gbxTTVe.Controls.Add(this.txtCMND);
             this.gbxTTVe.Controls.Add(this.label10);
             this.gbxTTVe.Controls.Add(this.txtThoiGianKhoiHanh);
+            this.gbxTTVe.Controls.Add(this.label15);
             this.gbxTTVe.Controls.Add(this.cboHangVe);
             this.gbxTTVe.Controls.Add(this.label9);
             this.gbxTTVe.Controls.Add(this.label12);
@@ -471,6 +479,45 @@
             this.gbxTTVe.TabIndex = 0;
             this.gbxTTVe.TabStop = false;
             this.gbxTTVe.Text = "Thông tin vé";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(337, 471);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 17);
+            this.label14.TabIndex = 63;
+            this.label14.Text = "VNĐ";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(8, 431);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(90, 17);
+            this.label15.TabIndex = 63;
+            this.label15.Text = "Số ghế trống";
+            // 
+            // txtSoGheTrong
+            // 
+            this.txtSoGheTrong.Location = new System.Drawing.Point(152, 426);
+            this.txtSoGheTrong.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoGheTrong.Name = "txtSoGheTrong";
+            this.txtSoGheTrong.ReadOnly = true;
+            this.txtSoGheTrong.Size = new System.Drawing.Size(127, 22);
+            this.txtSoGheTrong.TabIndex = 3;
+            // 
+            // btnChiTietGheTrong
+            // 
+            this.btnChiTietGheTrong.Location = new System.Drawing.Point(285, 425);
+            this.btnChiTietGheTrong.Name = "btnChiTietGheTrong";
+            this.btnChiTietGheTrong.Size = new System.Drawing.Size(88, 23);
+            this.btnChiTietGheTrong.TabIndex = 70;
+            this.btnChiTietGheTrong.Text = "Chi tiết";
+            this.btnChiTietGheTrong.UseVisualStyleBackColor = true;
+            this.btnChiTietGheTrong.Click += new System.EventHandler(this.btnChiTietGheTrong_Click);
             // 
             // frmBanVe
             // 
@@ -538,5 +585,9 @@
         private System.Windows.Forms.GroupBox gbxTTVe;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnChiTietGheTrong;
+        private System.Windows.Forms.TextBox txtSoGheTrong;
+        private System.Windows.Forms.Label label15;
     }
 }

@@ -34,6 +34,10 @@ namespace BUS
         {
             return dal.GetOfMaChuyenBay(maChuyenBay);
         }
+        public DateTime GetDateTimeOfMaChuyenBay(string str)
+        {
+            return dal.GetDateTimeOfMaChuyenBay(str);
+        }
         public DataTable GetToDisplay()
         {
             return dal.GetToDisplay();

@@ -16,14 +16,14 @@ namespace Plane_Ticket {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class crBaoCaoThang : ReportClass {
+    public class crDoanhThuThang : ReportClass {
         
-        public crBaoCaoThang() {
+        public crDoanhThuThang() {
         }
         
         public override string ResourceName {
             get {
-                return "crBaoCaoThang.rpt";
+                return "crDoanhThuThang.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Plane_Ticket {
         
         public override string FullResourceName {
             get {
-                return "Plane_Ticket.crBaoCaoThang.rpt";
+                return "Plane_Ticket.crDoanhThuThang.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace Plane_Ticket {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcrBaoCaoThang : Component, ICachedReport {
+    public class CachedcrDoanhThuThang : Component, ICachedReport {
         
-        public CachedcrBaoCaoThang() {
+        public CachedcrDoanhThuThang() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace Plane_Ticket {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            crBaoCaoThang rpt = new crBaoCaoThang();
+            crDoanhThuThang rpt = new crDoanhThuThang();
             rpt.Site = this.Site;
             return rpt;
         }

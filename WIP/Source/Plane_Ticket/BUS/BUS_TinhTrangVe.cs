@@ -39,5 +39,9 @@ namespace BUS
         {
             return dal.GetOfMaChuyenBay(maChuyenBay);
         }
+        public string GetSoGheTrongOfMaChuyenBayAndMaHangVe(string maChuyenBay, string maHangVe)
+        {
+            return dal.GetSoGheTrongOfMaChuyenBayAndMaHangVe(maChuyenBay, maHangVe);
+        }
     }
 }

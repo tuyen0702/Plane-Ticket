@@ -19,13 +19,12 @@ namespace DAL
             da.Fill(dt);
             return dt;
         }
-
         public bool Add(DTO_DoanhThuThang dto)
         {
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("INSERT INTO DOANHTHUTHANG(MADOANHTHUTHANG, MADOANHTHUNAM, THANG, SOCHUYENBAY, DOANHTHU) VALUES('{0}', '{1}', '{2}', '{3}', '{4}')", dto.MaDoanhThuNam, dto.MaDoanhThuThang, dto.Thang, dto.SoChuyenBay, dto.DoanhThu);
+                string sqlQuery = string.Format("INSERT INTO DOANHTHUTHANG(THANG, NAM, SOCHUYENBAY, DOANHTHU) VALUES('{0}', '{1}', '{2}', '{3}')", dto.Thang, dto.Nam, dto.SoChuyenBay, dto.DoanhThu);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -40,13 +39,12 @@ namespace DAL
             }
             return false;
         }
-
         public bool Update(DTO_DoanhThuThang dto)
         {
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("UPDATE DOANHTHUTHANG SET MADOANHTHUTHANG='{0}', MADOANHTHUNAM='{1}', THANG='{2}', SOCHUYENBAY='{3}', DOANHTHU='{4}')", dto.MaDoanhThuNam, dto.MaDoanhThuThang, dto.Thang, dto.SoChuyenBay, dto.DoanhThu);
+                string sqlQuery = string.Format("UPDATE DOANHTHUTHANG SET SOCHUYENBAY='{0}', DOANHTHU='{1}' WHERE THANG='{2}' AND NAM='{3}')", dto.SoChuyenBay, dto.DoanhThu, dto.Thang, dto.Nam);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
@@ -68,7 +66,7 @@ namespace DAL
             try
             {
                 _con.Open();
-                string sqlQuery = string.Format("DELETE FROM DOANHTHUTHANG WHERE MADOANHTHUTHANG='{0}'", dto.MaDoanhThuThang);
+                string sqlQuery = string.Format("DELETE FROM DOANHTHUTHANG WHERE THANG='{0}' AND NAM='{1}'", dto.Thang, dto.Nam);
                 SqlCommand cmd = new SqlCommand(sqlQuery, _con);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
@@ -84,6 +82,14 @@ namespace DAL
                 _con.Close();
             }
             return false;
+        }
+        public DataTable GetOfThangNam(string strThang, string strNam)
+        {
+            string sqlQuery = string.Format("SELECT* FROM DOANHTHUTHANG WHERE THANG='{0}' AND NAM='{1}'", strThang, strNam);
+            SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
         }
     }
 }

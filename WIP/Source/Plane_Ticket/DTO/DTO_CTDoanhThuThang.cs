@@ -8,7 +8,7 @@ namespace DTO
 {
     public class DTO_CTDoanhThuThang
     {
-        private string maDoanhThuThang;
+        private string thang;
         private string maChuyenBay;
         private int soVeBanDuoc;
         private long doanhThu;
@@ -16,15 +16,16 @@ namespace DTO
         public DTO_CTDoanhThuThang()
         {
         }
-        public DTO_CTDoanhThuThang( string maDoanhThuThang, string maChuyenBay, int soVeBanDuoc, long doanhThu)
+
+        public DTO_CTDoanhThuThang(string thang, string maChuyenBay, int soVeBanDuoc, long doanhThu)
         {
-            this.MaDoanhThuThang = maDoanhThuThang;
+            this.Thang = thang;
             this.MaChuyenBay = maChuyenBay;
             this.SoVeBanDuoc = soVeBanDuoc;
             this.DoanhThu = doanhThu;
         }
 
-        public string MaDoanhThuThang { get => maDoanhThuThang; set => maDoanhThuThang = value; }
+        public string Thang { get => thang; set => thang = value; }
         public string MaChuyenBay { get => maChuyenBay; set => maChuyenBay = value; }
         public int SoVeBanDuoc { get => soVeBanDuoc; set => soVeBanDuoc = value; }
         public long DoanhThu { get => doanhThu; set => doanhThu = value; }

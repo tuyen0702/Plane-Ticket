@@ -47,3 +47,4 @@ E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\GUI.csproj.Co
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\GUI.csproj.CopyComplete
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.exe
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.pdb
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmTinhTrangVe.resources

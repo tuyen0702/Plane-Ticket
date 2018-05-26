@@ -33,5 +33,16 @@ namespace Plane_Ticket.Properties {
                 return ((string)(this["PLANE_TICKET_NEWConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-LEEDDWCS\\SQLEXPRESS;Initial Catalog=PLANE_TICKET;Integrated Se" +
+            "curity=True")]
+        public string PLANE_TICKETConnectionString {
+            get {
+                return ((string)(this["PLANE_TICKETConnectionString"]));
+            }
+        }
     }
 }
