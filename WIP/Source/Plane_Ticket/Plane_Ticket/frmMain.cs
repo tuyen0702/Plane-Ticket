@@ -220,6 +220,18 @@ namespace Plane_Ticket
                 ActiveChildForm(frm);
             }
         }
+        private void thayDoiQuyDinhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThayDoiQuyDinh frm = new frmThayDoiQuyDinh();
+            if (!CheckExistForm(frm))
+            {
+                CreateTabPage(frm);
+            }
+            else
+            {
+                ActiveChildForm(frm);
+            }
+        }
         private void toolStripBtnDangXuat_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn đăng xuất không?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -241,6 +253,7 @@ namespace Plane_Ticket
                 this.Close();
             }
         }
+        
         #endregion
 
         private void KhoiTaoGiaoDien()
@@ -261,6 +274,7 @@ namespace Plane_Ticket
                 baoCaoToolStripMenuItem.Enabled = false;
             }
         }
+
 
         #endregion
 

@@ -83,9 +83,9 @@ namespace DAL
             }
             return false;
         }
-        public DataTable GetOfThangNam(string strThang, string strNam)
+        public DataTable GetOfNam(string strNam)
         {
-            string sqlQuery = string.Format("SELECT* FROM DOANHTHUTHANG WHERE THANG='{0}' AND NAM='{1}'", strThang, strNam);
+            string sqlQuery = string.Format("SELECT* FROM DOANHTHUTHANG WHERE NAM='{0}'", strNam);
             SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
             DataTable dt = new DataTable();
             da.Fill(dt);

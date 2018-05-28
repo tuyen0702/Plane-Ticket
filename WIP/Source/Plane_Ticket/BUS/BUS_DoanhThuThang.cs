@@ -30,9 +30,9 @@ namespace BUS
         {
             return dal.Delete(dto);
         }
-        public DataTable GetOfThangNam(string strThang, string strNam)
+        public DataTable GetOfNam(string strNam)
         {
-            return dal.GetOfThangNam(strThang, strNam);
+            return dal.GetOfNam(strNam);
         }
        
     }

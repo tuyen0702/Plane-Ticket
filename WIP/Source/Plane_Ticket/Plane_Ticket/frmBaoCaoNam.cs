@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,21 @@ namespace Plane_Ticket
         public frmBaoCaoNam()
         {
             InitializeComponent();
+        }
+
+        private void btnXemBaoCao_Click(object sender, EventArgs e)
+        {
+            string year = dtpNam.Value.Year.ToString();
+            BUS_DoanhThuThang busDoanhThuThang = new BUS_DoanhThuThang();
+            DataTable dtDoanhThuThang = busDoanhThuThang.GetOfNam(year);
+            crDoanhThuNam cr = new crDoanhThuNam();
+            cr.SetDataSource(dtDoanhThuThang);
+            crvBaoCaoNam.ReportSource = cr;
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Parent.Dispose();
         }
     }
 }

@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLyDonGia));
-            this.cboMaTuyenBay = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.gbxThaoTac = new System.Windows.Forms.GroupBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,28 +47,21 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.gbxTTMayBay = new System.Windows.Forms.GroupBox();
-            this.lbDonGia = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.txtDonGia = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.lbDonGia = new System.Windows.Forms.Label();
+            this.cboMaHangVe = new System.Windows.Forms.ComboBox();
             this.cboSanBayDen = new System.Windows.Forms.ComboBox();
             this.cboSanBayDi = new System.Windows.Forms.ComboBox();
-            this.txtDonGia = new System.Windows.Forms.TextBox();
-            this.cboMaHangVe = new System.Windows.Forms.ComboBox();
+            this.cboMaTuyenBay = new System.Windows.Forms.ComboBox();
             this.gbxThaoTac.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gboDSMayBay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDonGia)).BeginInit();
             this.gbxTTMayBay.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cboMaTuyenBay
-            // 
-            this.cboMaTuyenBay.FormattingEnabled = true;
-            this.cboMaTuyenBay.Location = new System.Drawing.Point(141, 20);
-            this.cboMaTuyenBay.Name = "cboMaTuyenBay";
-            this.cboMaTuyenBay.Size = new System.Drawing.Size(233, 24);
-            this.cboMaTuyenBay.TabIndex = 53;
-            this.cboMaTuyenBay.SelectionChangeCommitted += new System.EventHandler(this.cboMaTuyenBay_SelectionChangeCommitted);
             // 
             // label20
             // 
@@ -91,16 +82,6 @@
             this.label19.Size = new System.Drawing.Size(88, 17);
             this.label19.TabIndex = 46;
             this.label19.Text = "Tên hạng vé";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(7, 178);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(57, 17);
-            this.label18.TabIndex = 44;
-            this.label18.Text = "Đơn giá";
             // 
             // gbxThaoTac
             // 
@@ -301,14 +282,6 @@
             this.gbxTTMayBay.TabStop = false;
             this.gbxTTMayBay.Text = "Thông tin đơn giá";
             // 
-            // lbDonGia
-            // 
-            this.lbDonGia.AutoSize = true;
-            this.lbDonGia.Location = new System.Drawing.Point(257, 178);
-            this.lbDonGia.Name = "lbDonGia";
-            this.lbDonGia.Size = new System.Drawing.Size(0, 17);
-            this.lbDonGia.TabIndex = 59;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -329,6 +302,40 @@
             this.label14.TabIndex = 56;
             this.label14.Text = "Sân bay đi";
             // 
+            // txtDonGia
+            // 
+            this.txtDonGia.Location = new System.Drawing.Point(141, 173);
+            this.txtDonGia.Name = "txtDonGia";
+            this.txtDonGia.Size = new System.Drawing.Size(110, 22);
+            this.txtDonGia.TabIndex = 54;
+            this.txtDonGia.TextChanged += new System.EventHandler(this.txtDonGia_TextChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(7, 178);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(57, 17);
+            this.label18.TabIndex = 44;
+            this.label18.Text = "Đơn giá";
+            // 
+            // lbDonGia
+            // 
+            this.lbDonGia.AutoSize = true;
+            this.lbDonGia.Location = new System.Drawing.Point(257, 178);
+            this.lbDonGia.Name = "lbDonGia";
+            this.lbDonGia.Size = new System.Drawing.Size(0, 17);
+            this.lbDonGia.TabIndex = 59;
+            // 
+            // cboMaHangVe
+            // 
+            this.cboMaHangVe.FormattingEnabled = true;
+            this.cboMaHangVe.Location = new System.Drawing.Point(141, 135);
+            this.cboMaHangVe.Name = "cboMaHangVe";
+            this.cboMaHangVe.Size = new System.Drawing.Size(233, 24);
+            this.cboMaHangVe.TabIndex = 52;
+            // 
             // cboSanBayDen
             // 
             this.cboSanBayDen.FormattingEnabled = true;
@@ -347,21 +354,14 @@
             this.cboSanBayDi.TabIndex = 58;
             this.cboSanBayDi.SelectionChangeCommitted += new System.EventHandler(this.cboSanBayDi_SelectionChangeCommitted);
             // 
-            // txtDonGia
+            // cboMaTuyenBay
             // 
-            this.txtDonGia.Location = new System.Drawing.Point(141, 173);
-            this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(110, 22);
-            this.txtDonGia.TabIndex = 54;
-            this.txtDonGia.TextChanged += new System.EventHandler(this.txtDonGia_TextChanged);
-            // 
-            // cboMaHangVe
-            // 
-            this.cboMaHangVe.FormattingEnabled = true;
-            this.cboMaHangVe.Location = new System.Drawing.Point(141, 135);
-            this.cboMaHangVe.Name = "cboMaHangVe";
-            this.cboMaHangVe.Size = new System.Drawing.Size(233, 24);
-            this.cboMaHangVe.TabIndex = 52;
+            this.cboMaTuyenBay.FormattingEnabled = true;
+            this.cboMaTuyenBay.Location = new System.Drawing.Point(141, 20);
+            this.cboMaTuyenBay.Name = "cboMaTuyenBay";
+            this.cboMaTuyenBay.Size = new System.Drawing.Size(233, 24);
+            this.cboMaTuyenBay.TabIndex = 53;
+            this.cboMaTuyenBay.SelectionChangeCommitted += new System.EventHandler(this.cboMaTuyenBay_SelectionChangeCommitted);
             // 
             // frmQuanLyDonGia
             // 
@@ -389,10 +389,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox cboMaTuyenBay;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox gbxThaoTac;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label5;
@@ -411,10 +409,12 @@
         private System.Windows.Forms.GroupBox gbxTTMayBay;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtDonGia;
+        private System.Windows.Forms.Label lbDonGia;
         private System.Windows.Forms.ComboBox cboSanBayDen;
         private System.Windows.Forms.ComboBox cboSanBayDi;
-        private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.ComboBox cboMaHangVe;
-        private System.Windows.Forms.Label lbDonGia;
+        private System.Windows.Forms.ComboBox cboMaTuyenBay;
+        private System.Windows.Forms.Label label18;
     }
 }

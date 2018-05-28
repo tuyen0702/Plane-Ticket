@@ -105,3 +105,4 @@ E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\bin\Debug\pt\Microsoft.
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\Plane_Ticket\obj\Debug\Plane_Ticket.frmThayDoiQuyDinh.resources

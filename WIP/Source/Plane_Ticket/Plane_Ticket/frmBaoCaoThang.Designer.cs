@@ -34,6 +34,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.dtpThangNam = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,11 +106,21 @@
             this.dtpThangNam.Size = new System.Drawing.Size(110, 22);
             this.dtpThangNam.TabIndex = 122;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(394, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 17);
+            this.label1.TabIndex = 123;
+            this.label1.Text = "Tháng năm";
+            // 
             // frmBaoCaoThang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 678);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpThangNam);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.crvBaoCaoThang);
@@ -131,5 +142,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.DateTimePicker dtpThangNam;
+        private System.Windows.Forms.Label label1;
     }
 }

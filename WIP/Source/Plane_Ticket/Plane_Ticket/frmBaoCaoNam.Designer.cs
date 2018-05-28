@@ -28,23 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cboNam = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.crvBaoCaoNam = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.label17 = new System.Windows.Forms.Label();
             this.btnXemBaoCao = new System.Windows.Forms.Button();
+            this.dtpNam = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cboNam
-            // 
-            this.cboNam.FormattingEnabled = true;
-            this.cboNam.Location = new System.Drawing.Point(517, 67);
-            this.cboNam.Name = "cboNam";
-            this.cboNam.Size = new System.Drawing.Size(91, 24);
-            this.cboNam.TabIndex = 127;
             // 
             // panel1
             // 
@@ -81,6 +73,7 @@
             this.btnThoat.Size = new System.Drawing.Size(55, 50);
             this.btnThoat.TabIndex = 40;
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // crvBaoCaoNam
             // 
@@ -92,16 +85,6 @@
             this.crvBaoCaoNam.Size = new System.Drawing.Size(1240, 568);
             this.crvBaoCaoNam.TabIndex = 125;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(473, 74);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(37, 17);
-            this.label17.TabIndex = 124;
-            this.label17.Text = "Năm";
-            // 
             // btnXemBaoCao
             // 
             this.btnXemBaoCao.AutoSize = true;
@@ -112,16 +95,35 @@
             this.btnXemBaoCao.TabIndex = 123;
             this.btnXemBaoCao.Text = "Xem báo cáo";
             this.btnXemBaoCao.UseVisualStyleBackColor = true;
+            this.btnXemBaoCao.Click += new System.EventHandler(this.btnXemBaoCao_Click);
+            // 
+            // dtpNam
+            // 
+            this.dtpNam.CustomFormat = "yyyy";
+            this.dtpNam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNam.Location = new System.Drawing.Point(484, 67);
+            this.dtpNam.Name = "dtpNam";
+            this.dtpNam.Size = new System.Drawing.Size(124, 22);
+            this.dtpNam.TabIndex = 127;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(441, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 17);
+            this.label1.TabIndex = 128;
+            this.label1.Text = "Năm";
             // 
             // frmBaoCaoNam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 678);
-            this.Controls.Add(this.cboNam);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dtpNam);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.crvBaoCaoNam);
-            this.Controls.Add(this.label17);
             this.Controls.Add(this.btnXemBaoCao);
             this.Name = "frmBaoCaoNam";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -134,13 +136,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cboNam;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnThoat;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvBaoCaoNam;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnXemBaoCao;
+        private System.Windows.Forms.DateTimePicker dtpNam;
+        private System.Windows.Forms.Label label1;
     }
 }
