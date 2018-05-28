@@ -15,6 +15,7 @@ namespace Plane_Ticket
     {
         #region Properties
         BUS_ChuyenBay busChuyenBay;
+        ComboBox cboMaChuyenBay;
         #endregion
 
         #region Initialize
@@ -23,12 +24,18 @@ namespace Plane_Ticket
             InitializeComponent();
             busChuyenBay = new BUS_ChuyenBay();
         }
-
+        public frmTraCuuChuyenBay(ComboBox cboMaChuyenBay)
+        {
+            InitializeComponent();
+            busChuyenBay = new BUS_ChuyenBay();
+            this.cboMaChuyenBay = cboMaChuyenBay;
+        }
         #endregion
 
         #region Methods
         private void TaoLai()
         {
+
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
@@ -76,6 +83,14 @@ namespace Plane_Ticket
             cboSanBayDen.DataSource = dtSanBayDen;
             cboSanBayDen.DisplayMember = "TENSANBAY";
             cboSanBayDen.ValueMember = "MASANBAY";
+
+            if (cboMaChuyenBay == null)
+            {
+                btnChonChuyenBay.Visible = false;
+                lbBanVe.Visible = false;
+                btnTimKiem.Location = new Point(125,22);
+                lbTimKiem.Location = new Point(123, 65);
+            }
         }
         private void TaoBangDSChuyenBayTheoYeuCau(string maSanBayDen, string maSanBayDi, DateTime thoiGianKHTu, DateTime thoiGianKHDen)
         {
@@ -90,12 +105,16 @@ namespace Plane_Ticket
             if (e.RowIndex == -1)
                 return;
             DataGridViewRow row = dtgvChuyenBay.Rows[e.RowIndex];
-            txtMaTuyenBay.Text = row.Cells[0].Value.ToString();
+            txtMaChuyenBay.Text = row.Cells[0].Value.ToString();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Parent.Dispose();
+            if (cboMaChuyenBay == null)
+                this.Parent.Dispose();
+            else
+                this.Close();
+            
         }
 
         private void frmTraCuuChuyenBay_Shown(object sender, EventArgs e)
@@ -103,8 +122,11 @@ namespace Plane_Ticket
             KhoiTaoGiaoDien();
         }
 
+        private void btnBanVe_Click(object sender, EventArgs e)
+        {
+            cboMaChuyenBay.Text = txtMaChuyenBay.Text;
+            this.Close();
+        }
         #endregion
-
-
     }
 }

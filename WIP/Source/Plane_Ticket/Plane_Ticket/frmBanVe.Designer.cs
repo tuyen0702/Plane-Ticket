@@ -64,10 +64,12 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.gbxTTVe = new System.Windows.Forms.GroupBox();
+            this.btnChiTietGheTrong = new System.Windows.Forms.Button();
+            this.txtSoGheTrong = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtSoGheTrong = new System.Windows.Forms.TextBox();
-            this.btnChiTietGheTrong = new System.Windows.Forms.Button();
+            this.btnTraCuu = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.gbxThaoTac.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gbxDSVe.SuspendLayout();
@@ -294,8 +296,10 @@
             // 
             // gbxThaoTac
             // 
+            this.gbxThaoTac.Controls.Add(this.btnTraCuu);
             this.gbxThaoTac.Controls.Add(this.btnMuaVe);
             this.gbxThaoTac.Controls.Add(this.btnDatVe);
+            this.gbxThaoTac.Controls.Add(this.label16);
             this.gbxThaoTac.Controls.Add(this.label5);
             this.gbxThaoTac.Controls.Add(this.label2);
             this.gbxThaoTac.Location = new System.Drawing.Point(12, 565);
@@ -311,7 +315,7 @@
             this.btnMuaVe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMuaVe.FlatAppearance.BorderSize = 0;
             this.btnMuaVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMuaVe.Location = new System.Drawing.Point(99, 22);
+            this.btnMuaVe.Location = new System.Drawing.Point(43, 22);
             this.btnMuaVe.Margin = new System.Windows.Forms.Padding(4);
             this.btnMuaVe.Name = "btnMuaVe";
             this.btnMuaVe.Size = new System.Drawing.Size(55, 50);
@@ -325,7 +329,7 @@
             this.btnDatVe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDatVe.FlatAppearance.BorderSize = 0;
             this.btnDatVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDatVe.Location = new System.Drawing.Point(224, 22);
+            this.btnDatVe.Location = new System.Drawing.Point(165, 22);
             this.btnDatVe.Margin = new System.Windows.Forms.Padding(4);
             this.btnDatVe.Name = "btnDatVe";
             this.btnDatVe.Size = new System.Drawing.Size(55, 50);
@@ -336,7 +340,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(226, 76);
+            this.label5.Location = new System.Drawing.Point(168, 76);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 17);
@@ -346,7 +350,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(101, 76);
+            this.label2.Location = new System.Drawing.Point(45, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 17);
@@ -480,6 +484,25 @@
             this.gbxTTVe.TabStop = false;
             this.gbxTTVe.Text = "Thông tin vé";
             // 
+            // btnChiTietGheTrong
+            // 
+            this.btnChiTietGheTrong.Location = new System.Drawing.Point(285, 425);
+            this.btnChiTietGheTrong.Name = "btnChiTietGheTrong";
+            this.btnChiTietGheTrong.Size = new System.Drawing.Size(88, 23);
+            this.btnChiTietGheTrong.TabIndex = 70;
+            this.btnChiTietGheTrong.Text = "Chi tiết";
+            this.btnChiTietGheTrong.UseVisualStyleBackColor = true;
+            this.btnChiTietGheTrong.Click += new System.EventHandler(this.btnChiTietGheTrong_Click);
+            // 
+            // txtSoGheTrong
+            // 
+            this.txtSoGheTrong.Location = new System.Drawing.Point(152, 426);
+            this.txtSoGheTrong.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoGheTrong.Name = "txtSoGheTrong";
+            this.txtSoGheTrong.ReadOnly = true;
+            this.txtSoGheTrong.Size = new System.Drawing.Size(127, 22);
+            this.txtSoGheTrong.TabIndex = 3;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -500,24 +523,28 @@
             this.label15.TabIndex = 63;
             this.label15.Text = "Số ghế trống";
             // 
-            // txtSoGheTrong
+            // btnTraCuu
             // 
-            this.txtSoGheTrong.Location = new System.Drawing.Point(152, 426);
-            this.txtSoGheTrong.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoGheTrong.Name = "txtSoGheTrong";
-            this.txtSoGheTrong.ReadOnly = true;
-            this.txtSoGheTrong.Size = new System.Drawing.Size(127, 22);
-            this.txtSoGheTrong.TabIndex = 3;
+            this.btnTraCuu.BackgroundImage = global::Plane_Ticket.Properties.Resources.btnTimKiem;
+            this.btnTraCuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTraCuu.FlatAppearance.BorderSize = 0;
+            this.btnTraCuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTraCuu.Location = new System.Drawing.Point(280, 21);
+            this.btnTraCuu.Name = "btnTraCuu";
+            this.btnTraCuu.Size = new System.Drawing.Size(55, 50);
+            this.btnTraCuu.TabIndex = 64;
+            this.btnTraCuu.UseVisualStyleBackColor = true;
+            this.btnTraCuu.Click += new System.EventHandler(this.btnTraCuu_Click);
             // 
-            // btnChiTietGheTrong
+            // label16
             // 
-            this.btnChiTietGheTrong.Location = new System.Drawing.Point(285, 425);
-            this.btnChiTietGheTrong.Name = "btnChiTietGheTrong";
-            this.btnChiTietGheTrong.Size = new System.Drawing.Size(88, 23);
-            this.btnChiTietGheTrong.TabIndex = 70;
-            this.btnChiTietGheTrong.Text = "Chi tiết";
-            this.btnChiTietGheTrong.UseVisualStyleBackColor = true;
-            this.btnChiTietGheTrong.Click += new System.EventHandler(this.btnChiTietGheTrong_Click);
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(240, 76);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(134, 17);
+            this.label16.TabIndex = 63;
+            this.label16.Text = "Tra cứu chuyến bay";
             // 
             // frmBanVe
             // 
@@ -589,5 +616,7 @@
         private System.Windows.Forms.Button btnChiTietGheTrong;
         private System.Windows.Forms.TextBox txtSoGheTrong;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnTraCuu;
+        private System.Windows.Forms.Label label16;
     }
 }

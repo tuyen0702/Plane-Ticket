@@ -85,5 +85,13 @@ namespace DAL
             }
             return false;
         }
+        public DataTable GetOfThangNam(string strThang, string strNam)
+        {
+            string sqlQuery = string.Format("SELECT* FROM CTDOANHTHUTHANG WHERE THANG='{0}' AND NAM='{1}'", strThang, strNam);
+            SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

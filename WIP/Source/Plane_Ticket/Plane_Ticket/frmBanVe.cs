@@ -262,8 +262,13 @@ namespace Plane_Ticket
             Form frm = new frmTinhTrangVe(cboMaChuyenBay.Text);
             frm.Show();
         }
+
         #endregion
 
-
+        private void btnTraCuu_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmTraCuuChuyenBay(cboMaChuyenBay);
+            frm.Show();
+        }
     }
 }

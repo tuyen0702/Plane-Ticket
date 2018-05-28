@@ -35,7 +35,7 @@
             this.dtpNgayKHTu = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayKHDen = new System.Windows.Forms.DateTimePicker();
             this.gbxThaoTac = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbTimKiem = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -47,7 +47,9 @@
             this.cboSanBayDen = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.cboSanBayDi = new System.Windows.Forms.ComboBox();
-            this.txtMaTuyenBay = new System.Windows.Forms.TextBox();
+            this.txtMaChuyenBay = new System.Windows.Forms.TextBox();
+            this.btnChonChuyenBay = new System.Windows.Forms.Button();
+            this.lbBanVe = new System.Windows.Forms.Label();
             this.gbxThaoTac.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gbxDSChyenBay.SuspendLayout();
@@ -61,7 +63,7 @@
             this.btnTimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTimKiem.FlatAppearance.BorderSize = 0;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.Location = new System.Drawing.Point(163, 22);
+            this.btnTimKiem.Location = new System.Drawing.Point(95, 22);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(55, 50);
@@ -109,7 +111,9 @@
             // 
             // gbxThaoTac
             // 
-            this.gbxThaoTac.Controls.Add(this.label1);
+            this.gbxThaoTac.Controls.Add(this.lbBanVe);
+            this.gbxThaoTac.Controls.Add(this.btnChonChuyenBay);
+            this.gbxThaoTac.Controls.Add(this.lbTimKiem);
             this.gbxThaoTac.Controls.Add(this.btnTimKiem);
             this.gbxThaoTac.Location = new System.Drawing.Point(12, 565);
             this.gbxThaoTac.Name = "gbxThaoTac";
@@ -118,14 +122,14 @@
             this.gbxThaoTac.TabStop = false;
             this.gbxThaoTac.Text = "Thao tác";
             // 
-            // label1
+            // lbTimKiem
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(156, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 17);
-            this.label1.TabIndex = 91;
-            this.label1.Text = "Tìm kiếm";
+            this.lbTimKiem.AutoSize = true;
+            this.lbTimKiem.Location = new System.Drawing.Point(90, 78);
+            this.lbTimKiem.Name = "lbTimKiem";
+            this.lbTimKiem.Size = new System.Drawing.Size(64, 17);
+            this.lbTimKiem.TabIndex = 91;
+            this.lbTimKiem.Text = "Tìm kiếm";
             // 
             // panel1
             // 
@@ -193,7 +197,7 @@
             this.gbxTTChuyenBay.Controls.Add(this.dtpNgayKHDen);
             this.gbxTTChuyenBay.Controls.Add(this.cboSanBayDi);
             this.gbxTTChuyenBay.Controls.Add(this.dtpNgayKHTu);
-            this.gbxTTChuyenBay.Controls.Add(this.txtMaTuyenBay);
+            this.gbxTTChuyenBay.Controls.Add(this.txtMaChuyenBay);
             this.gbxTTChuyenBay.Controls.Add(this.label15);
             this.gbxTTChuyenBay.Controls.Add(this.label3);
             this.gbxTTChuyenBay.Location = new System.Drawing.Point(12, 64);
@@ -249,14 +253,32 @@
             this.cboSanBayDi.Size = new System.Drawing.Size(200, 24);
             this.cboSanBayDi.TabIndex = 43;
             // 
-            // txtMaTuyenBay
+            // txtMaChuyenBay
             // 
-            this.txtMaTuyenBay.Location = new System.Drawing.Point(173, 28);
-            this.txtMaTuyenBay.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMaTuyenBay.Name = "txtMaTuyenBay";
-            this.txtMaTuyenBay.ReadOnly = true;
-            this.txtMaTuyenBay.Size = new System.Drawing.Size(200, 22);
-            this.txtMaTuyenBay.TabIndex = 17;
+            this.txtMaChuyenBay.Location = new System.Drawing.Point(173, 28);
+            this.txtMaChuyenBay.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaChuyenBay.Name = "txtMaChuyenBay";
+            this.txtMaChuyenBay.ReadOnly = true;
+            this.txtMaChuyenBay.Size = new System.Drawing.Size(200, 22);
+            this.txtMaChuyenBay.TabIndex = 17;
+            // 
+            // btnChonChuyenBay
+            // 
+            this.btnChonChuyenBay.Location = new System.Drawing.Point(229, 22);
+            this.btnChonChuyenBay.Name = "btnChonChuyenBay";
+            this.btnChonChuyenBay.Size = new System.Drawing.Size(55, 50);
+            this.btnChonChuyenBay.TabIndex = 92;
+            this.btnChonChuyenBay.UseVisualStyleBackColor = true;
+            this.btnChonChuyenBay.Click += new System.EventHandler(this.btnBanVe_Click);
+            // 
+            // lbBanVe
+            // 
+            this.lbBanVe.AutoSize = true;
+            this.lbBanVe.Location = new System.Drawing.Point(206, 78);
+            this.lbBanVe.Name = "lbBanVe";
+            this.lbBanVe.Size = new System.Drawing.Size(118, 17);
+            this.lbBanVe.TabIndex = 93;
+            this.lbBanVe.Text = "Chọn chuyến bay";
             // 
             // frmTraCuuChuyenBay
             // 
@@ -302,7 +324,9 @@
         private System.Windows.Forms.ComboBox cboSanBayDen;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox cboSanBayDi;
-        private System.Windows.Forms.TextBox txtMaTuyenBay;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtMaChuyenBay;
+        private System.Windows.Forms.Label lbTimKiem;
+        private System.Windows.Forms.Button btnChonChuyenBay;
+        private System.Windows.Forms.Label lbBanVe;
     }
 }

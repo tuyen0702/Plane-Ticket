@@ -34,5 +34,6 @@ namespace BUS
         {
             return dal.GetOfThangNam(strThang, strNam);
         }
+       
     }
 }

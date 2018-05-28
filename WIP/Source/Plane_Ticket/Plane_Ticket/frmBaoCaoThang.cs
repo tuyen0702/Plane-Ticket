@@ -20,10 +20,12 @@ namespace Plane_Ticket
 
         private void btnXuatBaoCao_Click(object sender, EventArgs e)
         {
-            BUS_DoanhThuThang busDoanhThuThang = new BUS_DoanhThuThang();
-            DataTable dtDoanhThuThang = busDoanhThuThang.Get();
+            string month = dtpThangNam.Value.Month.ToString();
+            string year = dtpThangNam.Value.Year.ToString();
+            BUS_CTDoanhThuThang busCTDoanhThuThang = new BUS_CTDoanhThuThang();
+            DataTable dtCTDoanhThuThang = busCTDoanhThuThang.GetOfThangNam(month, year);
             crDoanhThuThang cr = new crDoanhThuThang();
-            cr.SetDataSource(dtDoanhThuThang);
+            cr.SetDataSource(dtCTDoanhThuThang);
             crvBaoCaoThang.ReportSource = cr;
         }
 

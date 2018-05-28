@@ -28,33 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label17 = new System.Windows.Forms.Label();
             this.btnXemBaoCao = new System.Windows.Forms.Button();
             this.crvBaoCaoThang = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.cboThang = new System.Windows.Forms.ComboBox();
+            this.dtpThangNam = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(461, 73);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(49, 17);
-            this.label17.TabIndex = 11;
-            this.label17.Text = "Tháng";
             // 
             // btnXemBaoCao
             // 
             this.btnXemBaoCao.AutoSize = true;
-            this.btnXemBaoCao.Location = new System.Drawing.Point(615, 64);
+            this.btnXemBaoCao.Location = new System.Drawing.Point(599, 61);
             this.btnXemBaoCao.Margin = new System.Windows.Forms.Padding(4);
             this.btnXemBaoCao.Name = "btnXemBaoCao";
-            this.btnXemBaoCao.Size = new System.Drawing.Size(105, 28);
+            this.btnXemBaoCao.Size = new System.Drawing.Size(105, 34);
             this.btnXemBaoCao.TabIndex = 9;
             this.btnXemBaoCao.Text = "Xem báo cáo";
             this.btnXemBaoCao.UseVisualStyleBackColor = true;
@@ -107,23 +96,23 @@
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // cboThang
+            // dtpThangNam
             // 
-            this.cboThang.FormattingEnabled = true;
-            this.cboThang.Location = new System.Drawing.Point(517, 66);
-            this.cboThang.Name = "cboThang";
-            this.cboThang.Size = new System.Drawing.Size(91, 24);
-            this.cboThang.TabIndex = 122;
+            this.dtpThangNam.CustomFormat = "MM/yyyy";
+            this.dtpThangNam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpThangNam.Location = new System.Drawing.Point(480, 67);
+            this.dtpThangNam.Name = "dtpThangNam";
+            this.dtpThangNam.Size = new System.Drawing.Size(110, 22);
+            this.dtpThangNam.TabIndex = 122;
             // 
             // frmBaoCaoThang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 678);
-            this.Controls.Add(this.cboThang);
+            this.Controls.Add(this.dtpThangNam);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.crvBaoCaoThang);
-            this.Controls.Add(this.label17);
             this.Controls.Add(this.btnXemBaoCao);
             this.Name = "frmBaoCaoThang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -136,12 +125,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnXemBaoCao;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvBaoCaoThang;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.ComboBox cboThang;
+        private System.Windows.Forms.DateTimePicker dtpThangNam;
     }
 }
