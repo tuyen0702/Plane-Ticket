@@ -84,12 +84,6 @@
       <DependentUpon>crDoanhThuThang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="crDoanhThuThang1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crDoanhThuThang.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="dsDoanhThuNam.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
