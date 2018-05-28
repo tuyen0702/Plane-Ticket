@@ -1,4 +1,4 @@
-![logoUIT](https://github.com/TokumeiShi/Plane-Ticket/blob/master/logo.png)
+![logoUIT](https://uit360.xyz/img/img_cntt.png)
 
 # PHẦN MỀM QUẢN LÝ VÉ MÁY BAY
 Đồ án có mục đích tạo ra phần mềm giúp quản lý các nghiệp vụ của đại lý bán vé máy bay.
