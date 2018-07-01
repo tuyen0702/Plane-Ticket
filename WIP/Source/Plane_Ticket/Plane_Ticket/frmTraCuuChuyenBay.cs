@@ -91,6 +91,7 @@ namespace Plane_Ticket
                 btnTimKiem.Location = new Point(125,22);
                 lbTimKiem.Location = new Point(123, 65);
             }
+            cboSanBayDi.Focus();
         }
         private void TaoBangDSChuyenBayTheoYeuCau(string maSanBayDen, string maSanBayDi, DateTime thoiGianKHTu, DateTime thoiGianKHDen)
         {

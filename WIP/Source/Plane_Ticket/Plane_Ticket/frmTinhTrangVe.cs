@@ -38,6 +38,8 @@ namespace Plane_Ticket
             cboMaChuyenBay.DisplayMember = "MACHUYENBAY";
             cboMaChuyenBay.ValueMember = "MACHUYENBAY";
             cboMaChuyenBay.SelectedValue = maChuyenBay;
+
+            cboMaChuyenBay.Focus();
         }
         private void TaoBangTinhTrangVe(string maChuyenBay)
         {

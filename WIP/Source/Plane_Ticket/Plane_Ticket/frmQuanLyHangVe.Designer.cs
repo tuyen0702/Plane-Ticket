@@ -64,6 +64,7 @@
             this.txtMaHangVe.ReadOnly = true;
             this.txtMaHangVe.Size = new System.Drawing.Size(232, 22);
             this.txtMaHangVe.TabIndex = 57;
+            this.txtMaHangVe.TabStop = false;
             // 
             // label20
             // 
@@ -81,7 +82,7 @@
             this.txtTenHangVe.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenHangVe.Name = "txtTenHangVe";
             this.txtTenHangVe.Size = new System.Drawing.Size(232, 22);
-            this.txtTenHangVe.TabIndex = 58;
+            this.txtTenHangVe.TabIndex = 1;
             // 
             // label19
             // 
@@ -104,7 +105,7 @@
             this.gbxThaoTac.Location = new System.Drawing.Point(12, 565);
             this.gbxThaoTac.Name = "gbxThaoTac";
             this.gbxThaoTac.Size = new System.Drawing.Size(380, 101);
-            this.gbxThaoTac.TabIndex = 66;
+            this.gbxThaoTac.TabIndex = 2;
             this.gbxThaoTac.TabStop = false;
             this.gbxThaoTac.Text = "Thao tác";
             // 
@@ -118,7 +119,7 @@
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(55, 50);
-            this.btnThem.TabIndex = 42;
+            this.btnThem.TabIndex = 2;
             this.btnThem.UseCompatibleTextRendering = true;
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -163,7 +164,7 @@
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(55, 50);
-            this.btnSua.TabIndex = 41;
+            this.btnSua.TabIndex = 3;
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -177,7 +178,7 @@
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(55, 50);
-            this.btnXoa.TabIndex = 41;
+            this.btnXoa.TabIndex = 4;
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -206,6 +207,7 @@
             this.btnThoat.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnThoat.BackgroundImage = global::Plane_Ticket.Properties.Resources.btnCancel;
             this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.FlatAppearance.BorderSize = 0;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -214,7 +216,7 @@
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(55, 50);
-            this.btnThoat.TabIndex = 40;
+            this.btnThoat.TabIndex = 8;
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -227,7 +229,7 @@
             this.gbxDSMayBay.Location = new System.Drawing.Point(398, 64);
             this.gbxDSMayBay.Name = "gbxDSMayBay";
             this.gbxDSMayBay.Size = new System.Drawing.Size(854, 602);
-            this.gbxDSMayBay.TabIndex = 64;
+            this.gbxDSMayBay.TabIndex = 3;
             this.gbxDSMayBay.TabStop = false;
             this.gbxDSMayBay.Text = "Danh sách hạng vé";
             // 
@@ -238,7 +240,7 @@
             this.dtgvHangVe.Name = "dtgvHangVe";
             this.dtgvHangVe.RowTemplate.Height = 24;
             this.dtgvHangVe.Size = new System.Drawing.Size(842, 533);
-            this.dtgvHangVe.TabIndex = 47;
+            this.dtgvHangVe.TabIndex = 7;
             this.dtgvHangVe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvHangVe_CellClick);
             // 
             // label6
@@ -257,7 +259,7 @@
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(165, 22);
-            this.txtTimKiem.TabIndex = 17;
+            this.txtTimKiem.TabIndex = 5;
             // 
             // btnTimKiem
             // 
@@ -269,7 +271,7 @@
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(33, 30);
-            this.btnTimKiem.TabIndex = 40;
+            this.btnTimKiem.TabIndex = 6;
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
@@ -282,14 +284,16 @@
             this.gbxTTMayBay.Location = new System.Drawing.Point(12, 64);
             this.gbxTTMayBay.Name = "gbxTTMayBay";
             this.gbxTTMayBay.Size = new System.Drawing.Size(380, 495);
-            this.gbxTTMayBay.TabIndex = 63;
+            this.gbxTTMayBay.TabIndex = 1;
             this.gbxTTMayBay.TabStop = false;
             this.gbxTTMayBay.Text = "Thông tin hạng vé";
             // 
             // frmQuanLyHangVe
             // 
+            this.AcceptButton = this.btnThem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1264, 678);
             this.Controls.Add(this.gbxThaoTac);
             this.Controls.Add(this.panel1);

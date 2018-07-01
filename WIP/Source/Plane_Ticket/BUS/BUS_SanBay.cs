@@ -38,5 +38,9 @@ namespace BUS
         {
             return dal.SearchOfMaSanBay(maSanBay);
         }
+        public bool CheckSanBay(string tenSanBay, string tenThanhPho)
+        {
+            return dal.CheckSanBay(tenSanBay, tenThanhPho);
+        }
     }
 }

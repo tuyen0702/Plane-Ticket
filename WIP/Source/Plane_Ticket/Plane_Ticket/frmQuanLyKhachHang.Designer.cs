@@ -38,10 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.gbxThaoTac = new System.Windows.Forms.GroupBox();
-            this.btnThem = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -68,6 +66,7 @@
             this.txtMaKhachHang.ReadOnly = true;
             this.txtMaKhachHang.Size = new System.Drawing.Size(232, 22);
             this.txtMaKhachHang.TabIndex = 65;
+            this.txtMaKhachHang.TabStop = false;
             // 
             // label20
             // 
@@ -85,7 +84,7 @@
             this.txtTenKhachHang.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenKhachHang.Name = "txtTenKhachHang";
             this.txtTenKhachHang.Size = new System.Drawing.Size(232, 22);
-            this.txtTenKhachHang.TabIndex = 66;
+            this.txtTenKhachHang.TabIndex = 1;
             // 
             // label19
             // 
@@ -113,7 +112,7 @@
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(232, 22);
-            this.txtSDT.TabIndex = 66;
+            this.txtSDT.TabIndex = 3;
             // 
             // label3
             // 
@@ -131,42 +130,25 @@
             this.txtCMND.Margin = new System.Windows.Forms.Padding(4);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(232, 22);
-            this.txtCMND.TabIndex = 65;
+            this.txtCMND.TabIndex = 2;
             // 
             // gbxThaoTac
             // 
-            this.gbxThaoTac.Controls.Add(this.btnThem);
             this.gbxThaoTac.Controls.Add(this.label5);
             this.gbxThaoTac.Controls.Add(this.label4);
-            this.gbxThaoTac.Controls.Add(this.label1);
             this.gbxThaoTac.Controls.Add(this.btnSua);
             this.gbxThaoTac.Controls.Add(this.btnXoa);
             this.gbxThaoTac.Location = new System.Drawing.Point(12, 565);
             this.gbxThaoTac.Name = "gbxThaoTac";
             this.gbxThaoTac.Size = new System.Drawing.Size(380, 101);
-            this.gbxThaoTac.TabIndex = 70;
+            this.gbxThaoTac.TabIndex = 2;
             this.gbxThaoTac.TabStop = false;
             this.gbxThaoTac.Text = "Thao tác";
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackgroundImage = global::Plane_Ticket.Properties.Resources.btnThem;
-            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Location = new System.Drawing.Point(37, 22);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(55, 50);
-            this.btnThem.TabIndex = 42;
-            this.btnThem.UseCompatibleTextRendering = true;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(301, 76);
+            this.label5.Location = new System.Drawing.Point(220, 76);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 17);
@@ -176,22 +158,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(176, 76);
+            this.label4.Location = new System.Drawing.Point(104, 76);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 17);
             this.label4.TabIndex = 13;
             this.label4.Text = "Sửa";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 76);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 17);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Thêm";
             // 
             // btnSua
             // 
@@ -199,11 +171,11 @@
             this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Location = new System.Drawing.Point(167, 22);
+            this.btnSua.Location = new System.Drawing.Point(95, 22);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(55, 50);
-            this.btnSua.TabIndex = 41;
+            this.btnSua.TabIndex = 4;
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -213,11 +185,11 @@
             this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Location = new System.Drawing.Point(290, 22);
+            this.btnXoa.Location = new System.Drawing.Point(209, 22);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(55, 50);
-            this.btnXoa.TabIndex = 41;
+            this.btnXoa.TabIndex = 5;
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -246,6 +218,7 @@
             this.btnThoat.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnThoat.BackgroundImage = global::Plane_Ticket.Properties.Resources.btnCancel;
             this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.FlatAppearance.BorderSize = 0;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -254,7 +227,7 @@
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(55, 50);
-            this.btnThoat.TabIndex = 40;
+            this.btnThoat.TabIndex = 9;
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -267,7 +240,7 @@
             this.gbxDSKhachHang.Location = new System.Drawing.Point(398, 64);
             this.gbxDSKhachHang.Name = "gbxDSKhachHang";
             this.gbxDSKhachHang.Size = new System.Drawing.Size(854, 602);
-            this.gbxDSKhachHang.TabIndex = 68;
+            this.gbxDSKhachHang.TabIndex = 3;
             this.gbxDSKhachHang.TabStop = false;
             this.gbxDSKhachHang.Text = "Danh sách khách hàng";
             // 
@@ -278,7 +251,7 @@
             this.dtgvKhachHang.Name = "dtgvKhachHang";
             this.dtgvKhachHang.RowTemplate.Height = 24;
             this.dtgvKhachHang.Size = new System.Drawing.Size(842, 533);
-            this.dtgvKhachHang.TabIndex = 47;
+            this.dtgvKhachHang.TabIndex = 8;
             this.dtgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvKhachHang_CellClick);
             // 
             // label7
@@ -297,7 +270,7 @@
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(165, 22);
-            this.txtTimKiem.TabIndex = 17;
+            this.txtTimKiem.TabIndex = 6;
             // 
             // btnTimKiem
             // 
@@ -309,7 +282,7 @@
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(33, 30);
-            this.btnTimKiem.TabIndex = 40;
+            this.btnTimKiem.TabIndex = 7;
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
@@ -326,14 +299,16 @@
             this.gbxTTKhachHang.Location = new System.Drawing.Point(12, 64);
             this.gbxTTKhachHang.Name = "gbxTTKhachHang";
             this.gbxTTKhachHang.Size = new System.Drawing.Size(380, 495);
-            this.gbxTTKhachHang.TabIndex = 67;
+            this.gbxTTKhachHang.TabIndex = 1;
             this.gbxTTKhachHang.TabStop = false;
             this.gbxTTKhachHang.Text = "Thông tin khách hàng";
             // 
             // frmQuanLyKhachHang
             // 
+            this.AcceptButton = this.btnSua;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1264, 678);
             this.Controls.Add(this.gbxThaoTac);
             this.Controls.Add(this.panel1);
@@ -365,10 +340,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.GroupBox gbxThaoTac;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Panel panel1;

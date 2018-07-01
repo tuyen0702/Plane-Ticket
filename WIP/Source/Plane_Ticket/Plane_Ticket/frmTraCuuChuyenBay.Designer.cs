@@ -30,11 +30,12 @@
         {
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpNgayKHTu = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayKHDen = new System.Windows.Forms.DateTimePicker();
             this.gbxThaoTac = new System.Windows.Forms.GroupBox();
+            this.lbBanVe = new System.Windows.Forms.Label();
+            this.btnChonChuyenBay = new System.Windows.Forms.Button();
             this.lbTimKiem = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,8 +49,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.cboSanBayDi = new System.Windows.Forms.ComboBox();
             this.txtMaChuyenBay = new System.Windows.Forms.TextBox();
-            this.btnChonChuyenBay = new System.Windows.Forms.Button();
-            this.lbBanVe = new System.Windows.Forms.Label();
             this.gbxThaoTac.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gbxDSChyenBay.SuspendLayout();
@@ -67,7 +66,7 @@
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(55, 50);
-            this.btnTimKiem.TabIndex = 90;
+            this.btnTimKiem.TabIndex = 5;
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
@@ -98,7 +97,7 @@
             this.dtpNgayKHTu.Location = new System.Drawing.Point(174, 134);
             this.dtpNgayKHTu.Name = "dtpNgayKHTu";
             this.dtpNgayKHTu.Size = new System.Drawing.Size(199, 22);
-            this.dtpNgayKHTu.TabIndex = 117;
+            this.dtpNgayKHTu.TabIndex = 3;
             // 
             // dtpNgayKHDen
             // 
@@ -107,7 +106,7 @@
             this.dtpNgayKHDen.Location = new System.Drawing.Point(174, 169);
             this.dtpNgayKHDen.Name = "dtpNgayKHDen";
             this.dtpNgayKHDen.Size = new System.Drawing.Size(199, 22);
-            this.dtpNgayKHDen.TabIndex = 117;
+            this.dtpNgayKHDen.TabIndex = 4;
             // 
             // gbxThaoTac
             // 
@@ -118,9 +117,27 @@
             this.gbxThaoTac.Location = new System.Drawing.Point(12, 565);
             this.gbxThaoTac.Name = "gbxThaoTac";
             this.gbxThaoTac.Size = new System.Drawing.Size(380, 101);
-            this.gbxThaoTac.TabIndex = 121;
+            this.gbxThaoTac.TabIndex = 2;
             this.gbxThaoTac.TabStop = false;
             this.gbxThaoTac.Text = "Thao tác";
+            // 
+            // lbBanVe
+            // 
+            this.lbBanVe.AutoSize = true;
+            this.lbBanVe.Location = new System.Drawing.Point(206, 78);
+            this.lbBanVe.Name = "lbBanVe";
+            this.lbBanVe.Size = new System.Drawing.Size(118, 17);
+            this.lbBanVe.TabIndex = 93;
+            this.lbBanVe.Text = "Chọn chuyến bay";
+            // 
+            // btnChonChuyenBay
+            // 
+            this.btnChonChuyenBay.Location = new System.Drawing.Point(229, 22);
+            this.btnChonChuyenBay.Name = "btnChonChuyenBay";
+            this.btnChonChuyenBay.Size = new System.Drawing.Size(55, 50);
+            this.btnChonChuyenBay.TabIndex = 6;
+            this.btnChonChuyenBay.UseVisualStyleBackColor = true;
+            this.btnChonChuyenBay.Click += new System.EventHandler(this.btnBanVe_Click);
             // 
             // lbTimKiem
             // 
@@ -156,6 +173,7 @@
             this.btnThoat.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnThoat.BackgroundImage = global::Plane_Ticket.Properties.Resources.btnCancel;
             this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.FlatAppearance.BorderSize = 0;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -164,7 +182,7 @@
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(55, 50);
-            this.btnThoat.TabIndex = 40;
+            this.btnThoat.TabIndex = 8;
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -174,7 +192,7 @@
             this.gbxDSChyenBay.Location = new System.Drawing.Point(398, 64);
             this.gbxDSChyenBay.Name = "gbxDSChyenBay";
             this.gbxDSChyenBay.Size = new System.Drawing.Size(854, 602);
-            this.gbxDSChyenBay.TabIndex = 119;
+            this.gbxDSChyenBay.TabIndex = 3;
             this.gbxDSChyenBay.TabStop = false;
             this.gbxDSChyenBay.Text = "Danh sách chuyến bay";
             // 
@@ -185,7 +203,7 @@
             this.dtgvChuyenBay.Name = "dtgvChuyenBay";
             this.dtgvChuyenBay.RowTemplate.Height = 24;
             this.dtgvChuyenBay.Size = new System.Drawing.Size(842, 568);
-            this.dtgvChuyenBay.TabIndex = 47;
+            this.dtgvChuyenBay.TabIndex = 7;
             this.dtgvChuyenBay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvChuyenBay_CellClick);
             // 
             // gbxTTChuyenBay
@@ -203,7 +221,7 @@
             this.gbxTTChuyenBay.Location = new System.Drawing.Point(12, 64);
             this.gbxTTChuyenBay.Name = "gbxTTChuyenBay";
             this.gbxTTChuyenBay.Size = new System.Drawing.Size(380, 495);
-            this.gbxTTChuyenBay.TabIndex = 118;
+            this.gbxTTChuyenBay.TabIndex = 1;
             this.gbxTTChuyenBay.TabStop = false;
             this.gbxTTChuyenBay.Text = "Thông tin chuyến bay";
             // 
@@ -233,7 +251,7 @@
             this.cboSanBayDen.Location = new System.Drawing.Point(174, 95);
             this.cboSanBayDen.Name = "cboSanBayDen";
             this.cboSanBayDen.Size = new System.Drawing.Size(200, 24);
-            this.cboSanBayDen.TabIndex = 43;
+            this.cboSanBayDen.TabIndex = 2;
             // 
             // label19
             // 
@@ -251,7 +269,7 @@
             this.cboSanBayDi.Location = new System.Drawing.Point(174, 63);
             this.cboSanBayDi.Name = "cboSanBayDi";
             this.cboSanBayDi.Size = new System.Drawing.Size(200, 24);
-            this.cboSanBayDi.TabIndex = 43;
+            this.cboSanBayDi.TabIndex = 1;
             // 
             // txtMaChuyenBay
             // 
@@ -261,29 +279,14 @@
             this.txtMaChuyenBay.ReadOnly = true;
             this.txtMaChuyenBay.Size = new System.Drawing.Size(200, 22);
             this.txtMaChuyenBay.TabIndex = 17;
-            // 
-            // btnChonChuyenBay
-            // 
-            this.btnChonChuyenBay.Location = new System.Drawing.Point(229, 22);
-            this.btnChonChuyenBay.Name = "btnChonChuyenBay";
-            this.btnChonChuyenBay.Size = new System.Drawing.Size(55, 50);
-            this.btnChonChuyenBay.TabIndex = 92;
-            this.btnChonChuyenBay.UseVisualStyleBackColor = true;
-            this.btnChonChuyenBay.Click += new System.EventHandler(this.btnBanVe_Click);
-            // 
-            // lbBanVe
-            // 
-            this.lbBanVe.AutoSize = true;
-            this.lbBanVe.Location = new System.Drawing.Point(206, 78);
-            this.lbBanVe.Name = "lbBanVe";
-            this.lbBanVe.Size = new System.Drawing.Size(118, 17);
-            this.lbBanVe.TabIndex = 93;
-            this.lbBanVe.Text = "Chọn chuyến bay";
+            this.txtMaChuyenBay.TabStop = false;
             // 
             // frmTraCuuChuyenBay
             // 
+            this.AcceptButton = this.btnTimKiem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1264, 678);
             this.Controls.Add(this.gbxThaoTac);
             this.Controls.Add(this.panel1);
@@ -308,7 +311,6 @@
         #endregion
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpNgayKHTu;
         private System.Windows.Forms.DateTimePicker dtpNgayKHDen;
