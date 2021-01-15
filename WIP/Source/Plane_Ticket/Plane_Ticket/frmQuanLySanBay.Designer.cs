@@ -67,7 +67,6 @@
             this.txtMaSanBay.ReadOnly = true;
             this.txtMaSanBay.Size = new System.Drawing.Size(220, 22);
             this.txtMaSanBay.TabIndex = 47;
-            this.txtMaSanBay.TabStop = false;
             // 
             // label20
             // 
@@ -85,8 +84,7 @@
             this.txtTenSanBay.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenSanBay.Name = "txtTenSanBay";
             this.txtTenSanBay.Size = new System.Drawing.Size(220, 22);
-            this.txtTenSanBay.TabIndex = 1;
-            this.txtTenSanBay.Tag = "";
+            this.txtTenSanBay.TabIndex = 48;
             // 
             // label19
             // 
@@ -104,8 +102,7 @@
             this.txtTenThanhPho.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenThanhPho.Name = "txtTenThanhPho";
             this.txtTenThanhPho.Size = new System.Drawing.Size(220, 22);
-            this.txtTenThanhPho.TabIndex = 2;
-            this.txtTenThanhPho.Tag = "2";
+            this.txtTenThanhPho.TabIndex = 44;
             // 
             // label18
             // 
@@ -128,7 +125,7 @@
             this.gbxThaoTac.Location = new System.Drawing.Point(12, 571);
             this.gbxThaoTac.Name = "gbxThaoTac";
             this.gbxThaoTac.Size = new System.Drawing.Size(380, 101);
-            this.gbxThaoTac.TabIndex = 2;
+            this.gbxThaoTac.TabIndex = 56;
             this.gbxThaoTac.TabStop = false;
             this.gbxThaoTac.Text = "Thao tác";
             // 
@@ -142,8 +139,7 @@
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(55, 50);
-            this.btnThem.TabIndex = 3;
-            this.btnThem.Tag = "";
+            this.btnThem.TabIndex = 42;
             this.btnThem.UseCompatibleTextRendering = true;
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -188,8 +184,7 @@
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(55, 50);
-            this.btnSua.TabIndex = 4;
-            this.btnSua.Tag = "";
+            this.btnSua.TabIndex = 41;
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -203,8 +198,7 @@
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(55, 50);
-            this.btnXoa.TabIndex = 5;
-            this.btnXoa.Tag = "";
+            this.btnXoa.TabIndex = 41;
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -241,7 +235,7 @@
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(55, 50);
-            this.btnThoat.TabIndex = 9;
+            this.btnThoat.TabIndex = 40;
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -254,7 +248,7 @@
             this.gbxDSSanBay.Location = new System.Drawing.Point(398, 70);
             this.gbxDSSanBay.Name = "gbxDSSanBay";
             this.gbxDSSanBay.Size = new System.Drawing.Size(854, 602);
-            this.gbxDSSanBay.TabIndex = 3;
+            this.gbxDSSanBay.TabIndex = 54;
             this.gbxDSSanBay.TabStop = false;
             this.gbxDSSanBay.Text = "Danh sách sân bay";
             // 
@@ -265,7 +259,7 @@
             this.dtgvSanBay.Name = "dtgvSanBay";
             this.dtgvSanBay.RowTemplate.Height = 24;
             this.dtgvSanBay.Size = new System.Drawing.Size(842, 533);
-            this.dtgvSanBay.TabIndex = 8;
+            this.dtgvSanBay.TabIndex = 47;
             this.dtgvSanBay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvSanBay_CellClick);
             // 
             // label6
@@ -284,7 +278,7 @@
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(165, 22);
-            this.txtTimKiem.TabIndex = 6;
+            this.txtTimKiem.TabIndex = 17;
             // 
             // btnTimKiem
             // 
@@ -296,7 +290,7 @@
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(33, 30);
-            this.btnTimKiem.TabIndex = 7;
+            this.btnTimKiem.TabIndex = 40;
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
@@ -310,9 +304,8 @@
             this.gbxTTSanBay.Controls.Add(this.txtTenSanBay);
             this.gbxTTSanBay.Location = new System.Drawing.Point(12, 64);
             this.gbxTTSanBay.Name = "gbxTTSanBay";
-            this.gbxTTSanBay.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.gbxTTSanBay.Size = new System.Drawing.Size(380, 501);
-            this.gbxTTSanBay.TabIndex = 1;
+            this.gbxTTSanBay.TabIndex = 53;
             this.gbxTTSanBay.TabStop = false;
             this.gbxTTSanBay.Text = "Thông tin sân bay";
             // 

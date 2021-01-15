@@ -144,7 +144,8 @@ namespace Plane_Ticket
         private void KhoiTaoGiaoDien()
         {
             TaoBangDSNhanVien();
-            txtTenNhanVien.Focus();
+            AcceptButton = btnThem;
+            CancelButton = btnThoat;
         }
         private void TaoBangDSNhanVien()
         {
@@ -161,6 +162,10 @@ namespace Plane_Ticket
             txtTenNhanVien.Clear();
             txtUsername.Clear();
             txtPassword.Clear();
+        }
+        private void frmQuanLyTuyenBay_Shown(object sender, EventArgs e)
+        {
+            txtTenNhanVien.Focus();
         }
         private void dtgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {

@@ -11,6 +11,7 @@ E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\bin\Debug\DAL.dll
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\bin\Debug\DAL.pdb
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\bin\Debug\DTO.dll
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\bin\Debug\DTO.pdb
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\obj\Debug\DAL.dll
@@ -24,13 +25,3 @@ C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\obj\Debug\DAL.csproj.
 C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\obj\Debug\DAL.dll
 C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\obj\Debug\DAL.pdb
-E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
-E:\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\bin\Debug\DAL.dll
-E:\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\bin\Debug\DAL.pdb
-E:\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\bin\Debug\DTO.dll
-E:\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\bin\Debug\DTO.pdb
-E:\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-E:\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-E:\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\obj\Debug\DAL.csproj.CopyComplete
-E:\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\obj\Debug\DAL.dll
-E:\Plane-Ticket\WIP\Source\Plane_Ticket\DAL\obj\Debug\DAL.pdb

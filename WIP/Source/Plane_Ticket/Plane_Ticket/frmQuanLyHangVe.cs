@@ -158,7 +158,20 @@ namespace Plane_Ticket
         private void KhoiTaoGiaoDien()
         {
             TaoBangDSHangVe();
-            txtTenHangVe.Focus();
+
+            txtMaHangVe.TabStop = false;
+            gbxTTMayBay.TabIndex = 0;
+            gbxThaoTac.TabIndex = 1;
+            gbxDSMayBay.TabIndex = 2;
+
+            txtTenHangVe.TabIndex = 0;
+            btnThem.TabIndex = 1;
+            btnSua.TabIndex = 2;
+            btnXoa.TabIndex = 3;
+            txtTimKiem.TabIndex = 4;
+            btnTimKiem.TabIndex = 5;
+            dtgvHangVe.TabIndex = 6;
+            btnThoat.TabIndex = 7;
         }
         #endregion
     }

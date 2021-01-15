@@ -42,7 +42,7 @@
             this.dtgvTinhTrangVe.Name = "dtgvTinhTrangVe";
             this.dtgvTinhTrangVe.RowTemplate.Height = 24;
             this.dtgvTinhTrangVe.Size = new System.Drawing.Size(520, 341);
-            this.dtgvTinhTrangVe.TabIndex = 2;
+            this.dtgvTinhTrangVe.TabIndex = 0;
             // 
             // label2
             // 
@@ -69,7 +69,7 @@
             this.cboMaChuyenBay.Location = new System.Drawing.Point(142, 53);
             this.cboMaChuyenBay.Name = "cboMaChuyenBay";
             this.cboMaChuyenBay.Size = new System.Drawing.Size(150, 24);
-            this.cboMaChuyenBay.TabIndex = 1;
+            this.cboMaChuyenBay.TabIndex = 41;
             this.cboMaChuyenBay.SelectedValueChanged += new System.EventHandler(this.cboMaChuyenBay_SelectedValueChanged);
             // 
             // frmTinhTrangVe

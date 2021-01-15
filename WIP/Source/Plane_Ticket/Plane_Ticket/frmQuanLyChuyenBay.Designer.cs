@@ -38,6 +38,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.cboMaMayBay = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtThoiGianKH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cboMaHangVe = new System.Windows.Forms.ComboBox();
             this.txtTongSoGhe = new System.Windows.Forms.TextBox();
@@ -58,7 +59,6 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.gbxTTChuyenBay = new System.Windows.Forms.GroupBox();
-            this.dtpkThoiGianKhoiHanh = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.cboSanBayDen = new System.Windows.Forms.ComboBox();
@@ -79,7 +79,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.dtgvSanBayTG = new System.Windows.Forms.DataGridView();
             this.btnXoaSBTG = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.gbxThaoTac.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gbxDSChuyenBay.SuspendLayout();
@@ -93,17 +92,17 @@
             // 
             // txtThoiGianBay
             // 
-            this.txtThoiGianBay.Location = new System.Drawing.Point(155, 266);
+            this.txtThoiGianBay.Location = new System.Drawing.Point(156, 260);
             this.txtThoiGianBay.Margin = new System.Windows.Forms.Padding(4);
             this.txtThoiGianBay.Name = "txtThoiGianBay";
-            this.txtThoiGianBay.Size = new System.Drawing.Size(174, 22);
+            this.txtThoiGianBay.Size = new System.Drawing.Size(218, 22);
             this.txtThoiGianBay.TabIndex = 29;
             this.txtThoiGianBay.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(7, 269);
+            this.label26.Location = new System.Drawing.Point(8, 263);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(94, 17);
@@ -183,6 +182,15 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "Mã chuyến bay";
             this.label2.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
+            // 
+            // txtThoiGianKH
+            // 
+            this.txtThoiGianKH.Location = new System.Drawing.Point(156, 222);
+            this.txtThoiGianKH.Margin = new System.Windows.Forms.Padding(4);
+            this.txtThoiGianKH.Name = "txtThoiGianKH";
+            this.txtThoiGianKH.Size = new System.Drawing.Size(218, 22);
+            this.txtThoiGianKH.TabIndex = 29;
+            this.txtThoiGianKH.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
             // 
             // label3
             // 
@@ -406,20 +414,19 @@
             // 
             // gbxTTChuyenBay
             // 
-            this.gbxTTChuyenBay.Controls.Add(this.dtpkThoiGianKhoiHanh);
             this.gbxTTChuyenBay.Controls.Add(this.txtMaChuyenBay);
             this.gbxTTChuyenBay.Controls.Add(this.cboMaMayBay);
             this.gbxTTChuyenBay.Controls.Add(this.label15);
             this.gbxTTChuyenBay.Controls.Add(this.label14);
             this.gbxTTChuyenBay.Controls.Add(this.label27);
             this.gbxTTChuyenBay.Controls.Add(this.label2);
-            this.gbxTTChuyenBay.Controls.Add(this.label1);
             this.gbxTTChuyenBay.Controls.Add(this.cboSanBayDen);
             this.gbxTTChuyenBay.Controls.Add(this.cboSanBayDi);
             this.gbxTTChuyenBay.Controls.Add(this.cboMaTuyenBay);
             this.gbxTTChuyenBay.Controls.Add(this.label26);
             this.gbxTTChuyenBay.Controls.Add(this.label24);
             this.gbxTTChuyenBay.Controls.Add(this.txtThoiGianBay);
+            this.gbxTTChuyenBay.Controls.Add(this.txtThoiGianKH);
             this.gbxTTChuyenBay.Controls.Add(this.label25);
             this.gbxTTChuyenBay.Location = new System.Drawing.Point(12, 64);
             this.gbxTTChuyenBay.Name = "gbxTTChuyenBay";
@@ -428,15 +435,6 @@
             this.gbxTTChuyenBay.TabStop = false;
             this.gbxTTChuyenBay.Text = "Thông tin chuyến bay";
             this.gbxTTChuyenBay.CursorChanged += new System.EventHandler(this.gbxTTChuyenBay_CursorChanged);
-            // 
-            // dtpkThoiGianKhoiHanh
-            // 
-            this.dtpkThoiGianKhoiHanh.CustomFormat = "dd/MM/yyyy - h:mm:ss tt ";
-            this.dtpkThoiGianKhoiHanh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpkThoiGianKhoiHanh.Location = new System.Drawing.Point(155, 225);
-            this.dtpkThoiGianKhoiHanh.Name = "dtpkThoiGianKhoiHanh";
-            this.dtpkThoiGianKhoiHanh.Size = new System.Drawing.Size(218, 22);
-            this.dtpkThoiGianKhoiHanh.TabIndex = 37;
             // 
             // label15
             // 
@@ -686,17 +684,6 @@
             this.btnXoaSBTG.UseVisualStyleBackColor = true;
             this.btnXoaSBTG.Click += new System.EventHandler(this.btnXoaSBTG_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(337, 269);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 17);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "phút";
-            this.label1.Click += new System.EventHandler(this.gbxThemHangVeChoChuyenBay_CursorChanged);
-            // 
             // frmQuanLyChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -741,6 +728,7 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox cboMaMayBay;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtThoiGianKH;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboMaHangVe;
         private System.Windows.Forms.TextBox txtTongSoGhe;
@@ -781,7 +769,5 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cboSanBayDen;
         private System.Windows.Forms.ComboBox cboSanBayDi;
-        private System.Windows.Forms.DateTimePicker dtpkThoiGianKhoiHanh;
-        private System.Windows.Forms.Label label1;
     }
 }

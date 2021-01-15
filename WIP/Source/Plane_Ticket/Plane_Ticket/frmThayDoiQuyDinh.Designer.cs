@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThayDoiQuyDinh));
             this.gbxThaoTac = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnSua = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.gbxTTThamSo = new System.Windows.Forms.GroupBox();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             this.gbxThaoTac.Location = new System.Drawing.Point(12, 565);
             this.gbxThaoTac.Name = "gbxThaoTac";
             this.gbxThaoTac.Size = new System.Drawing.Size(1245, 101);
-            this.gbxThaoTac.TabIndex = 2;
+            this.gbxThaoTac.TabIndex = 62;
             this.gbxThaoTac.TabStop = false;
             this.gbxThaoTac.Text = "Thao tác";
             // 
@@ -73,20 +73,6 @@
             this.label4.Size = new System.Drawing.Size(33, 17);
             this.label4.TabIndex = 13;
             this.label4.Text = "Sửa";
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSua.BackgroundImage")));
-            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSua.FlatAppearance.BorderSize = 0;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Location = new System.Drawing.Point(587, 22);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(55, 50);
-            this.btnSua.TabIndex = 7;
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // panel1
             // 
@@ -108,22 +94,6 @@
             this.label2.TabIndex = 39;
             this.label2.Text = "THAY ĐỔI QUY ĐỊNH";
             // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnThoat.BackgroundImage = global::Plane_Ticket.Properties.Resources.btnCancel;
-            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThoat.FlatAppearance.BorderSize = 0;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(1206, 4);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(55, 50);
-            this.btnThoat.TabIndex = 40;
-            this.btnThoat.UseVisualStyleBackColor = false;
-            // 
             // gbxTTThamSo
             // 
             this.gbxTTThamSo.Controls.Add(this.label1);
@@ -141,9 +111,39 @@
             this.gbxTTThamSo.Location = new System.Drawing.Point(12, 64);
             this.gbxTTThamSo.Name = "gbxTTThamSo";
             this.gbxTTThamSo.Size = new System.Drawing.Size(1240, 495);
-            this.gbxTTThamSo.TabIndex = 1;
+            this.gbxTTThamSo.TabIndex = 59;
             this.gbxTTThamSo.TabStop = false;
             this.gbxTTThamSo.Text = "Thông tin tham số";
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSua.BackgroundImage")));
+            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.Location = new System.Drawing.Point(587, 22);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(55, 50);
+            this.btnSua.TabIndex = 41;
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnThoat.BackgroundImage = global::Plane_Ticket.Properties.Resources.btnCancel;
+            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.White;
+            this.btnThoat.Location = new System.Drawing.Point(1206, 4);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(55, 50);
+            this.btnThoat.TabIndex = 40;
+            this.btnThoat.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -180,42 +180,42 @@
             this.txtTGBayMin.Location = new System.Drawing.Point(637, 57);
             this.txtTGBayMin.Name = "txtTGBayMin";
             this.txtTGBayMin.Size = new System.Drawing.Size(153, 22);
-            this.txtTGBayMin.TabIndex = 1;
+            this.txtTGBayMin.TabIndex = 60;
             // 
             // txtSoSanBayTGMax
             // 
             this.txtSoSanBayTGMax.Location = new System.Drawing.Point(637, 123);
             this.txtSoSanBayTGMax.Name = "txtSoSanBayTGMax";
             this.txtSoSanBayTGMax.Size = new System.Drawing.Size(153, 22);
-            this.txtSoSanBayTGMax.TabIndex = 2;
+            this.txtSoSanBayTGMax.TabIndex = 61;
             // 
             // txtTGDungMin
             // 
             this.txtTGDungMin.Location = new System.Drawing.Point(637, 189);
             this.txtTGDungMin.Name = "txtTGDungMin";
             this.txtTGDungMin.Size = new System.Drawing.Size(153, 22);
-            this.txtTGDungMin.TabIndex = 3;
+            this.txtTGDungMin.TabIndex = 62;
             // 
             // txtTGDungMax
             // 
             this.txtTGDungMax.Location = new System.Drawing.Point(637, 257);
             this.txtTGDungMax.Name = "txtTGDungMax";
             this.txtTGDungMax.Size = new System.Drawing.Size(153, 22);
-            this.txtTGDungMax.TabIndex = 4;
+            this.txtTGDungMax.TabIndex = 63;
             // 
             // txtTGMinDatVe
             // 
             this.txtTGMinDatVe.Location = new System.Drawing.Point(637, 326);
             this.txtTGMinDatVe.Name = "txtTGMinDatVe";
             this.txtTGMinDatVe.Size = new System.Drawing.Size(153, 22);
-            this.txtTGMinDatVe.TabIndex = 5;
+            this.txtTGMinDatVe.TabIndex = 64;
             // 
             // txtTGMinHuyVe
             // 
             this.txtTGMinHuyVe.Location = new System.Drawing.Point(637, 397);
             this.txtTGMinHuyVe.Name = "txtTGMinHuyVe";
             this.txtTGMinHuyVe.Size = new System.Drawing.Size(153, 22);
-            this.txtTGMinHuyVe.TabIndex = 6;
+            this.txtTGMinHuyVe.TabIndex = 65;
             // 
             // label20
             // 

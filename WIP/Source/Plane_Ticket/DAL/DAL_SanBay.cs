@@ -135,15 +135,5 @@ namespace DAL
             }
             return "SB" + strSoKhong + count;
         }
-        public bool CheckSanBay(string tenSanBay, string tenThanhPho)
-        {
-            string sqlQuery = string.Format("SELECT * FROM SANBAY WHERE TENSANBAY =N'{0}' AND TENTHANHPHO=N'{1}'", tenSanBay, tenThanhPho);
-            SqlDataAdapter da = new SqlDataAdapter(sqlQuery, _con);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            if (dt.Rows.Count > 0)
-                return true;
-            return false;
-        }
     }
 }

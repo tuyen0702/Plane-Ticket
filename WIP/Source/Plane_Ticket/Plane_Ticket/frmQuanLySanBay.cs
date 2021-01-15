@@ -41,11 +41,6 @@ namespace Plane_Ticket
         {
             if (txtTenSanBay.Text.Trim() != "" && txtTenThanhPho.Text.Trim() != "")
             {
-                if (busSanBay.CheckSanBay(txtTenSanBay.Text, txtTenThanhPho.Text))
-                {
-                    MessageBox.Show("Sân bay đã tồn tại, vui lòng nhập lại thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
                 try
                 {
                     dtoSanBay = new DTO_SanBay(txtMaSanBay.Text, txtTenSanBay.Text, txtTenThanhPho.Text);
@@ -154,7 +149,27 @@ namespace Plane_Ticket
         private void KhoiTaoGiaoDien()
         {
             TaoBangDSSanBay();
+
             txtTenSanBay.Focus();
+
+            txtMaSanBay.TabStop = false;
+
+            gbxTTSanBay.TabIndex = 0;
+            gbxThaoTac.TabIndex = 1;
+            gbxDSSanBay.TabIndex = 2;
+
+            txtTenSanBay.TabIndex = 0;
+            txtTenThanhPho.TabIndex = 1;
+            btnThem.TabIndex = 3;
+            btnSua.TabIndex = 4;
+            btnXoa.TabIndex = 5;
+            txtTimKiem.TabIndex = 6;
+            btnTimKiem.TabIndex = 7;
+            dtgvSanBay.TabIndex = 8;
+            btnThoat.TabIndex = 9;
+
+            AcceptButton = btnThem;
+            CancelButton = btnThoat;
         }
         private void frmQuanLySanBay_Shown(object sender, EventArgs e)
         {

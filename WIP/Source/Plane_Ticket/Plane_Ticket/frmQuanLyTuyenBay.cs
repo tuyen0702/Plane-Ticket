@@ -33,11 +33,6 @@ namespace Plane_Ticket
             
             if(cboSanBayDen.Text.Trim()!="" && cboSanBayDi.Text.Trim()!="")
             {
-                if (cboSanBayDi.Text == cboSanBayDen.Text)
-                {
-                    MessageBox.Show("Sân bay đến và sân bay đi phải khác nhau!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
                 try
                 {
                     dtoTuyenBay = new DTO_TuyenBay(txtMaTuyenBay.Text, cboSanBayDi.SelectedValue.ToString(), cboSanBayDen.SelectedValue.ToString());
@@ -68,11 +63,6 @@ namespace Plane_Ticket
             {
                 if (cboSanBayDen.Text.Trim() != "" && cboSanBayDi.Text.Trim() != "")
                 {
-                    if (cboSanBayDi.Text == cboSanBayDen.Text)
-                    {
-                        MessageBox.Show("Sân bay đến và sân bay đi phải khác nhau!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
                     try
                     {
                         dtoTuyenBay = new DTO_TuyenBay(txtMaTuyenBay.Text, cboSanBayDi.SelectedValue.ToString(), cboSanBayDen.SelectedValue.ToString());
@@ -155,7 +145,19 @@ namespace Plane_Ticket
 
             TaoBangDSTuyenBay();
 
-            cboSanBayDi.Focus();
+            txtMaTuyenBay.TabStop = false;
+            cboSanBayDi.TabIndex = 0;
+            cboSanBayDen.TabIndex = 1;
+            btnThem.TabIndex = 2;
+            btnSua.TabIndex = 3;
+            btnXoa.TabIndex = 4;
+            txtTimKiem.TabIndex = 5;
+            btnTimKiem.TabIndex = 6;
+            dtgvTuyenBay.TabIndex = 7;
+            btnThoat.TabIndex = 8;
+
+            AcceptButton = btnThem;
+            CancelButton = btnThoat;
         }
         private void TaoBangDSTuyenBay()
         {

@@ -155,7 +155,25 @@ namespace Plane_Ticket
         private void KhoiTaoGiaoDien()
         {
             TaoBangDSMayBay();
-            txtTenMayBay.Focus();
+
+            txtMaMayBay.TabStop = false;
+
+            gbxTTMayBay.TabIndex = 0;
+            gbxThaoTac.TabIndex = 1;
+            gbxDSMayBay.TabIndex = 2;
+
+            txtTenMayBay.TabIndex = 0;
+            txtSoLuongGhe.TabIndex = 1;
+            btnThem.TabIndex = 2;
+            btnSua.TabIndex = 3;
+            btnXoa.TabIndex = 4;
+            txtTimKiem.TabIndex = 5;
+            btnTimKiem.TabIndex = 6;
+            dtgvMayBay.TabIndex = 7;
+            btnThoat.TabIndex = 8;
+
+            AcceptButton = btnThem;
+            CancelButton = btnThoat;
         }
 
         #endregion

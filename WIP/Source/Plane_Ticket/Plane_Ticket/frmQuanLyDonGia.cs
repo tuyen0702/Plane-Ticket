@@ -39,13 +39,9 @@ namespace Plane_Ticket
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
+
             if (cboMaTuyenBay.Text.Trim() != "" && cboMaHangVe.Text.Trim() != "" && txtDonGia.Text!="")
             {
-                if(cboSanBayDi.Text==cboSanBayDen.Text)
-                {
-                    MessageBox.Show("Sân bay đến và sân bay đi phải khác nhau!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
                 try
                 {
                     dtoDonGia = new DTO_DonGia(cboMaTuyenBay.Text, cboMaHangVe.SelectedValue.ToString(), Convert.ToInt32(txtDonGia.Text));
@@ -73,12 +69,6 @@ namespace Plane_Ticket
         {
             if (flagCellClick)
             {
-
-                if (cboSanBayDi.Text == cboSanBayDen.Text)
-                {
-                    MessageBox.Show("Sân bay đến và sân bay đi phải khác nhau!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
                 if (cboSanBayDen.Text.Trim() != "" && cboSanBayDi.Text.Trim() != "")
                 {
                     try
@@ -173,7 +163,8 @@ namespace Plane_Ticket
 
             TaoBangDSDonGia();
 
-            cboSanBayDi.Focus();
+            AcceptButton = btnThem;
+            CancelButton = btnThoat;
         }
         private void cboMaTuyenBay_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -235,7 +226,6 @@ namespace Plane_Ticket
         private void frmQuanLyDonGia_Shown(object sender, EventArgs e)
         {
             KhoiTaoGiaoDien();
-            cboMaTuyenBay_SelectionChangeCommitted(sender, e);
         }
         #endregion
 

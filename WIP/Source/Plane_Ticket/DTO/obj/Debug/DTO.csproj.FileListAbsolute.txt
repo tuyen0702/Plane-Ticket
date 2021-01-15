@@ -6,6 +6,7 @@ C:\Users\LeeDDwcs\source\repos\Plane_Ticket\DTO\obj\Debug\DTO.dll
 C:\Users\LeeDDwcs\source\repos\Plane_Ticket\DTO\obj\Debug\DTO.pdb
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\bin\Debug\DTO.dll
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\bin\Debug\DTO.pdb
+E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.dll
 E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.pdb
@@ -15,10 +16,3 @@ C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.csprojR
 C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.dll
 C:\Users\Beatless\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.pdb
-E:\Git\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
-E:\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\bin\Debug\DTO.dll
-E:\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\bin\Debug\DTO.pdb
-E:\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
-E:\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-E:\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.dll
-E:\Plane-Ticket\WIP\Source\Plane_Ticket\DTO\obj\Debug\DTO.pdb

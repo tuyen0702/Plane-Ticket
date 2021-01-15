@@ -39,7 +39,34 @@ namespace Plane_Ticket
             txtCMND.Clear();
             txtSDT.Clear();
         }
-        
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+            if (txtTenKhachHang.Text.Trim() != "" && txtCMND.Text.Trim() != "" && txtSDT.Text.Trim()!="")
+            {
+                try
+                {
+                    dtoKhachHang = new DTO_KhachHang(null, txtTenKhachHang.Text, txtCMND.Text, txtSDT.Text);
+                    if (busKhachHang.Add(dtoKhachHang))
+                        MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                catch (Exception a)
+                {
+                    MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    TaoLai();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
         private void btnSua_Click(object sender, EventArgs e)
         {
             if (txtMaKhachHang.Text.Trim() != "")
@@ -110,7 +137,9 @@ namespace Plane_Ticket
         private void KhoiTaoGiaoDien()
         {
             TaoBangDSKhachHang();
-            txtTenKhachHang.Focus();
+
+            AcceptButton = btnThem;
+            CancelButton = btnThoat;
         }
         private void TaoBangDSKhachHang()
         {

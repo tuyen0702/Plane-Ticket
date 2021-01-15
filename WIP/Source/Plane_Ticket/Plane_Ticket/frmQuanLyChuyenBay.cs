@@ -44,7 +44,6 @@ namespace Plane_Ticket
         private void frmQuanLyChuyenBay_Shown(object sender, EventArgs e)
         {
             KhoiTaoGiaoDien();
-            cboMaTuyenBay_SelectionChangeCommitted(sender, e);
         }
         private void gbxThemHangVeChoChuyenBay_CursorChanged(object sender, EventArgs e)
         {
@@ -65,17 +64,24 @@ namespace Plane_Ticket
         private void TaoLaiChuyenBay()
         {
             TaoBangDSChuyenBay();
+            txtMaChuyenBay.Clear();
+            cboMaTuyenBay.Text = "";
+            cboSanBayDi.Text = "";
+            cboSanBayDen.Text = "";
+            cboMaMayBay.Text = "";
+            txtThoiGianKH.Clear();
+            txtThoiGianBay.Clear();
             gbxThemHangVeChoChuyenBay.Enabled = false;
             gbxThemSanBayTGChoChuyenBay.Enabled = false;
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
 
-            if (cboMaTuyenBay.Text.Trim() != "" && cboMaMayBay.Text.Trim() != "" && txtThoiGianBay.Text.Trim()!="")
+            if (cboMaTuyenBay.Text.Trim() != "" && cboMaMayBay.Text.Trim() != "" && txtThoiGianKH.Text.Trim()!="" && txtThoiGianBay.Text.Trim()!="")
             {
                 try
                 {
-                    dtoChuyenBay = new DTO_ChuyenBay(txtMaChuyenBay.Text, cboMaTuyenBay.Text, cboMaMayBay.Text, dtpkThoiGianKhoiHanh.Value ,float.Parse(txtThoiGianBay.Text));
+                    dtoChuyenBay = new DTO_ChuyenBay(txtMaChuyenBay.Text, cboMaTuyenBay.Text, cboMaMayBay.Text, Convert.ToDateTime(txtThoiGianKH.Text),float.Parse(txtThoiGianBay.Text));
                     if(busChuyenBay.Add(dtoChuyenBay))
                         MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
@@ -100,11 +106,11 @@ namespace Plane_Ticket
         {
             if (txtMaChuyenBay.Text.Trim() != "")
             {
-                if (cboMaTuyenBay.Text.Trim() != "" && cboMaMayBay.Text.Trim() != "" && txtThoiGianBay.Text.Trim() != "")
+                if (cboMaTuyenBay.Text.Trim() != "" && cboMaMayBay.Text.Trim() != "" && txtThoiGianKH.Text.Trim() != "" && txtThoiGianBay.Text.Trim() != "")
                 {
                     try
                     {
-                        dtoChuyenBay = new DTO_ChuyenBay(txtMaChuyenBay.Text, cboMaTuyenBay.Text, cboMaMayBay.Text, dtpkThoiGianKhoiHanh.Value, float.Parse(txtThoiGianBay.Text));
+                        dtoChuyenBay = new DTO_ChuyenBay(txtMaChuyenBay.Text, cboMaTuyenBay.Text, cboMaMayBay.Text, Convert.ToDateTime(txtThoiGianKH.Text), float.Parse(txtThoiGianBay.Text));
                         if (busChuyenBay.Update(dtoChuyenBay))
                             MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         else
@@ -257,8 +263,8 @@ namespace Plane_Ticket
             txtMaChuyenBay.Text = row.Cells[0].Value.ToString();
             cboMaTuyenBay.Text = row.Cells[1].Value.ToString();
             cboMaMayBay.Text = row.Cells[2].Value.ToString();
-            dtpkThoiGianKhoiHanh.Value= Convert.ToDateTime(row.Cells[3].Value.ToString());
-            txtThoiGianBay.Text = row.Cells[4].Value.ToString();
+            txtThoiGianKH.Text= row.Cells[3].Value.ToString();
+            txtThoiGianBay.Text = row.Cells[3].Value.ToString();
             cboMaTuyenBay_SelectionChangeCommitted(sender, e);
 
             gbxThemHangVeChoChuyenBay.Enabled = true;
